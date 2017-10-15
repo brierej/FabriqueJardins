@@ -18,4 +18,26 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+
+    /**
+     * @Route("/jardin-hispano-mauresque", name="jardin-hispano-mauresque")
+     */
+    public function jardinAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('catalog/ambiances/jardin-hispano-mauresque.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/questionnaire-particuliers", name="questionnaire-particuliers")
+     */
+    public function formAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('forms/form-particuliers.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
 }

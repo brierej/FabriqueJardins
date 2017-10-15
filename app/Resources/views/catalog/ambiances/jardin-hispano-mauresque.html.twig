@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="section nobg notopmargin noborder bottommargin-sm">
+        <div class="container clearfix">
+            <div class="col_half nobottommargin">
+                <div class="heading-block" style="padding-top: 40px;">
+
+                    <h2>Le jardin hispano-mauresque.</h2>
+                    <span>Duis mollis, est non commodo luctus. Donec sed odio dui</span>
+
+                </div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, repudiandae, maxime, earum, sapiente assumenda non odit laborum qui vero vel quos sint excepturi in laudantium.</p>
+
+            </div>
+
+            <div class="col_half bottommargin-sm center col_last">
+                <img src="{{ asset('media/jardin-hispano-mauresque.jpg') }}" alt="Image" data-animate="fadeInRight">
+            </div>
+        </div>
+    </div>
+
+    <div class="container clearfix">
+        <div class="col_one_fourth nobottommargin">
+            <div class="fancy-title title-border">
+                <h4>Les plantes</h4>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur facilis cumque amet suscipit odio.</p>
+
+            <ul class="iconlist nobottommargin">
+                <li><i class="icon-caret-right"></i>Integer vitae libero ac risus egestas placerat.</li>
+                <li><i class="icon-caret-right"></i>Vestibulum commodo felis quis tortor.</li>
+                <li><i class="icon-caret-right"></i>Ut aliquam sollicitudin leo.</li>
+                <li><i class="icon-caret-right"></i>Cras iaculis ultricies nulla.</li>
+            </ul>
+        </div>
+
+        <div class="col_one_fourth nobottommargin">
+            <div class="fancy-title title-border">
+                <h4>Les caractéristiques</h4>
+            </div>
+
+            <ul class="iconlist nobottommargin">
+                <li><i class="icon-caret-right"></i>Vestibulum auctor dapibus neque.</li>
+                <li><i class="icon-caret-right"></i>Nunc dignissim risus id metus.</li>
+                <li><i class="icon-caret-right"></i>Cras ornare tristique elit.</li>
+            </ul>
+
+        </div>
+
+        <div class="col_half nobottommargin col_last">
+            <div class="fancy-title title-border">
+                <h4>Gallery</h4>
+            </div>
+
+            <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-giethoorn-the-netherlands-july-front-with-hydrangea-of-a-monumental-house-in-the-704087947.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-giethoorn-the-netherlands-july-front-with-hydrangea-of-a-monumental-house-in-the-704087947.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-granada-the-gardens-of-alhambra-palace-565964941.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-granada-the-gardens-of-alhambra-palace-565964941.jpg') }}" alt="Gallery Thumb 2" data-animate="zoomIn" data-delay="100"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-green-park-in-front-of-the-old-alcazaba-in-malaga-andalusia-spain-355491794.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-green-park-in-front-of-the-old-alcazaba-in-malaga-andalusia-spain-355491794.jpg') }}" alt="Gallery Thumb 3" data-animate="zoomIn" data-delay="200"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-hatfield-house-with-garden-hertfordshire-england-177372050.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-hatfield-house-with-garden-hertfordshire-england-177372050.jpg') }}" alt="Gallery Thumb 4" data-animate="zoomIn" data-delay="300"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-newport-ri-usa-august-visitors-look-over-a-formal-english-garden-at-a-monor-in-newport-701712916.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-newport-ri-usa-august-visitors-look-over-a-formal-english-garden-at-a-monor-in-newport-701712916.jpg') }}" alt="Gallery Thumb 5" data-animate="zoomIn" data-delay="400"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-oldway-mansion-paignton-154840616.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-oldway-mansion-paignton-154840616.jpg') }}" alt="Gallery Thumb 6" data-animate="zoomIn" data-delay="500"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-sibenik-croatia-may-the-appearance-of-the-garden-of-the-monastery-of-st-lawrence-of-659905804.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-sibenik-croatia-may-the-appearance-of-the-garden-of-the-monastery-of-st-lawrence-of-659905804.jpg') }}" alt="Gallery Thumb 7" data-animate="zoomIn" data-delay="600"></a>
+                <a href="{{ asset('media/hispano-mauresque/stock-photo-vienna-austria-botanical-gardens-of-the-university-of-vienna-235429411.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/hispano-mauresque/stock-photo-vienna-austria-botanical-gardens-of-the-university-of-vienna-235429411.jpg') }}" alt="Gallery Thumb 8" data-animate="zoomIn" data-delay="700"></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
