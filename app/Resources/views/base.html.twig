@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% include 'default/canvas-css.html.twig' %}
+    {% endblock %}
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+    {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+    {#<link rel="stylesheet" href="{{ asset("css/fabrique-jardins.css") }}" />#}
+
+    {#<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>#}
+    {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+    {#<script src="{{ asset("js/fabrique-jardin.js") }}"></script>#}
+
+</head>
+<body class="no-transition">
+
+    <!-- The Main Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Header
+        ============================================= -->
+        <header id="header">
+            {% block header %}
+                {% include 'default/header.html.twig' %}
+            {% endblock %}
+        </header>
+
+        <!-- Site Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    {% block content %}{% endblock %}
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+
+            <div class="container">
+
+                {% block footer %}
+                    {#{% include 'default/footer.html.twig' %}#}
+                {% endblock %}
+
+            </div>
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    {% block copyright %}
+                        {% include 'default/copyright.html.twig' %}
+                    {% endblock %}
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="{{ asset('js/canvas/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/canvas/plugins.js') }}"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="{{ asset('js/canvas/functions.js') }}"></script>
+</body>
+</html>
