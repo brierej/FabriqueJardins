@@ -20,9 +20,9 @@
                     <li><a href="#"><div>Accueil</div></a></li>
                     <li class="current"><a href="#"><div>Conception de jardins</div></a>
                         <ul>
-                            <li><a href="#"><div><i class="icon-stack"></i>Particuliers</div></a></li>
-                            <li><a href="#"><div><i class="icon-stack"></i>Professionnels</div></a></li>
-                            <li><a href="questionnaire-particuliers"><div><i class="icon-stack"></i>Questionnaire en ligne</div></a></li>
+                            <li><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}"><div><i class="icon-stack"></i>Particuliers</div></a></li>
+                            <li><a href="{{ path('form', {'form_type': 'questionnaire-professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>
+                            <li><a href="{{ path('form', {'form_type': 'questionaire-en-ligne'}) }}"><div><i class="icon-stack"></i>Questionnaire en ligne</div></a></li>
                         </ul>
                     </li>
                     <li class="mega-menu"><a href="#"><div>Le catalogue</div></a>
@@ -30,49 +30,48 @@
                             <ul class="mega-menu-column col-md-4">
                                 <li class="mega-menu-title"><a href="#"><div>Les ambiances</div></a>
                                     <ul>
-                                        <li><a href="jardin-hispano-mauresque"><div>Jardin hispano-mauresque</div></a></li>
-                                        <li><a href="about-2.html"><div>Jardin méditerranéen</div></a></li>
-                                        <li><a href="about-me.html"><div>Jardin oriental - zen</div></a></li>
-                                        <li><a href="team.html"><div>Jardin exotique</div></a></li>
-                                        <li><a href="jobs.html"><div>Jardin médiéval</div></a></li>
-                                        <li><a href="side-navigation.html"><div>Jardin anglais mixed-border romantique</div></a></li>
-                                        <li><a href="page-submenu.html"><div>Jardin contemporain-moderne</div></a></li>
-                                        <li><a href="sitemap.html"><div>Jardin à la française</div></a></li>
-                                        <li><a href="sitemap.html"><div>Jardin d'ombre</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-hispano-mauresque'}) }}"><div>Jardin hispano-mauresque</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-mediterraneen'}) }}"><div>Jardin méditerranéen</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-oriental-zen'}) }}"><div>Jardin oriental - zen</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-exotique'}) }}"><div>Jardin exotique</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-medieval'}) }}"><div>Jardin médiéval</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-anglais-mixed-border'}) }}"><div>Jardin anglais mixed-border romantique</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-contemporain-moderne'}) }}"><div>Jardin contemporain-moderne</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-a-la-francaise'}) }}"><div>Jardin à la française</div></a></li>
+                                        <li><a href="{{ path('ambiances', {'ambiance': 'jardin-d-ombre'}) }}"><div>Jardin d'ombre</div></a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="mega-menu-column col-md-4">
                                 <li class="mega-menu-title"><a href="#"><div>Les lieux</div></a>
                                     <ul>
-                                        <li><a href="services.html"><div>Balcon</div></a></li>
-                                        <li><a href="services-2.html"><div>Terrasse</div></a></li>
-                                        <li><a href="services-3.html"><div>Aménagement de piscine</div></a></li>
-                                        <li><a href="faqs.html"><div>Massif</div></a></li>
-                                        <li><a href="faqs-2.html"><div>Potager</div></a></li>
-                                        <li><a href="faqs-3.html"><div>Jardin en ville</div></a></li>
-                                        <li><a href="faqs-4.html"><div>Jardin de bourg</div></a></li>
-                                        <li><a href="maintenance.html"><div>Jardin de campagne</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'balcon'}) }}"><div>Balcon</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'terrasse'}) }}"><div>Terrasse</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'amenagement-de-piscine'}) }}"><div>Aménagement de piscine</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'massif'}) }}"><div>Massif</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'potager'}) }}"><div>Potager</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'jardin-en-ville'}) }}"><div>Jardin en ville</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'jardin-de-bourg'}) }}"><div>Jardin de bourg</div></a></li>
+                                        <li><a href="{{ path('lieux', {'place': 'jardin-de-campagne'}) }}"><div>Jardin de campagne</div></a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="mega-menu-column col-md-4">
                                 <li class="mega-menu-title"><a href="#"><div>La philosophie</div></a>
                                     <ul>
-                                        <li><a href="full-width.html"><div>Jardin conventionnel</div></a></li>
-                                        <li><a href="full-width-wide.html"><div>Jardin écologique</div></a></li>
-                                        <li><a href="right-sidebar.html"><div>Jardin de la récup</div></a></li>
-                                        <li><a href="left-sidebar.html"><div>Permaculture</div></a></li>
-                                        <li><a href="both-sidebar.html"><div>Permaculture</div></a></li>
-                                        <li><a href="both-right-sidebar.html"><div>Potager bio</div></a></li>
+                                        <li><a href="{{ path('philosophie', {'philosophy': 'jardin-conventionnel'}) }}"><div>Jardin conventionnel</div></a></li>
+                                        <li><a href="{{ path('philosophie', {'philosophy': 'jardin-ecologique'}) }}"><div>Jardin écologique</div></a></li>
+                                        <li><a href="{{ path('philosophie', {'philosophy': 'jardin-de-la-recup'}) }}"><div>Jardin de la récup</div></a></li>
+                                        <li><a href="{{ path('philosophie', {'philosophy': 'jardin-permaculture'}) }}"><div>Permaculture</div></a></li>
+                                        <li><a href="{{ path('philosophie', {'philosophy': 'jardin-potager-bio'}) }}"><div>Potager bio</div></a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="index.html"><div>Les tarifs</div></a></li>
-                    <li><a href="index.html"><div>Contacts</div></a></li>
-                    <li><a href="index.html"><div>Blog</div></a></li>
+                    <li><a href="#"><div>Les tarifs</div></a></li>
+                    <li><a href="#"><div>Contacts</div></a></li>
+                    <li><a href="#"><div>Blog</div></a></li>
 
                 </ul>
 

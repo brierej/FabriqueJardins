@@ -7,12 +7,12 @@
             <div class="col_half nobottommargin">
                 <div class="heading-block" style="padding-top: 40px;">
 
-                    <h2>Le jardin hispano-mauresque.</h2>
-                    <span>Duis mollis, est non commodo luctus. Donec sed odio dui</span>
+                    <h2>{{ datas['title'] }}</h2>
+                    <span> {{ datas['subtitle'] }}</span>
 
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, repudiandae, maxime, earum, sapiente assumenda non odit laborum qui vero vel quos sint excepturi in laudantium.</p>
+                <p>{{ datas['description'] }}</p>
 
             </div>
 
@@ -28,13 +28,12 @@
                 <h4>Les plantes</h4>
             </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur facilis cumque amet suscipit odio.</p>
+            <p>{{ datas['plants_description'] }}</p>
 
             <ul class="iconlist nobottommargin">
-                <li><i class="icon-caret-right"></i>Integer vitae libero ac risus egestas placerat.</li>
-                <li><i class="icon-caret-right"></i>Vestibulum commodo felis quis tortor.</li>
-                <li><i class="icon-caret-right"></i>Ut aliquam sollicitudin leo.</li>
-                <li><i class="icon-caret-right"></i>Cras iaculis ultricies nulla.</li>
+                {% for plant in datas['plants'] %}
+                    <li><i class="icon-caret-right"></i>{{ plant }}</li>
+                {% endfor %}
             </ul>
         </div>
 
@@ -44,9 +43,9 @@
             </div>
 
             <ul class="iconlist nobottommargin">
-                <li><i class="icon-caret-right"></i>Vestibulum auctor dapibus neque.</li>
-                <li><i class="icon-caret-right"></i>Nunc dignissim risus id metus.</li>
-                <li><i class="icon-caret-right"></i>Cras ornare tristique elit.</li>
+                {% for carac in datas['carac'] %}
+                    <li><i class="icon-caret-right"></i>{{ carac }}</li>
+                {% endfor %}
             </ul>
 
         </div>
