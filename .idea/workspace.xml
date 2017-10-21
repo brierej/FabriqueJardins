@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a02721-c3cb-4302-9554-6ceeaafcdf86" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,16 +25,6 @@
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conception-form.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/conception/conception-form.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,11 +105,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="1987" column="13" lean-forward="false" selection-start-line="1987" selection-start-column="13" selection-end-line="1987" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -142,6 +141,7 @@
       <find>&lt;/p&gt;</find>
       <find>icon</find>
       <find>icon-star3</find>
+      <find>header</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\FabriqueJardins\web</dir>
@@ -180,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/index.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
       </list>
     </option>
   </component>
@@ -575,19 +576,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\FabriqueJardins\web\css\admin" />
-      <recent name="C:\wamp64\www\FabriqueJardins\vendor" />
-      <recent name="C:\wamp64\www\FabriqueJardins\app\Resources\views\admin" />
-      <recent name="C:\wamp64\www\FabriqueJardins\web\js\canvas" />
-      <recent name="C:\wamp64\www\FabriqueJardins\web\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\FabriqueJardins\web\css\canvas" />
       <recent name="C:\wamp64\www\FabriqueJardins\app\Resources\views" />
       <recent name="C:\wamp64\www\FabriqueJardins\web\media\jardins" />
       <recent name="C:\wamp64\www\FabriqueJardins\web\media" />
       <recent name="C:\wamp64\www\FabriqueJardins\app\Resources\views\default" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\FabriqueJardins\web\css\admin" />
+      <recent name="C:\wamp64\www\FabriqueJardins\vendor" />
+      <recent name="C:\wamp64\www\FabriqueJardins\app\Resources\views\admin" />
+      <recent name="C:\wamp64\www\FabriqueJardins\web\js\canvas" />
+      <recent name="C:\wamp64\www\FabriqueJardins\web\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -662,12 +663,12 @@
       <workItem from="1507449518154" duration="21600000" />
       <workItem from="1507984123501" duration="18019000" />
       <workItem from="1508263704940" duration="8455000" />
-      <workItem from="1508573076002" duration="2084000" />
+      <workItem from="1508573076002" duration="2353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56829000" />
+    <option name="totallyTimeSpent" value="57098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -812,13 +813,6 @@
             <element signature="e#121#180#0#PHP" expanded="false" />
             <element signature="e#432#457#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1037,6 +1031,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="1987" column="13" lean-forward="false" selection-start-line="1987" selection-start-column="13" selection-end-line="1987" selection-end-column="13" />
           <folding />
         </state>
       </provider>
