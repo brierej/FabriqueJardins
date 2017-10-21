@@ -37,10 +37,6 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    paths:
-        "%kernel.root_dir%/../vendor/bootstrap": bootstrap
-        "%kernel.root_dir%/../vendor/datatables": datatables
-        "%kernel.root_dir%/../vendor/font-awesome": font-awesome
 
 # Doctrine Configuration
 doctrine:
