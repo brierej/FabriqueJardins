@@ -129,8 +129,8 @@ class CatalogController extends Controller
                 '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg'
             )
         );
-        $ambiances['jardin-anglais-mixedborder'] = array(
-            'code' => 'jardin-anglais-mixedborder',
+        $ambiances['jardin-anglais-mixed-border'] = array(
+            'code' => 'jardin-anglais-mixed-border',
             'title' => 'Jardin anglais mixed-border',
             'subtitle' => 'Duis mollis, est non commodo luctus. Donec sed odio dui',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, repudiandae, maxime, earum, sapiente assumenda non odit laborum qui vero vel quos sint excepturi in laudantium.',
