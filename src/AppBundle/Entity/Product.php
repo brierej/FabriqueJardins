@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="jardin")
  */
-class Jardin
+class Product
 {
     /**
      * @var
@@ -47,22 +47,6 @@ class Jardin
      * @ORM\Column(type="text")
      */
     private $description;
-
-    /**
-     * @var
-     * @ORM\Column(type="string", length=250)
-     */
-    private $image;
-
-    /**
-     * @var
-     * @ORM\Column(type="text")
-     */
-    private $plantsDescription;
-
-    private $plants = array();
-    private $caracs = array();
-    private $gallery = array();
 
     /**
      * @return mixed

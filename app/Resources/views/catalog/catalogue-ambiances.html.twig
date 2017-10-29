@@ -7,17 +7,17 @@
             <div class="col_half nobottommargin">
                 <div class="heading-block" style="padding-top: 40px;">
 
-                    <h2>{{ datas['title'] }}</h2>
-                    <span> {{ datas['subtitle'] }}</span>
+                    <h2>{{ datas.title }}</h2>
+                    <span> {{ datas.subtitle }}</span>
 
                 </div>
 
-                <p>{{ datas['description'] }}</p>
+                <p>{{ datas.description }}</p>
 
             </div>
 
             <div class="col_half bottommargin-sm center col_last">
-                <img src="{{ asset('media/' ~ datas['code'] ~ '/5.jpg') }}" alt="Image" data-animate="fadeInRight">
+                <img src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Image" data-animate="fadeInRight">
             </div>
         </div>
     </div>
@@ -28,12 +28,13 @@
                 <h4>Les plantes</h4>
             </div>
 
-            <p>{{ datas['plants_description'] }}</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur facilis cumque amet suscipit odio.</p>
 
             <ul class="iconlist nobottommargin">
-                {% for plant in datas['plants'] %}
-                    <li><i class="icon-caret-right"></i>{{ plant }}</li>
-                {% endfor %}
+                <li><i class="icon-caret-right"></i>Integer vitae libero ac risus egestas placerat.</li>
+                <li><i class="icon-caret-right"></i>Vestibulum commodo felis quis tortor.</li>
+                <li><i class="icon-caret-right"></i>Ut aliquam sollicitudin leo.</li>
+                <li><i class="icon-caret-right"></i>Cras iaculis ultricies nulla.</li>
             </ul>
         </div>
 
@@ -43,9 +44,9 @@
             </div>
 
             <ul class="iconlist nobottommargin">
-                {% for carac in datas['carac'] %}
-                    <li><i class="icon-caret-right"></i>{{ carac }}</li>
-                {% endfor %}
+                <li><i class="icon-caret-right"></i>Vestibulum auctor dapibus neque.</li>
+                <li><i class="icon-caret-right"></i>Nunc dignissim risus id metus.</li>
+                <li><i class="icon-caret-right"></i>Cras ornare tristique elit.</li>
             </ul>
 
         </div>
@@ -56,22 +57,22 @@
             </div>
 
             <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/1.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/1.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/2.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/2.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/3.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/3.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/4.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/4.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/5.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/5.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/6.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/6.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/7.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/7.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas['code'] ~ '/8.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas['code'] ~ '/8.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+                <a href="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
             </div>
         </div>
     </div>

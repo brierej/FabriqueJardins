@@ -28,7 +28,7 @@
                     <li class="mega-menu"><a href="#"><div>Le catalogue</div></a>
                         <div class="mega-menu-content style-2 clearfix">
                             <ul class="mega-menu-column col-md-4">
-                                <li class="mega-menu-title"><a href="#"><div>Les ambiances</div></a>
+                                <li class="mega-menu-title"><a href="{{ path('catalogue_type', {'catalogueType': 'jardins' }) }}"><div>Les ambiances</div></a>
                                     <ul>
                                         <li><a href="{{ path('ambiances', {'ambiance': 'jardin-hispano-mauresque'}) }}"><div>Jardin hispano-mauresque</div></a></li>
                                         <li><a href="{{ path('ambiances', {'ambiance': 'jardin-mediterraneen'}) }}"><div>Jardin méditerranéen</div></a></li>
