@@ -8,8 +8,12 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <a href="#" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-                <a href="#" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+                <a href="#" class="{{ asset('media/logo.png') }}" data-dark-logo="images/logo.png">
+                    <img src="{{ asset('media/logo.png') }}" alt="Canvas Logo">
+                </a>
+                <a href="#" class="retina-logo" data-dark-logo="{{ asset('media/logo.png') }}">
+                    <img src="{{ asset('media/logo.png') }}" alt="Canvas Logo">
+                </a>
             </div><!-- #logo end -->
 
             <!-- Primary Navigation
@@ -22,7 +26,6 @@
                         <ul>
                             <li><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}"><div><i class="icon-stack"></i>Particuliers</div></a></li>
                             <li><a href="{{ path('form', {'form_type': 'questionnaire-professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>
-                            <li><a href="{{ path('form', {'form_type': 'questionaire-en-ligne'}) }}"><div><i class="icon-stack"></i>Questionnaire en ligne</div></a></li>
                         </ul>
                     </li>
                     <li class="mega-menu"><a href="#"><div>Le catalogue</div></a>
@@ -70,7 +73,7 @@
                         </div>
                     </li>
                     <li><a href="#"><div>Les tarifs</div></a></li>
-                    <li><a href="#"><div>Contacts</div></a></li>
+                    <li><a href="{{ path('contact') }}"><div>Contact</div></a></li>
                     <li><a href="#"><div>Blog</div></a></li>
 
                 </ul>

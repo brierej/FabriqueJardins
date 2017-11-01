@@ -70,21 +70,7 @@ class CatalogController extends Controller
         return new Response('Product saved with id '.$product->getId());
     }
 
-    /**
-     * @return Response
-     * @Route("/admin/listProducts", name="listProducts")
-     */
-    public function listProductsAction()
-    {
-        $repository = $this->getDoctrine()->getRepository(Product::class);
 
-        $products = $repository->findAll();
-
-        return $this->render('admin/list-products.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            'datas' => $products,
-        ]);
-    }
 
     /**
      * @return Response

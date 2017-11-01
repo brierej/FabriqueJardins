@@ -1,3 +1,5 @@
+{% extends 'admin/base.html.twig' %}
+
 {% block content %}
 <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -38,7 +40,7 @@
                         <td>{{ product.description }}</td>
                         <td>
                             <i class="fa fa-trash"></i><span>Supprimer</span>
-                            <i class="fa fa-pencil"></i><span>Modifier</span>
+                            <i class="fa fa-pencil"></i><a href="{{ path('edit_product', {'productId': product.id}) }}">Modifier</a>
                         </td>
                     </tr>
                     {% endfor %}

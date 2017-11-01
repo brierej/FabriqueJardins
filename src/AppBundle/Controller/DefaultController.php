@@ -22,10 +22,32 @@ class DefaultController extends Controller
     /**
      * @Route("/questionnaire-particuliers", name="questionnaire-particuliers")
      */
-    public function formAction(Request $request)
+    public function formParAction(Request $request)
     {
         // replace this example code with whatever you need
         return $this->render('forms/form-particuliers.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/questionnaire-professionnel", name="questionnaire-particuliers")
+     */
+    public function formProAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('forms/form-particuliers.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('forms/contact.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
