@@ -1,5 +1,5 @@
 {% block header %}
-    <div id="header-wrap">
+    <div id="header-wrap" style="height: 100px; border: 1px solid slategrey; background-color: #465a7b">
 
         <div class="container clearfix">
 
@@ -21,8 +21,8 @@
             <nav id="primary-menu" class="style-2">
 
                 <ul>
-                    <li><a href="#"><div>Accueil</div></a></li>
-                    <li class="current"><a href="#"><div>Conception de jardins</div></a>
+                    <li><a href="{{ path('homepage') }}"><div>Accueil</div></a></li>
+                    <li><a href="#"><div>Conception de jardins</div></a>
                         <ul>
                             <li><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}"><div><i class="icon-stack"></i>Particuliers</div></a></li>
                             <li><a href="{{ path('form', {'form_type': 'questionnaire-professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>

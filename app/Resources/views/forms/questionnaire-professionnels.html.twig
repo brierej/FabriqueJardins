@@ -1,30 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    <div class="container clearfix">
+        <h2 class="center">Formulaire pour les particuliers</h2>
+        <div class="row clearfix">
 
-    <div class="row clearfix">
+            <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
 
-        <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
-
-            <div class="col-md-6">
-                {% include 'forms/form-coordonnees.html.twig' %}
-            </div>
-            <div class="col-md-6">
-                {% include 'forms/form-jardin-initial.html.twig' %}
-            </div>
-            <div class="col-md-6">
-                {% include 'forms/form-envies.html.twig' %}
-            </div>
-            <div class="col-md-6">
-                {% include 'forms/form-elements.html.twig' %}
-            </div>
-            <div class="col-md-6">
-                {% include 'forms/form-utilisation-jardin.html.twig' %}
-            </div>
-        </form>
+                <div class="col-md-6">
+                    {% include 'forms/form-coordonnees.html.twig' %}
+                </div>
+                <div class="col-md-6">
+                    {% include 'forms/form-jardin-initial.html.twig' %}
+                </div>
+                <div class="col-md-6">
+                    {% include 'forms/form-envies.html.twig' %}
+                </div>
+                <div class="col-md-6">
+                    {% include 'forms/form-elements.html.twig' %}
+                </div>
+                <div class="col-md-6">
+                    {% include 'forms/form-utilisation-jardin.html.twig' %}
+                </div>
+            </form>
+        </div>
+        <div class="clear bottommargin"></div>
+        </div>
     </div>
-    <div class="clear bottommargin"></div>
-    </div>
-
 
 {% endblock %}
