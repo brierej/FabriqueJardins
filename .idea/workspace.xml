@@ -2,61 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a02721-c3cb-4302-9554-6ceeaafcdf86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/media/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/admin/forms/edit-product.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/form-theme.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/contact.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form-coordonnees.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form-elements.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form-envies.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form-jardin-initial.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form-utilisation-jardin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/logo.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/default/hp-slider.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/list-products.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/list-products.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/canvas-css.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/canvas-css.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/header.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/forms/questionnaire-particuliers.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/forms/questionnaire-particuliers.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/forms/questionnaire-professionnels.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/forms/questionnaire-professionnels.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CatalogController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CatalogController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/colors-rtl.css" afterPath="$PROJECT_DIR$/web/css/canvas/colors-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/colors-rtl.php" afterPath="$PROJECT_DIR$/web/css/canvas/colors-rtl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/colors.php" afterPath="$PROJECT_DIR$/web/css/canvas/colors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/components/bs-rating.css" afterPath="$PROJECT_DIR$/web/css/canvas/components/bs-rating.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/components/bs-switches.css" afterPath="$PROJECT_DIR$/web/css/canvas/components/bs-switches.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/components/ion.rangeslider.css" afterPath="$PROJECT_DIR$/web/css/canvas/components/ion.rangeslider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/components/radio-checkbox.css" afterPath="$PROJECT_DIR$/web/css/canvas/components/radio-checkbox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/dark-rtl.css" afterPath="$PROJECT_DIR$/web/css/canvas/dark-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/dark.css" afterPath="$PROJECT_DIR$/web/css/canvas/dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/font-icons.css" afterPath="$PROJECT_DIR$/web/css/canvas/font-icons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/blog.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/blog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/extras.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/extras.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/header.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/helpers.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/helpers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/pagetitle.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/pagetitle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/portfolio.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/portfolio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shop.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shop.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/buttons.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/carousel.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/carousel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/counter-skills.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/counter-skills.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/faqs.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/faqs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/feature-box.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/feature-box.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/headings.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/headings.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/misc.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/misc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/pricing.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/pricing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/process-steps.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/process-steps.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/promo.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/promo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/styled-icons.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/styled-icons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/tabs.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/tabs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/team.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/team.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/testimonials.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/shortcodes/testimonials.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/topbar.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/topbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/typography.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/typography.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/imports/widgets.css" afterPath="$PROJECT_DIR$/web/css/canvas/imports/widgets.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/canvas/responsive.css" afterPath="$PROJECT_DIR$/web/css/canvas/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,101 +23,92 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pricing.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/pricing.css">
+      <file leaf-file-name="CatalogController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CatalogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="145" column="12" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+            <state relative-caret-position="17">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process-steps.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/process-steps.css">
+      <file leaf-file-name="header.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+            <state relative-caret-position="425">
+              <caret line="31" column="90" lean-forward="false" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="90" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#119#236#0#HTML" expanded="true" />
+                <element signature="e#301#346#0#HTML" expanded="true" />
+                <element signature="e#411#436#0#HTML" expanded="true" />
+                <element signature="e#482#501#0#HTML" expanded="true" />
+                <element signature="e#549#583#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-theme.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/form-theme.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/promo.css">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="122" column="39" lean-forward="false" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+            <state relative-caret-position="442">
+              <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hp-slider.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hp-slider.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styled-icons.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/styled-icons.css">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="86" column="23" lean-forward="false" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+            <state relative-caret-position="476">
+              <caret line="1178" column="14" lean-forward="false" selection-start-line="1178" selection-start-column="14" selection-end-line="1178" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabs.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/tabs.css">
+      <file leaf-file-name="canvas-css.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/canvas-css.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/team.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testimonials.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/testimonials.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topbar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/topbar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="typography.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/typography.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgets.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/widgets.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+            <state relative-caret-position="119">
+              <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -210,11 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/admin/forms/edit-product.html.twig" />
-        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/form-theme.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/forms/form-jardin-initial.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/forms/form-coordonnees.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/forms/form-envies.html.twig" />
@@ -224,9 +161,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/forms/questionnaire-professionnels.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/forms/contact.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/header.html.twig" />
         <option value="$PROJECT_DIR$/web/css/canvas/components/ion.rangeslider.css" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/css/canvas/colors-rtl.css" />
         <option value="$PROJECT_DIR$/web/css/canvas/dark-rtl.css" />
         <option value="$PROJECT_DIR$/web/css/canvas/dark.css" />
@@ -261,6 +196,13 @@
         <option value="$PROJECT_DIR$/web/css/canvas/imports/topbar.css" />
         <option value="$PROJECT_DIR$/web/css/canvas/imports/typography.css" />
         <option value="$PROJECT_DIR$/web/css/canvas/imports/widgets.css" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CatalogController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/canvas-css.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/hp-slider.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/header.html.twig" />
       </list>
     </option>
   </component>
@@ -272,8 +214,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="814" />
+    <option name="x" value="477" />
+    <option name="y" value="2" />
+    <option name="width" value="1447" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -291,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -301,6 +245,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FabriqueJardins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FabriqueJardins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FabriqueJardins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FabriqueJardins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FabriqueJardins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,7 +556,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -682,22 +657,22 @@
       <workItem from="1508573076002" duration="2947000" />
       <workItem from="1508664431403" duration="11002000" />
       <workItem from="1508955530399" duration="7354000" />
-      <workItem from="1509525320677" duration="17774000" />
+      <workItem from="1509525320677" duration="18918000" />
+      <workItem from="1509876754311" duration="8448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93822000" />
+    <option name="totallyTimeSpent" value="103414000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="814" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="477" y="2" width="1447" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49122807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2739343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3340448" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -708,6 +683,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3340448" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -723,61 +699,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/conception/conception-particuliers.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/conception/conception-pro.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/conception/conception-form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/forms/product.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form-jardin-initial.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form-utilisation-jardin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/questionnaire-professionnels.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="33" column="120" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,7 +725,7 @@
         <state relative-caret-position="424">
           <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
-            <element signature="e#1600#1625#0#PHP" expanded="true" />
+            <element signature="e#1600#1625#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -813,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1598">
           <caret line="94" column="45" lean-forward="false" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,7 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,50 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="66" column="63" lean-forward="false" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding>
-            <element signature="e#1122#1126#0#Twig" expanded="false" />
-            <element signature="e#1287#1291#0#Twig" expanded="false" />
-            <element signature="e#1762#1776#0#Twig" expanded="false" />
-            <element signature="e#1946#1955#0#Twig" expanded="false" />
-            <element signature="e#2111#2120#0#Twig" expanded="false" />
-            <element signature="e#2268#2277#0#Twig" expanded="false" />
-            <element signature="e#2425#2434#0#Twig" expanded="false" />
-            <element signature="e#2572#2581#0#Twig" expanded="false" />
-            <element signature="e#2719#2728#0#Twig" expanded="false" />
-            <element signature="e#2901#2910#0#Twig" expanded="false" />
-            <element signature="e#3072#3081#0#Twig" expanded="false" />
-            <element signature="e#3231#3240#0#Twig" expanded="false" />
-            <element signature="e#3695#3700#0#Twig" expanded="false" />
-            <element signature="e#3817#3822#0#Twig" expanded="false" />
-            <element signature="e#3943#3948#0#Twig" expanded="false" />
-            <element signature="e#4097#4102#0#Twig" expanded="false" />
-            <element signature="e#4219#4224#0#Twig" expanded="false" />
-            <element signature="e#4343#4348#0#Twig" expanded="false" />
-            <element signature="e#4483#4488#0#Twig" expanded="false" />
-            <element signature="e#4623#4628#0#Twig" expanded="false" />
-            <element signature="e#5093#5104#0#Twig" expanded="false" />
-            <element signature="e#5254#5265#0#Twig" expanded="false" />
-            <element signature="e#5409#5420#0#Twig" expanded="false" />
-            <element signature="e#5566#5577#0#Twig" expanded="false" />
-            <element signature="e#5718#5729#0#Twig" expanded="false" />
-            <marker date="1509572905520" expanded="true" signature="0:6300" ph="{% block header ...%}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -884,103 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="382" column="49" lean-forward="false" selection-start-line="382" selection-start-column="49" selection-end-line="382" selection-end-column="49" />
-          <caret line="384" column="23" lean-forward="false" selection-start-line="384" selection-start-column="23" selection-end-line="384" selection-end-column="23" />
-          <caret line="386" column="37" lean-forward="false" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
-          <caret line="799" column="33" lean-forward="false" selection-start-line="799" selection-start-column="33" selection-end-line="799" selection-end-column="33" />
-          <caret line="1160" column="48" lean-forward="false" selection-start-line="1160" selection-start-column="48" selection-end-line="1160" selection-end-column="48" />
-          <caret line="1175" column="33" lean-forward="false" selection-start-line="1175" selection-start-column="33" selection-end-line="1175" selection-end-column="33" />
-          <caret line="1222" column="18" lean-forward="false" selection-start-line="1222" selection-start-column="18" selection-end-line="1222" selection-end-column="18" />
-          <caret line="1310" column="114" lean-forward="false" selection-start-line="1310" selection-start-column="114" selection-end-line="1310" selection-end-column="114" />
-          <caret line="1392" column="29" lean-forward="false" selection-start-line="1392" selection-start-column="29" selection-end-line="1392" selection-end-column="29" />
-          <caret line="1408" column="67" lean-forward="false" selection-start-line="1408" selection-start-column="67" selection-end-line="1408" selection-end-column="67" />
-          <caret line="1452" column="33" lean-forward="false" selection-start-line="1452" selection-start-column="33" selection-end-line="1452" selection-end-column="33" />
-          <caret line="1501" column="29" lean-forward="false" selection-start-line="1501" selection-start-column="29" selection-end-line="1501" selection-end-column="29" />
-          <caret line="1729" column="36" lean-forward="false" selection-start-line="1729" selection-start-column="36" selection-end-line="1729" selection-end-column="36" />
-          <caret line="1814" column="29" lean-forward="false" selection-start-line="1814" selection-start-column="29" selection-end-line="1814" selection-end-column="29" />
-          <caret line="1826" column="33" lean-forward="false" selection-start-line="1826" selection-start-column="33" selection-end-line="1826" selection-end-column="33" />
-          <caret line="1891" column="50" lean-forward="false" selection-start-line="1891" selection-start-column="50" selection-end-line="1891" selection-end-column="50" />
-          <caret line="1907" column="44" lean-forward="false" selection-start-line="1907" selection-start-column="44" selection-end-line="1907" selection-end-column="44" />
-          <caret line="1932" column="18" lean-forward="false" selection-start-line="1932" selection-start-column="18" selection-end-line="1932" selection-end-column="18" />
-          <caret line="2164" column="29" lean-forward="false" selection-start-line="2164" selection-start-column="29" selection-end-line="2164" selection-end-column="29" />
-          <caret line="2258" column="29" lean-forward="false" selection-start-line="2258" selection-start-column="29" selection-end-line="2258" selection-end-column="29" />
-          <caret line="2332" column="69" lean-forward="false" selection-start-line="2332" selection-start-column="69" selection-end-line="2332" selection-end-column="69" />
-          <caret line="2339" column="33" lean-forward="false" selection-start-line="2339" selection-start-column="33" selection-end-line="2339" selection-end-column="33" />
-          <caret line="2366" column="38" lean-forward="false" selection-start-line="2366" selection-start-column="38" selection-end-line="2366" selection-end-column="38" />
-          <caret line="3368" column="36" lean-forward="false" selection-start-line="3368" selection-start-column="36" selection-end-line="3368" selection-end-column="36" />
-          <caret line="3573" column="45" lean-forward="false" selection-start-line="3573" selection-start-column="45" selection-end-line="3573" selection-end-column="45" />
-          <caret line="3577" column="29" lean-forward="false" selection-start-line="3577" selection-start-column="29" selection-end-line="3577" selection-end-column="29" />
-          <caret line="3629" column="18" lean-forward="false" selection-start-line="3629" selection-start-column="18" selection-end-line="3629" selection-end-column="18" />
-          <caret line="3630" column="25" lean-forward="false" selection-start-line="3630" selection-start-column="25" selection-end-line="3630" selection-end-column="25" />
-          <caret line="3669" column="29" lean-forward="false" selection-start-line="3669" selection-start-column="29" selection-end-line="3669" selection-end-column="29" />
-          <caret line="3704" column="29" lean-forward="false" selection-start-line="3704" selection-start-column="29" selection-end-line="3704" selection-end-column="29" />
-          <caret line="3771" column="43" lean-forward="false" selection-start-line="3771" selection-start-column="43" selection-end-line="3771" selection-end-column="43" />
-          <caret line="4572" column="18" lean-forward="false" selection-start-line="4572" selection-start-column="18" selection-end-line="4572" selection-end-column="18" />
-          <caret line="4883" column="46" lean-forward="false" selection-start-line="4883" selection-start-column="46" selection-end-line="4883" selection-end-column="46" />
-          <caret line="4958" column="40" lean-forward="false" selection-start-line="4958" selection-start-column="40" selection-end-line="4958" selection-end-column="40" />
-          <caret line="4993" column="39" lean-forward="false" selection-start-line="4993" selection-start-column="39" selection-end-line="4993" selection-end-column="39" />
-          <caret line="5036" column="29" lean-forward="false" selection-start-line="5036" selection-start-column="29" selection-end-line="5036" selection-end-column="29" />
-          <caret line="5319" column="25" lean-forward="false" selection-start-line="5319" selection-start-column="25" selection-end-line="5319" selection-end-column="25" />
-          <caret line="5320" column="18" lean-forward="false" selection-start-line="5320" selection-start-column="18" selection-end-line="5320" selection-end-column="18" />
-          <caret line="5381" column="47" lean-forward="false" selection-start-line="5381" selection-start-column="47" selection-end-line="5381" selection-end-column="47" />
-          <caret line="5397" column="36" lean-forward="false" selection-start-line="5397" selection-start-column="36" selection-end-line="5397" selection-end-column="36" />
-          <caret line="5485" column="47" lean-forward="false" selection-start-line="5485" selection-start-column="47" selection-end-line="5485" selection-end-column="47" />
-          <caret line="5661" column="57" lean-forward="false" selection-start-line="5661" selection-start-column="57" selection-end-line="5661" selection-end-column="57" />
-          <caret line="5907" column="58" lean-forward="false" selection-start-line="5907" selection-start-column="58" selection-end-line="5907" selection-end-column="58" />
-          <caret line="5924" column="18" lean-forward="false" selection-start-line="5924" selection-start-column="18" selection-end-line="5924" selection-end-column="18" />
-          <caret line="5984" column="29" lean-forward="false" selection-start-line="5984" selection-start-column="29" selection-end-line="5984" selection-end-column="29" />
-          <caret line="6121" column="18" lean-forward="false" selection-start-line="6121" selection-start-column="18" selection-end-line="6121" selection-end-column="18" />
-          <caret line="6265" column="57" lean-forward="false" selection-start-line="6265" selection-start-column="57" selection-end-line="6265" selection-end-column="57" />
-          <caret line="6612" column="29" lean-forward="false" selection-start-line="6612" selection-start-column="29" selection-end-line="6612" selection-end-column="29" />
-          <caret line="6641" column="53" lean-forward="false" selection-start-line="6641" selection-start-column="53" selection-end-line="6641" selection-end-column="53" />
-          <caret line="6799" column="29" lean-forward="false" selection-start-line="6799" selection-start-column="29" selection-end-line="6799" selection-end-column="29" />
-          <caret line="7351" column="45" lean-forward="false" selection-start-line="7351" selection-start-column="45" selection-end-line="7351" selection-end-column="45" />
-          <caret line="7506" column="29" lean-forward="false" selection-start-line="7506" selection-start-column="29" selection-end-line="7506" selection-end-column="29" />
-          <caret line="7553" column="29" lean-forward="false" selection-start-line="7553" selection-start-column="29" selection-end-line="7553" selection-end-column="29" />
-          <caret line="7621" column="29" lean-forward="false" selection-start-line="7621" selection-start-column="29" selection-end-line="7621" selection-end-column="29" />
-          <caret line="7629" column="18" lean-forward="false" selection-start-line="7629" selection-start-column="18" selection-end-line="7629" selection-end-column="18" />
-          <caret line="7669" column="18" lean-forward="false" selection-start-line="7669" selection-start-column="18" selection-end-line="7669" selection-end-column="18" />
-          <caret line="7948" column="73" lean-forward="false" selection-start-line="7948" selection-start-column="73" selection-end-line="7948" selection-end-column="73" />
-          <caret line="7951" column="69" lean-forward="false" selection-start-line="7951" selection-start-column="69" selection-end-line="7951" selection-end-column="69" />
-          <caret line="8003" column="85" lean-forward="false" selection-start-line="8003" selection-start-column="85" selection-end-line="8003" selection-end-column="85" />
-          <caret line="8005" column="81" lean-forward="false" selection-start-line="8005" selection-start-column="81" selection-end-line="8005" selection-end-column="81" />
-          <caret line="8125" column="18" lean-forward="false" selection-start-line="8125" selection-start-column="18" selection-end-line="8125" selection-end-column="18" />
-          <caret line="8130" column="29" lean-forward="false" selection-start-line="8130" selection-start-column="29" selection-end-line="8130" selection-end-column="29" />
-          <caret line="8133" column="25" lean-forward="false" selection-start-line="8133" selection-start-column="25" selection-end-line="8133" selection-end-column="25" />
-          <caret line="8323" column="29" lean-forward="false" selection-start-line="8323" selection-start-column="29" selection-end-line="8323" selection-end-column="29" />
-          <caret line="9199" column="33" lean-forward="false" selection-start-line="9199" selection-start-column="33" selection-end-line="9199" selection-end-column="33" />
-          <caret line="9219" column="36" lean-forward="false" selection-start-line="9219" selection-start-column="36" selection-end-line="9219" selection-end-column="36" />
-          <caret line="9252" column="29" lean-forward="false" selection-start-line="9252" selection-start-column="29" selection-end-line="9252" selection-end-column="29" />
-          <caret line="9290" column="18" lean-forward="false" selection-start-line="9290" selection-start-column="18" selection-end-line="9290" selection-end-column="18" />
-          <caret line="9478" column="29" lean-forward="false" selection-start-line="9478" selection-start-column="29" selection-end-line="9478" selection-end-column="29" />
-          <caret line="9543" column="36" lean-forward="false" selection-start-line="9543" selection-start-column="36" selection-end-line="9543" selection-end-column="36" />
-          <caret line="9807" column="29" lean-forward="false" selection-start-line="9807" selection-start-column="29" selection-end-line="9807" selection-end-column="29" />
-          <caret line="9881" column="18" lean-forward="false" selection-start-line="9881" selection-start-column="18" selection-end-line="9881" selection-end-column="18" />
-          <caret line="10107" column="18" lean-forward="false" selection-start-line="10107" selection-start-column="18" selection-end-line="10107" selection-end-column="18" />
-          <caret line="10341" column="29" lean-forward="false" selection-start-line="10341" selection-start-column="29" selection-end-line="10341" selection-end-column="29" />
-          <caret line="10753" column="29" lean-forward="false" selection-start-line="10753" selection-start-column="29" selection-end-line="10753" selection-end-column="29" />
-          <caret line="10778" column="29" lean-forward="false" selection-start-line="10778" selection-start-column="29" selection-end-line="10778" selection-end-column="29" />
-          <caret line="11113" column="34" lean-forward="false" selection-start-line="11113" selection-start-column="34" selection-end-line="11113" selection-end-column="34" />
-          <caret line="11120" column="35" lean-forward="false" selection-start-line="11120" selection-start-column="35" selection-end-line="11120" selection-end-column="35" />
-          <caret line="11229" column="57" lean-forward="false" selection-start-line="11229" selection-start-column="57" selection-end-line="11229" selection-end-column="57" />
-          <caret line="11292" column="33" lean-forward="false" selection-start-line="11292" selection-start-column="33" selection-end-line="11292" selection-end-column="33" />
-          <caret line="11337" column="36" lean-forward="false" selection-start-line="11337" selection-start-column="36" selection-end-line="11337" selection-end-column="36" />
-          <caret line="11583" column="42" lean-forward="false" selection-start-line="11583" selection-start-column="42" selection-end-line="11583" selection-end-column="42" />
-          <caret line="12091" column="25" lean-forward="false" selection-start-line="12091" selection-start-column="25" selection-end-line="12091" selection-end-column="25" />
-          <caret line="12092" column="18" lean-forward="false" selection-start-line="12092" selection-start-column="18" selection-end-line="12092" selection-end-column="18" />
-          <caret line="12359" column="29" lean-forward="false" selection-start-line="12359" selection-start-column="29" selection-end-line="12359" selection-end-column="29" />
-          <caret line="12413" column="40" lean-forward="false" selection-start-line="12413" selection-start-column="40" selection-end-line="12413" selection-end-column="40" />
-          <caret line="12498" column="46" lean-forward="false" selection-start-line="12498" selection-start-column="46" selection-end-line="12498" selection-end-column="46" />
-          <caret line="12539" column="29" lean-forward="false" selection-start-line="12539" selection-start-column="29" selection-end-line="12539" selection-end-column="29" />
-          <caret line="12540" column="25" lean-forward="false" selection-start-line="12540" selection-start-column="25" selection-end-line="12540" selection-end-column="25" />
-          <caret line="12545" column="60" lean-forward="false" selection-start-line="12545" selection-start-column="60" selection-end-line="12545" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/colors-rtl.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -988,7 +766,6 @@
           <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <caret line="18" column="79" lean-forward="false" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
           <caret line="23" column="91" lean-forward="false" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,7 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/promo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="2074">
           <caret line="122" column="39" lean-forward="false" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
           <folding />
         </state>
@@ -1202,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/styled-icons.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="1462">
           <caret line="86" column="23" lean-forward="false" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
           <folding />
         </state>
@@ -1210,7 +985,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/tabs.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="1343">
           <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
           <folding />
         </state>
@@ -1218,7 +993,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/team.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="935">
           <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
           <folding />
         </state>
@@ -1226,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/shortcodes/testimonials.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="3196">
           <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
           <folding />
         </state>
@@ -1234,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/topbar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="1445">
           <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
           <folding />
         </state>
@@ -1242,7 +1017,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/typography.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="340">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding />
         </state>
@@ -1250,9 +1025,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/canvas/imports/widgets.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="1122">
           <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/catalog/portfolio.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/canvas-css.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/form-theme.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hp-slider.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="1178" column="14" lean-forward="false" selection-start-line="1178" selection-start-column="14" selection-end-line="1178" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#119#236#0#HTML" expanded="true" />
+            <element signature="e#301#346#0#HTML" expanded="true" />
+            <element signature="e#411#436#0#HTML" expanded="true" />
+            <element signature="e#482#501#0#HTML" expanded="true" />
+            <element signature="e#549#583#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="90" lean-forward="false" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -24,23 +24,23 @@
 
         <!-- Header
         ============================================= -->
-        <header id="header">
+        <header id="header full-header">
             {% block header %}
                 {% include 'default/header.html.twig' %}
             {% endblock %}
         </header>
 
+        <div class="clear"></div>
+
         <!-- Site Content
         ============================================= -->
         <section id="content">
 
-            <div class="content-wrap">
+            <div class="content-wrap" style="padding: 0px">
 
-                <div class="container clearfix">
+                    {% block content %}
 
-                    {% block content %}{% endblock %}
-
-                </div>
+                    {% endblock %}
 
             </div>
 
