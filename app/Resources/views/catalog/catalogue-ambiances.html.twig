@@ -2,79 +2,111 @@
 
 {% block content %}
 
-    <div class="section nobg notopmargin noborder bottommargin-sm">
-        <div class="container clearfix">
-            <div class="col_half nobottommargin">
+<!--    <div class="section nobg notopmargin noborder bottommargin-sm">-->
+        <div class="container-fluid clearfix">
+            <div class="col_full">
                 <div class="heading-block" style="padding-top: 40px;">
 
                     <h2>{{ datas.title }}</h2>
                     <span> {{ datas.subtitle }}</span>
 
                 </div>
-
-                <p>{{ datas.description }}</p>
-
             </div>
+            <div class="col_full">
+                <div class="col_half nobottommargin">
 
-            <div class="col_half bottommargin-sm center col_last">
-                <img src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Image" data-animate="fadeInRight">
+
+                    <p style="text-align: justify">{{ datas.description }}</p>
+
+                    <p><strong>Origine&nbsp;:&nbsp;</strong>{{ datas.origins }}</p>
+                    <p><strong>Influence et similitudes&nbsp;:&nbsp;</strong>{{ datas.influences }}</p>
+                </div>
+
+                <div class="col_half bottommargin-sm center col_last">
+                    <img src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Image" data-animate="fadeInRight">
+                </div>
             </div>
+        </div>
+<!--    </div> -->
+
+    <div class="container-fluid clearfix">
+        {% if datas.showFeaturesList() %}
+        <div class="col_one_fourth nobottommargin">
+            <div class="fancy-title title-border">
+                <h4><i class="material-icons">style</i>Caractéristiques - le tracé</h4>
+            </div>
+            <ul class="iconlist nobottommargin">
+                {% for feature in datas.showFeaturesList() %}
+                    <li><i class="icon-caret-right"></i>{{ feature }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+            {% endif %}
+
+        {% if datas.showMaterialsList() %}
+        <div class="col_one_fourth nobottommargin">
+            <div class="fancy-title title-border">
+                <h4><i class="material-icons">polymer</i>Les matériaux</h4>
+            </div>
+            <ul class="iconlist nobottommargin">
+                {% for material in datas.showMaterialsList() %}
+                    <li><i class="icon-caret-right"></i>{{ material }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if datas.showDecorationsList() %}
+        <div class="col_one_fourth nobottommargin">
+            <div class="fancy-title title-border">
+                <h4><i class="material-icons">account_balance</i>Les éléments décoratifs</h4>
+            </div>
+            <ul class="iconlist nobottommargin">
+                {% for decoration in datas.showDecorationsList() %}
+                    <li><i class="icon-caret-right"></i>{{ decoration }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if datas.showPlantsList() %}
+        <div class="col_one_fourth nobottommargin col_last">
+            <div class="fancy-title title-border">
+                <h4><i class="material-icons">local_florist</i>Les végétaux</h4>
+            </div>
+            <ul class="iconlist nobottommargin">
+                {% for plant in datas.showPlantsList() %}
+                    <li><i class="icon-caret-right"></i>{{ plant }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="col_full nobottommargin">
+        <div class="fancy-title title-border">
+            <h4>Gallery</h4>
+        </div>
+
+        <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
+            <a href="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
         </div>
     </div>
 
-    <div class="container clearfix">
-        <div class="col_one_fourth nobottommargin">
-            <div class="fancy-title title-border">
-                <h4>Les plantes</h4>
-            </div>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur facilis cumque amet suscipit odio.</p>
-
-            <ul class="iconlist nobottommargin">
-                <li><i class="icon-caret-right"></i>Integer vitae libero ac risus egestas placerat.</li>
-                <li><i class="icon-caret-right"></i>Vestibulum commodo felis quis tortor.</li>
-                <li><i class="icon-caret-right"></i>Ut aliquam sollicitudin leo.</li>
-                <li><i class="icon-caret-right"></i>Cras iaculis ultricies nulla.</li>
-            </ul>
-        </div>
-
-        <div class="col_one_fourth nobottommargin">
-            <div class="fancy-title title-border">
-                <h4>Les caractéristiques</h4>
-            </div>
-
-            <ul class="iconlist nobottommargin">
-                <li><i class="icon-caret-right"></i>Vestibulum auctor dapibus neque.</li>
-                <li><i class="icon-caret-right"></i>Nunc dignissim risus id metus.</li>
-                <li><i class="icon-caret-right"></i>Cras ornare tristique elit.</li>
-            </ul>
-
-        </div>
-
-        <div class="col_half nobottommargin col_last">
-            <div class="fancy-title title-border">
-                <h4>Gallery</h4>
-            </div>
-
-            <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
-                <a href="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-                <a href="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            </div>
-        </div>
-    </div>
 
 {% endblock %}

@@ -39,9 +39,39 @@
                                     {{ form_widget(form.subtitle) }}
                                 </div>
                                 <div class="form-group">
+                                    {{ form_label(form.origins) }}
+                                    {{ form_errors(form.origins) }}
+                                    {{ form_widget(form.origins) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.influences) }}
+                                    {{ form_errors(form.influences) }}
+                                    {{ form_widget(form.influences) }}
+                                </div>
+                                <div class="form-group">
                                     {{ form_label(form.description) }}
                                     {{ form_errors(form.description) }}
                                     {{ form_widget(form.description) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.features) }}
+                                    {{ form_errors(form.features) }}
+                                    {{ form_widget(form.features) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.materials) }}
+                                    {{ form_errors(form.materials) }}
+                                    {{ form_widget(form.materials) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.decorations) }}
+                                    {{ form_errors(form.decorations) }}
+                                    {{ form_widget(form.decorations) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.plants) }}
+                                    {{ form_errors(form.plants) }}
+                                    {{ form_widget(form.plants) }}
                                 </div>
                                 {{ form_widget(form.save) }}
                             {{ form_end(form) }}

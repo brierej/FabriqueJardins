@@ -32,7 +32,13 @@ class ProductController extends Controller
             ->add('code', TextType::class)
             ->add('title', TextType::class)
             ->add('subtitle', TextType::class)
+            ->add('origins', TextareaType::class)
+            ->add('influences', TextareaType::class)
             ->add('description', TextareaType::class)
+            ->add('features', TextareaType::class)
+            ->add('materials', TextareaType::class)
+            ->add('decorations', TextareaType::class)
+            ->add('plants', TextareaType::class)
             ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
 
