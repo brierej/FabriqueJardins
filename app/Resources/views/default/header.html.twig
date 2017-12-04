@@ -7,21 +7,27 @@
 
             <!-- Logo
             ============================================= -->
-            <div id="logo">
-                <!--<a href="#" class="{{ asset('media/logo2.png') }}" data-dark-logo="images/logo2.png">
-                    <img src="{{ asset('media/logo2.png') }}" alt="Canvas Logo">
+            <!--<div id="logo">
+                <a href="#" class="{{ asset('media/logo3.jpg') }}" data-dark-logo="images/logo2.png">
+                    <img src="{{ asset('media/logo3.jpg') }}" alt="Canvas Logo">
                 </a>
-                <a href="#" class="retina-logo" data-dark-logo="{{ asset('media/logo2.png') }}">
-                    <img src="{{ asset('media/logo2.png') }}" alt="Canvas Logo">
-                </a>-->
-            </div><!-- #logo end -->
+                <a href="#" class="retina-logo" data-dark-logo="{{ asset('media/logo3.jpg') }}">
+                    <img src="{{ asset('media/logo3.jpg') }}" alt="Canvas Logo">
+                </a>
+            </div>--><!-- #logo end -->
 
             <!-- Primary Navigation
             ============================================= -->
             <nav id="primary-menu" class="style-2">
 
                 <ul>
-                    <li><a href="{{ path('homepage') }}"><div>Accueil</div></a></li>
+                    <li><a href="#"><div>Accueil</div></a>
+                        <ul>
+                            <li><a href="{{ path('homepage1') }}"><div><i class="icon-stack"></i>Accueil 1</div></a></li>
+                            <li><a href="{{ path('homepage2') }}"><div><i class="icon-stack"></i>Accueil 2</div></a></li>
+                            <li><a href="{{ path('homepage3') }}"><div><i class="icon-stack"></i>Accueil 3</div></a></li>
+                        </ul>
+                    </li>
                     <li><a href="#"><div>Conception de jardins</div></a>
                         <ul>
                             <li><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}"><div><i class="icon-stack"></i>Particuliers</div></a></li>

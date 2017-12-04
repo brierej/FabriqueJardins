@@ -9,7 +9,6 @@
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     font-weight: bold;
-
     background-color: #465A7B;
 }
 
@@ -48,4 +47,63 @@
     font-family: "Lithos Pro Regular";
     color: white;
     font-weight: bold;
+}
+
+.ambiance-params > i{
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
+    vertical-align: middle;
+    height:100%;
+    padding-left:10px;
+    padding-right:10px;
+}
+.ambiance-params{
+    width: 100%;
+    height:52px;
+}
+.ambiance-features{
+    border-left: 2px solid #dff0d8;
+}
+.ambiance-features h4{
+    color: #3c763d;
+    background-color:#dff0d8 !important;
+}
+.ambiance-materials{
+    border-left: 2px solid #d9edf7;
+}
+.ambiance-materials h4{
+    color: #31708f;
+    background-color:#d9edf7 !important;
+}
+.ambiance-decorations{
+    border-left: 2px solid #fcf8e3;
+}
+.ambiance-decorations h4{
+    color: #8a6d3b;
+    background-color:#fcf8e3 !important;
+}
+
+.ambiance-vegetals{
+    border-left: 2px solid #f2dede;
+}
+.ambiance-vegetals h4{
+    color: #a94442;
+    background-color:#f2dede !important;
+}
+.ambiance-features li{
+    margin-left:-5px;
+    color: #3c763d;
+}
+.ambiance-materials li{
+    margin-left:-5px;
+    color: #31708f;
+}
+.ambiance-decorations li{
+    margin-left:-5px;
+    color: #8a6d3b;
+}
+.ambiance-vegetals li{
+    margin-left:-5px;
+    color: #a94442;
 }
