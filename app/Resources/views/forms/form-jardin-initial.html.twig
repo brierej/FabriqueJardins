@@ -1,7 +1,7 @@
 <h3 class="">Votre jardin initial</h3>
 
 <div class="col_half">
-    <label for="formjardin_place">Type de lieu à aménager (cochez la case correspondante)</label>
+    <label for="formjardin_place">Type de lieu à aménager (cochez la ou les case(s) correspondante(s))</label>
     <div class="control-group form-group">
         <div class="editable-input">
             <div class="editable-checklist">
@@ -29,13 +29,19 @@
                     <input type="checkbox"  name="formjardin_place"/>
                     <span> Massif</span>
                 </label>
+                <div class="clear"></div>
+                <label>
+                    <input type="checkbox"  name="formjardin_place"/>
+                    <span> Verger</span>
+                </label>
             </div>
         </div>
     </div>
 </div>
 
 <div class="col_full">
-    <h4>Vous avez la possibilité de nous transmettre un plan inital et d'y mentionner ces informations</h4>
+    <h4>Vous avez la possibilité de nous transmettre un plan inital de votre jardin et d'y mentionner les informations ci-dessous&nbsp;: <br />
+    Exposition / orientation / batiments, cheminements et végétaux existants / vue environnante à garder ou à masquer, terrain plat ou en pente ...</h4>
 </div>
 
 <div class="col_half">
@@ -50,9 +56,13 @@
     <div class="col_full">
         <label for="shipping-form-lname">Type de sol</label>
         <select class="sm-form-control">
-            <option value="">Sol 1</option>
-            <option value="">Sol 2</option>
-            <option value="">Sol 3</option>
+            <option value="argileux">argileux</option>
+            <option value="calcaire">calcaire</option>
+            <option value="sableux">sableux</option>
+            <option value="siliceux">siliceux</option>
+            <option value="tourbeux">tourbeux</option>
+            <option value="limoneux">limoneux</option>
+            <option value="aucune idée">aucune idée</option>
         </select>
     </div>
     <div class="col_full">

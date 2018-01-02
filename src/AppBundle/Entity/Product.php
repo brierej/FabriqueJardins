@@ -177,7 +177,7 @@ class Product
      */
     public function getDescription()
     {
-        return $this->description;
+        return nl2br($this->description);
     }
 
     /**

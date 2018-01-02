@@ -7,22 +7,39 @@
 
             <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
 
-                <div class="col-md-6">
-                    {% include 'forms/form-coordonnees.html.twig' %}
+                <div class="tabs tabs-responsive clearfix">
+
+                    <ul class="tab-nav clearfix">
+                        <li><a href="#tab-responsive-1">Vos coordonnées</a></li>
+                        <li><a href="#tab-responsive-2">Jardin initial</a></li>
+                        <li><a href="#tab-responsive-3">Vos envies</a></li>
+                        <li><a href="#tab-responsive-4">Les éléments</a></li>
+                        <li><a href="#tab-responsive-5">Utilisation</a></li>
+                    </ul>
+
+                    <div class="tab-container">
+
+                        <div class="tab-content clearfix" id="tab-responsive-1">
+                            {% include 'forms/form-coordonnees.html.twig' %}
+                        </div>
+                        <div class="tab-content clearfix" id="tab-responsive-2">
+                            {% include 'forms/form-jardin-initial.html.twig' %}
+                        </div>
+                        <div class="tab-content clearfix" id="tab-responsive-3">
+                            {% include 'forms/form-envies.html.twig' %}
+                        </div>
+                        <div class="tab-content clearfix" id="tab-responsive-4">
+                            {% include 'forms/form-elements.html.twig' %}
+                        </div>
+                        <div class="tab-content clearfix" id="tab-responsive-5">
+                            {% include 'forms/form-utilisation-jardin.html.twig' %}
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="col-md-6">
-                    {% include 'forms/form-jardin-initial.html.twig' %}
-                </div>
-                <div class="col-md-6">
-                    {% include 'forms/form-envies.html.twig' %}
-                </div>
-                <div class="col-md-6">
-                    {% include 'forms/form-elements.html.twig' %}
-                </div>
-                <div class="col-md-6">
-                    {% include 'forms/form-utilisation-jardin.html.twig' %}
-                </div>
-            </form>
+
+                </form>
         </div>
         <div class="clear bottommargin"></div>
     </div>
