@@ -31,7 +31,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hp", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexAction(Request $request)
     {
