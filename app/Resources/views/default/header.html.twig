@@ -21,19 +21,13 @@
             <nav id="primary-menu" class="style-2">
 
                 <ul>
-                    <li><a href="#"><div>Accueil</div></a>
-                        <ul>
-                            <li><a href="{{ path('homepage1') }}"><div><i class="icon-stack"></i>Accueil 1</div></a></li>
-                            <li><a href="{{ path('homepage2') }}"><div><i class="icon-stack"></i>Accueil 2</div></a></li>
-                            <li><a href="{{ path('homepage3') }}"><div><i class="icon-stack"></i>Accueil 3</div></a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{ path('homepage') }}"><div>Accueil</div></a></li>
                     <li><a href="#"><div>La fabrique</div></a>
                         <ul>
-                            <li><a href="#"><div><i class="icon-stack"></i>Le concept</div></a></li>
-                            <li><a href="#"><div><i class="icon-stack"></i>Le questionnaire</div></a></li>
-                            <li><a href="#"><div><i class="icon-stack"></i>Nos tarifs</div></a></li>
-                            <li><a href="{{ path('form', {'form_type': 'questionnaire-professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>
+                            <li><a href="{{ path('page', {'page': 'concept'}) }}"><div><i class="icon-stack"></i>Le concept</div></a></li>
+                            <li><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}"><div><i class="icon-stack"></i>Le questionnaire</div></a></li>
+                            <li><a href="{{ path('page', {'page': 'tarifs'}) }}"><div><i class="icon-stack"></i>Nos tarifs</div></a></li>
+                            <li><a href="{{ path('page', {'page': 'professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>
                         </ul>
                     </li>
                     <li class="mega-menu"><a href="#"><div>Conception de jardin</div></a>

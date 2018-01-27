@@ -1,48 +1,79 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-<div class="container clearfix">
-    <h2 class="center">Formulaire pour les particuliers</h2>
-    <div class="row clearfix">
+    <div class="container clearfix">
+        <h2 class="center">Formulaire pour les particuliers</h2>
+        <div id="tabs" class="tabs clearfix" data-speed="700" data-active="1">
 
-            <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
+            <!--<form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post"> -->
+            <ul class="tab-nav clearfix">
+                <li>
+                    <a href="#tab-1" class="">1</a>
+                    {#<h5>Vos espace à aménager</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-2" class="">2</a>
+                    {#<h5>Les ambiances</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-3" class="">3</a>
+                    {#<h5>La philosophie</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-4" class="">4</a>
+                    {#<h5>Utilisation du jardin</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-5" class="">5</a>
+                    {#<h5>Les travaux</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-6" class="">6</a>
+                    {#<h5>L'entretien</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-7" class="">7</a>
+                    {#<h5>Coordonnées</h5>#}
+                </li>
+                <li>
+                    <a href="#tab-8" class="">8</a>
+                    {#<h5>Récapitulatif</h5>#}
+                </li>
+            </ul>
 
-                <div class="tabs tabs-responsive clearfix">
+            <div class="tab-container">
 
-                    <ul class="tab-nav clearfix">
-                        <li><a href="#tab-responsive-1">Vos coordonnées</a></li>
-                        <li><a href="#tab-responsive-2">Jardin initial</a></li>
-                        <li><a href="#tab-responsive-3">Vos envies</a></li>
-                        <li><a href="#tab-responsive-4">Les éléments</a></li>
-                        <li><a href="#tab-responsive-5">Utilisation</a></li>
-                    </ul>
-
-                    <div class="tab-container">
-
-                        <div class="tab-content clearfix" id="tab-responsive-1">
-                            {% include 'forms/form-coordonnees.html.twig' %}
-                        </div>
-                        <div class="tab-content clearfix" id="tab-responsive-2">
-                            {% include 'forms/form-jardin-initial.html.twig' %}
-                        </div>
-                        <div class="tab-content clearfix" id="tab-responsive-3">
-                            {% include 'forms/form-envies.html.twig' %}
-                        </div>
-                        <div class="tab-content clearfix" id="tab-responsive-4">
-                            {% include 'forms/form-elements.html.twig' %}
-                        </div>
-                        <div class="tab-content clearfix" id="tab-responsive-5">
-                            {% include 'forms/form-utilisation-jardin.html.twig' %}
-                        </div>
-
-                    </div>
-
+                <div id="tab-1" class="tab-content clearfix">
+                    {% include 'forms/form-etape1.html.twig' %}
+                </div>
+                <div id="tab-2" class="tab-content clearfix">
+                    {% include 'forms/form-etape2.html.twig' %}
+                </div>
+                <div id="tab-3" class="tab-content clearfix">
+                    {% include 'forms/form-etape3.html.twig' %}
+                </div>
+                <div id="tab-4" class="tab-content clearfix">
+                    {% include 'forms/form-etape4.html.twig' %}
+                </div>
+                <div id="tab-5" class="tab-content clearfix">
+                    {% include 'forms/form-etape5.html.twig' %}
+                </div>
+                <div id="tab-6" class="tab-content clearfix">
+                    {% include 'forms/form-etape6.html.twig' %}
+                </div>
+                <div id="tab-7" class="tab-content clearfix">
+                    {% include 'forms/form-etape7.html.twig' %}
+                </div>
+                <div id="tab-8" class="tab-content clearfix">
+                    {% include 'forms/form-etape8.html.twig' %}
                 </div>
 
-                </form>
+            </div>
+            <!--</form>-->
+
+
         </div>
         <div class="clear bottommargin"></div>
     </div>
-</div>
 
 {% endblock %}

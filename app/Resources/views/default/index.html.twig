@@ -2,11 +2,11 @@
 
 {% block content %}
 
-    <div class="section dark bottommargin-lg container-fullwidth" style="margin: 0px; height: 500px; background-position:center; background-size:contain; background-repeat:no-repeat; background-image: url('{{ asset('media/logo3.png') }}');">
-        <div class="container center clearfix vertical-middle" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="section dark bottommargin-lg container-fullwidth" style="margin: 0px; height: 500px; background-size:cover; background-image: url('{{ asset('media/dessin4.jpg') }}');">
+        <div class="container center clearfix vertical-middle" style="padding-top: 20px; padding-bottom:20px; background-color: rgba(0, 0, 0, 0.5);">
 
             <div class="slider-caption slider-caption-center" style="max-width:1000px;">
-                <h2 data-animate="fadeInUp" style="margin: 0px">Ma fabrique de jardins</h2>
+                <h2 data-animate="fadeInUp" style="margin: 0px">La fabrique de jardins</h2>
                 <p style="width:80%; margin: 0 auto;" data-animate="fadeInUp" data-delay="200">"Des projets paysagers en ligne pour les particuliers, entrepreneurs du paysage, jardineries, maitres d’œuvre."</p>
             </div>
 
@@ -15,13 +15,17 @@
 
     <div class="container clearfix">
 
+        <div class="heading-block center">
+            <h2>Nos réalisations</h2>
+        </div>
+
         <div class="col_one_third nobottommargin">
             <div class="feature-box media-box">
                 <div class="fbox-media">
                     <img src="{{ asset('media/dessin1.jpg') }}" alt="Why choose Us?">
                 </div>
                 <div class="fbox-desc">
-                    <h3>Why choose Us.<span class="subtitle">Because we are Reliable.</span></h3>
+                    <h3>Le jardin breton<span class="subtitle">Because we are Reliable.</span></h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
                 </div>
             </div>
@@ -33,7 +37,7 @@
                     <img src="{{ asset('media/dessin2.jpg') }}" alt="Why choose Us?">
                 </div>
                 <div class="fbox-desc">
-                    <h3>Our Mission.<span class="subtitle">To Redefine your Brand.</span></h3>
+                    <h3>Le potager permacole<span class="subtitle">To Redefine your Brand.</span></h3>
                     <p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum molestias quo.</p>
                 </div>
             </div>
@@ -45,13 +49,51 @@
                     <img src="{{ asset('media/dessin3.jpg') }}" alt="Why choose Us?">
                 </div>
                 <div class="fbox-desc">
-                    <h3>What we Do.<span class="subtitle">Make our Customers Happy.</span></h3>
+                    <h3>Le jardin médieval<span class="subtitle">Make our Customers Happy.</span></h3>
                     <p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse ab accusantium ea modi ut.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="clear"></div>
 
-        <div class="clear"></div>
+    <div class="section container-fullwidth">
+        <div class="container clearfix">
+            <div class="heading-block center">
+                <h2>La fabrique de jardins</h2>
+                <span>Une solution à moindre coût pour une étude paysagère personnalisée de votre jardin.</span>
+            </div>
 
+            <div class="col_half">
+                <img style="width:100%;" data-animate="fadeIn" src="{{ asset('media/logo3.png') }}" alt="Macbook">
+            </div>
+
+            <div class="col_half col_last nobottommargin">
+
+                <div style="padding: 0" class="feature-box fbox-plain">
+                    <!--<div class="fbox-icon">
+                        <a href="#"><i class="i-alt">1</i></a>
+                    </div>-->
+                    <h3>1. Choisissez votre type de jardin</h3>
+                    <p>Parcourez le catalogue à la recherche de votre jardin idéal. Découvrez des ambiances et des exemples de réalisation pour vous aiguiller sur le jardin de vos rêves.</p>
+                </div>
+
+                <div style="padding: 0" class="feature-box fbox-plain">
+                    <!--<div class="fbox-icon">
+                        <a href="#"><i class="i-alt">2</i></a>
+                    </div>-->
+                    <h3>2. Remplissez le questionnaire</h3>
+                    <p>Détaillez votre projet et transmettez les informations à nos paysagistes pour une conception au plus près de vos demandes.</p>
+                </div>
+
+                <div style="padding: 0" class="feature-box fbox-plain">
+                    <!--<div class="fbox-icon">
+                        <a href="#"><i class="i-alt">3</i></a>
+                    </div>-->
+                    <h3>3. Recevez des plans sur mesure</h3>
+                    <p>Echangez avec nous et validez votre projet. Recevez les plans et les détails sur les éléments constituant votre jardin.</p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
