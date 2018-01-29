@@ -41,20 +41,16 @@ class CatalogController extends Controller
                 'No products found'
             );
         }
-        $path = getcwd().'/media/bretonne';
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        $path = getcwd().'/media/'.$ambiance;
         $tmp_files = scandir($path);
-//        var_dump($tmp_files);
         foreach($tmp_files as $tmp_file) {
             if (is_file($path.'/'.$tmp_file))
                 $files[] = $tmp_file;
         }
-//        var_dump($files);
 
-        // replace this example code with whatever you need
-//        if (isset($ambiances[$ambiance]) && !empty($ambiances[$ambiance]))
-//            $datas = $ambiances[$ambiance];
-//        else
-//            return $this->render('catalog/catalogue-ambiances.html.twig');
         return $this->render('catalog/catalogue-ambiances.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'datas' => $products,
