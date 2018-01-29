@@ -89,22 +89,10 @@
         </div>
 
         <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
-            <a href="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/1.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/2.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/3.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/4.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/5.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/6.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/7.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            <a href="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/8.jpg') }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            {% for file in files %}
+            <a href="{{ asset('media/' ~ datas.code ~ '/' ~ file) }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/' ~ file) }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            {% endfor %}
         </div>
     </div>
 
