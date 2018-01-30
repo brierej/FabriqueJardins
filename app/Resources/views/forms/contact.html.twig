@@ -2,77 +2,102 @@
 
 {% block content %}
 
-    <div class="row clearfix">
+    <section id="map-overlay" style="background-color:#ADB7C7">
 
-        <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
+        <div class="container clearfix">
 
-            <div class="col-md-6">
-                <h3>Vos coordonnées</h3>
+            <!-- Contact Form Overlay
+            ============================================= -->
+            <div id="contact-form-overlay" class="clearfix">
 
-                <div class="col_half">
-                    <label for="billing-form-name">Nom</label>
-                    <input type="text" id="client-name" name="billing-form-name" value="" class="sm-form-control" />
+                <div class="fancy-title title-dotted-border">
+                    <h3>Questionnaire - Prise de contact</h3>
+                    <p>Pour toute demande, n'hésitez pas à me contacter au 02 40 69 42 02 ou par mail à laurence@gmail.com ... ou encore en remplissant le formulaire ci-dessous. Je vous répondrais dans les meilleurs délais.</p>
+                    <p>Pour vos projets dans les départements 44, 49, 85, je me déplace gratuitement dans un rayon de 30km autour de Gorges. Alors n'hésitez pas à prendre rendez-vous pour votre devis d'étude paysagère.</p>
                 </div>
 
-                <div class="col_half col_last">
-                    <label for="billing-form-lname">Prénom</label>
-                    <input type="text" id="billing-form-lname" name="billing-form-lname" value="" class="sm-form-control" />
+                <div class="contact-widget">
+
+                    <div class="contact-form-result"></div>
+
+                    <!-- Contact Form
+                    ============================================= -->
+                    <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+
+                        <div class="col_half">
+                            <label for="template-contactform-name">Nom</label>
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                        </div>
+                        <div class="col_half col_last">
+                            <label for="template-contactform-name">Prénom</label>
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                        </div>
+
+
+
+                        <div class="clear"></div>
+
+                        <div class="col_half">
+                            <label for="template-contactform-email">Email <small>*</small></label>
+                            <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+                        </div>
+
+                        <div class="col_half col_last">
+                            <label for="template-contactform-phone">Téléphone</label>
+                            <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col_full">
+                            <label for="template-contactform-subject">Sujet <small>*</small></label>
+                            <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+                        </div>
+
+                        <div class="col_full">
+                            <label for="template-contactform-message">Message <small>*</small></label>
+                            <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                        </div>
+
+                        <div class="col_full hidden">
+                            <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                        </div>
+
+                        <div class="col_full">
+                            <button class="button button-3d nomargin fright" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Envoyer mon message</button>
+                        </div>
+
+                    </form>
                 </div>
 
                 <div class="clear"></div>
+                <div class="line"></div>
+                <!-- Contact Info
+                ============================================= -->
+                <div class="col_one_third nobottommargin">
 
-                <div class="col_half">
-                    <label for="billing-form-name">Téléphone fixe</label>
-                    <input type="text" id="billing-form-name" name="billing-form-name" value="" class="sm-form-control" />
-                </div>
+                    <address>
+                        <strong>Laurence BAZEAU</strong><br>
+                        La fabrique de jardins<br>
+                        17, rue de l'Aubépin<br>
+                        44190 GORGES<br>
+                    </address>
+                    <strong>Téléphone :&nbsp;</strong>02 40 69 42 02<br>
+                    <strong>Email :&nbsp;</strong>info@canvas.com
 
-                <div class="col_half col_last">
-                    <label for="billing-form-lname">Portable</label>
-                    <input type="text" id="billing-form-lname" name="billing-form-lname" value="" class="sm-form-control" />
-                </div>
+                </div><!-- Contact Info End -->
 
-                <div class="clear"></div>
+                <div class="col_two_third nobottommargin col_last">
 
-                <div class="col_full">
-                    <label for="billing-form-companyname">Email</label>
-                    <input type="text" id="billing-form-companyname" name="billing-form-companyname" value="" class="sm-form-control" />
-                </div>
 
-                <div class="col_full">
-                    <label for="billing-form-address">Adresse</label>
-                    <input type="text" id="billing-form-address" name="billing-form-address" value="" class="sm-form-control" />
-                </div>
 
-                <div class="col_full">
-                    <input type="text" id="billing-form-address2" name="billing-form-adress" value="" class="sm-form-control" />
-                </div>
+                </div><!-- Contact Info End -->
 
-                <div class="col_two_third">
-                    <label for="billing-form-city">Ville</label>
-                    <input type="text" id="billing-form-city" name="billing-form-city" value="" class="sm-form-control" />
-                </div>
-                <div class="col_one_third col_last">
-                    <label for="billing-form-city">Code postal</label>
-                    <input type="text" id="billing-form-city" name="billing-form-city" value="" class="sm-form-control" />
-                </div>
+            </div><!-- Contact Form Overlay End -->
 
-                <div class="clear"></div>
+        </div>
 
-                <div class="col_full">
-                    <label for="shipping-form-address">Votre demande</label>
-                    <textarea class="sm-form-control" id="shipping-form-message" name="shipping-form-message" rows="6" cols="30"></textarea>
-                </div>
-
-                <div class="col_full">
-                    <button class="button button-aqua button-3d">Envoyer</button>
-                </div>
-
-            </div>
-
-        </form>
-    </div>
-    <div class="clear bottommargin"></div>
-    </div>
+    </section><!-- Contact Form & Map Overlay Section End -->
 
 
 {% endblock %}
