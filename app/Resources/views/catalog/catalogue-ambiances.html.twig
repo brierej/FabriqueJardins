@@ -12,28 +12,34 @@
 
 {% block content %}
 
+    <section id="content">
+        <div class="content-wrap">
 <!--    <div class="section nobg notopmargin noborder bottommargin-sm">-->
-        <div class="container-fluid clearfix">
+        <div class="container clearfix">
             <div class="col_full">
                 <div class="col_half nobottommargin">
 
 
                     <p style="text-align: justify">{{ datas.description |raw }}</p>
 
+                    {% if (datas.origins) %}
                     <p><strong>Origine&nbsp;:&nbsp;</strong>{{ datas.origins }}</p>
+                    {% endif %}
+                    {% if (datas.influences) %}
                     <p><strong>Influence et similitudes&nbsp;:&nbsp;</strong>{{ datas.influences }}</p>
+                    {% endif %}
                 </div>
 
                 <div class="col_half bottommargin-sm center col_last">
                 {% for file in files|slice(0,1) %}
-                    <img class="crop360" src="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ file) }}" alt="Image" data-animate="fadeInRight">
+                    <img src="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ file) }}" alt="Image" data-animate="fadeInRight">
                 {% endfor %}
                 </div>
             </div>
         </div>
 <!--    </div> -->
 
-    <div class="container-fluid clearfix">
+    <div class="container clearfix">
         {% if datas.showFeaturesList() %}
         <div class="col_one_fourth nobottommargin ambiance-features">
             <div class="fancy-title title-border">
@@ -87,10 +93,12 @@
         {% endif %}
     </div>
 
-    <div class="col_full nobottommargin">
-        <div class="fancy-title title-border">
-            <h4>Gallery</h4>
         </div>
+    </section>
+    <div class="col_full nobottommargin">
+        {#<div class="fancy-title title-border">#}
+            {#<h4>Gallery</h4>#}
+        {#</div>#}
 
         <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
             {% for file in files %}

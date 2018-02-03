@@ -32,17 +32,25 @@
                         <div class="entry-image">
                             <a href="#">
                                 {% for key,file in files if key == product.code %}
+                                    {% if context == 'ambiances' %}
+                                        <a href="{{ path(product.type, {'ambiance' : product.code}) }}">
+                                    {% elseif context == 'lieux' %}
+                                        <a href="{{ path(product.type, {'lieu' : product.code}) }}">
+                                    {% elseif context == 'philosophies' %}
+                                        <a href="{{ path(product.type, {'philosophie' : product.code}) }}">
+                                    {% endif %}
                                     <img class="crop360" src="{{ asset('media/' ~ product.type ~ '/' ~ product.code ~ '/' ~ random(file)) }}" alt="Mac Sunglasses">
+                                    </a>
                                 {% endfor %}
                             </a>
                         </div>
                         <div class="entry-title">
                             {% if context == 'ambiances' %}
-                                <h2><a href="{{ path(product.type, {'ambiance' : product.code}) }}">{{ product.title }}</a></h2>
+                                <h2 style="text-decoration: underline"><a  href="{{ path(product.type, {'ambiance' : product.code}) }}">{{ product.title }}</a></h2>
                             {% elseif context == 'lieux' %}
-                                <h2><a href="{{ path(product.type, {'lieu' : product.code}) }}">{{ product.title }}</a></h2>
+                                <h2 style="text-decoration: underline"><a style="text-decoration: underline" href="{{ path(product.type, {'lieu' : product.code}) }}">{{ product.title }}</a></h2>
                             {% elseif context == 'philosophies' %}
-                                <h2><a href="{{ path(product.type, {'philosophie' : product.code}) }}">{{ product.title }}</a></h2>
+                                <h2 style="text-decoration: underline"><a style="text-decoration: underline" href="{{ path(product.type, {'philosophie' : product.code}) }}">{{ product.title }}</a></h2>
                             {% endif %}
                             <span>{{ product.subtitle }}</span>
                         </div>

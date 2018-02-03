@@ -18,8 +18,8 @@
     margin-top: 50px;
     padding-bottom: 20px;
     padding-top: 30px;
-    text-align: center;
-    border-bottom: 2px solid #465A7B;
+    /*text-align: center;*/
+    /*border-bottom: 2px solid #465A7B;*/
 }
 
 .ambiance-bloc{
@@ -63,47 +63,55 @@
     height:52px;
 }
 .ambiance-features{
-    border-left: 2px solid #dff0d8;
+    border: 2px solid #cfcdcc;
+    border-radius: 3px;
+    padding: 10px;
 }
 .ambiance-features h4{
-    color: #3c763d;
-    background-color:#dff0d8 !important;
+    color: #000000;
+    background-color:#cfcdcc !important;
 }
 .ambiance-materials{
-    border-left: 2px solid #d9edf7;
+    border: 2px solid #cfcdcc;
+    border-radius: 3px;
+    padding: 10px;
 }
 .ambiance-materials h4{
-    color: #31708f;
-    background-color:#d9edf7 !important;
+    color: #000000;
+    background-color:#cfcdcc !important;
 }
 .ambiance-decorations{
-    border-left: 2px solid #fcf8e3;
+    border: 2px solid #cfcdcc;
+    border-radius: 3px;
+    padding: 10px;
 }
 .ambiance-decorations h4{
-    color: #8a6d3b;
-    background-color:#fcf8e3 !important;
+    color: #000000;
+    background-color:#cfcdcc !important;
 }
 
 .ambiance-vegetals{
-    border-left: 2px solid #f2dede;
+    border: 2px solid #cfcdcc;
+    border-radius: 3px;
+    padding: 10px;
 }
 .ambiance-vegetals h4{
-    color: #a94442;
-    background-color:#f2dede !important;
+    color: #000000;
+    background-color:#cfcdcc !important;
 }
 .ambiance-features li{
     margin-left:-5px;
-    color: #3c763d;
+    color: #000000;
 }
 .ambiance-materials li{
     margin-left:-5px;
-    color: #31708f;
+    color: #000000;
 }
 .ambiance-decorations li{
     margin-left:-5px;
-    color: #8a6d3b;
+    color: #000000;
 }
 .ambiance-vegetals li{
     margin-left:-5px;
-    color: #a94442;
+    color: #000000;
 }
