@@ -17,19 +17,119 @@ use Symfony\Component\HttpFoundation\Response;
 class CatalogController extends Controller
 {
     /**
-     * @Route("/catalogue/{catalogueType}", name="catalogue_type")
+     * @Route("/conception-jardin/lieux", name="lieux")
      */
-    public function catalogueAction(Request $request, $catalogueType)
+    public function lieuxAction(Request $request)
     {
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findBy(array('type' => 'lieux'));
+
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        foreach($products as $product) {
+
+            $path = getcwd().'/media/'.$product->getType().'/'.$product->getCode();
+    //            var_dump($path); die;
+            $tmp_files = scandir($path);
+            foreach($tmp_files as $tmp_file) {
+                if (is_file($path.'/'.$tmp_file))
+                    $files[$product->getCode()][] = $tmp_file;
+            }
+        }
+
+
         return $this->render('catalog/portfolio.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            'type' => $catalogueType,
+            'products' => $products,
+            'files' => $files,
+            'context' => 'lieux'
+        ]);
+    }
+
+     /**
+     * @Route("/conception-jardin/philosophies", name="philosophies")
+     */
+    public function philosophiesAction(Request $request)
+    {
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findBy(array('type' => 'philosophie'));
+
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        foreach($products as $product) {
+
+            $path = getcwd().'/media/'.$product->getType().'/'.$product->getCode();
+    //            var_dump($path); die;
+            $tmp_files = scandir($path);
+            foreach($tmp_files as $tmp_file) {
+                if (is_file($path.'/'.$tmp_file))
+                    $files[$product->getCode()][] = $tmp_file;
+            }
+        }
+
+        return $this->render('catalog/portfolio.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'products' => $products,
+            'files' => $files,
+            'context' => 'philosophies'
         ]);
     }
 
     /**
-     * @Route("/ambiances/{ambiance}", name="ambiances")
+     * @Route("/conception-jardin/ambiances", name="ambiances")
      */
+    public function ambiancesAction(Request $request)
+    {
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findBy(array('type' => 'ambiance'));
+
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        foreach($products as $product) {
+
+            $path = getcwd().'/media/'.$product->getType().'/'.$product->getCode();
+    //            var_dump($path); die;
+            $tmp_files = scandir($path);
+            foreach($tmp_files as $tmp_file) {
+                if (is_file($path.'/'.$tmp_file))
+                    $files[$product->getCode()][] = $tmp_file;
+            }
+        }
+
+//        var_dump($files); die;
+
+        return $this->render('catalog/portfolio.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'products' => $products,
+            'files' => $files,
+            'context' => 'ambiances'
+        ]);
+    }
+
+    /**
+ * @Route("/conception-jardin/ambiances/{ambiance}", name="ambiance")
+ */
     public function ambianceAction(Request $request, $ambiance)
     {
         $products = $this->getDoctrine()
@@ -44,7 +144,69 @@ class CatalogController extends Controller
 
         // Récupère les images du dossier correspondant à l'ambiance
         $files = array();
-        $path = getcwd().'/media/'.$ambiance;
+        $path = getcwd().'/media/ambiance/'.$ambiance;
+        $tmp_files = scandir($path);
+        foreach($tmp_files as $tmp_file) {
+            if (is_file($path.'/'.$tmp_file))
+                $files[] = $tmp_file;
+        }
+
+        return $this->render('catalog/catalogue-ambiances.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'datas' => $products,
+            'files' => $files
+        ]);
+    }
+
+    /**
+     * @Route("/conception-jardin/philosophie/{philosophie}", name="philosophie")
+     */
+    public function philosophieAction(Request $request, $philosophie)
+    {
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findOneBy(array('code' => $philosophie));
+
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        $path = getcwd().'/media/philosophie/'.$philosophie;
+        $tmp_files = scandir($path);
+        foreach($tmp_files as $tmp_file) {
+            if (is_file($path.'/'.$tmp_file))
+                $files[] = $tmp_file;
+        }
+
+        return $this->render('catalog/catalogue-ambiances.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'datas' => $products,
+            'files' => $files
+        ]);
+    }
+
+    /**
+     * @Route("/conception-jardin/lieux/{lieu}", name="lieu")
+     */
+    public function lieuAction(Request $request, $lieu)
+    {
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findOneBy(array('code' => $lieu));
+
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        // Récupère les images du dossier correspondant à l'ambiance
+        $files = array();
+        $path = getcwd().'/media/lieux/'.$lieu;
         $tmp_files = scandir($path);
         foreach($tmp_files as $tmp_file) {
             if (is_file($path.'/'.$tmp_file))
@@ -73,27 +235,5 @@ class CatalogController extends Controller
         $em->flush();
 
         return new Response('Product saved with id '.$product->getId());
-    }
-
-    /**
-     * @Route("/lieux/{place}", name="lieux")
-     */
-    public function placeAction(Request $request, $place)
-    {
-        // replace this example code with whatever you need
-        return $this->render('catalog/lieux/'.$place.'.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
-    }
-
-    /**
-     * @Route("/philosophie/{philosophy}", name="philosophie")
-     */
-    public function philosophyAction(Request $request, $philosophy)
-    {
-        // replace this example code with whatever you need
-        return $this->render('catalog/philosophie/'.$philosophy.'.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
     }
 }

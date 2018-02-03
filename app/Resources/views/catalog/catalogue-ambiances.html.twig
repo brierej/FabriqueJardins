@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block pagetitle %}
+    <section id="page-title">
+        <div class="container clearfix">
+            <h1>{{ datas.title }}</h1>
+            <span>{{ datas.subtitle }}</span>
+        </div>
+    </section>
+
+{% endblock %}
+
 {% block content %}
 
 <!--    <div class="section nobg notopmargin noborder bottommargin-sm">-->
         <div class="container-fluid clearfix">
-            <div class="col_full">
-                <div class="heading-block" style="padding-top: 40px;">
-
-                    <h2>{{ datas.title }}</h2>
-                    <span> {{ datas.subtitle }}</span>
-
-                </div>
-            </div>
             <div class="col_full">
                 <div class="col_half nobottommargin">
 
@@ -23,7 +25,9 @@
                 </div>
 
                 <div class="col_half bottommargin-sm center col_last">
-                    <img src="{{ asset('media/' ~ datas.code ~ '/LA FABRIQUE DE JARDINS - AMBIANCES - EXOTIQUE TROPICALE (1).jpg') }}" alt="Image" data-animate="fadeInRight">
+                {% for file in files|slice(0,1) %}
+                    <img class="crop360" src="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ file) }}" alt="Image" data-animate="fadeInRight">
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -90,8 +94,8 @@
 
         <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
             {% for file in files %}
-            <a href="{{ asset('media/' ~ datas.code ~ '/' ~ file) }}" data-lightbox="gallery-item">
-                <img class="image_fade" src="{{ asset('media/' ~ datas.code ~ '/' ~ file) }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            <a href="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ file) }}" data-lightbox="gallery-item">
+                <img class="image_fade" src="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ file) }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
             {% endfor %}
         </div>
     </div>

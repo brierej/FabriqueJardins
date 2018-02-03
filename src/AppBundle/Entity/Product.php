@@ -32,55 +32,61 @@ class Product
 
     /**
      * @var
+     * @ORM\Column(type="string", length=40)
+     */
+    private $type;
+
+    /**
+     * @var
      * @ORM\Column(type="string", length=150)
      */
     private $title;
 
     /**
      * @var
-     * @ORM\Column(type="string", length=250)
+     * @ORM\Column(type="string", length=250, nullable=true)
      */
     private $subtitle;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $description;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $origins;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $influences;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $features;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $materials;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $decorations;
 
     /**
      * @var
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $plants;
 
@@ -138,6 +144,22 @@ class Product
     public function setCode($code)
     {
         $this->code = $code;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 
     /**
