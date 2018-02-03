@@ -36,8 +36,9 @@
                 </div>
                 <div class="fbox-desc">
                     <h3>OSEZ IMAGINER LE JARDIN DE VOS REVES !<span class="subtitle">Ambiances, inspirations et philosophies</span></h3>
-                    <p>Vous parcourez les différentes ambiances, inspirations et philosophies de jardin que je propose sur le site (rubrique : conception de jardin (lien)).</p>
+                    <p>Vous parcourez les différentes ambiances, inspirations et philosophies de jardin que je propose sur le site.</p>
                 </div>
+                <a href="{{ path('ambiances') }}" class="button button-3d fright">Voir les jardins</a>
             </div>
         </div>
 
@@ -50,6 +51,7 @@
                     <h3>TRANQUILLEMENT DE CHEZ VOUS<span class="subtitle">Questionnaire en ligne</span></h3>
                     <p>Puis, devenez acteur de votre projet en remplissant le questionnaire en ligne (lien) au moment qui vous convient.</p>
                 </div>
+                <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}" class="button button-3d fright">Accéder au questionnaire</a>
             </div>
         </div>
 
@@ -64,6 +66,7 @@
                     <p>Vous recevez ensuite un dossier complet vous permettant de réaliser à votre rythme vos travaux ou confier ceux-ci à une entreprise d’espaces verts.<br />
                         Bien entendu, tout au long de votre étude et même après, je reste à votre écoute pour des conseils complémentaires.</p>
                 </div>
+                <a href="{{ path('page', {'page': 'tarifs'}) }}" class="button button-3d fright">Les tarifs</a>
             </div>
         </div>
     </div>
