@@ -3,15 +3,18 @@
 {% block content %}
 
 <h1>Tarifs 1ère année particuliers</h1>
-<table>
+    <div class="table_responsive">
+<table class="table">
+    <thead>
     <tr>
-        <th>Les forfaits de base</th>
-        <th/>
+        <th colspan="2">Les forfaits de base</th>
         <th>Mise en forme 3D</th>
         <th>Dossier technique</th>
         <th>Choix entreprise</th>
         <th>Guide d'entretien</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>Massif de 0 à 25m²</td>
         <td>95 €</td>
@@ -103,6 +106,7 @@
         <td>80 km</td>
         <td>78.19 €</td>
     </tr>
+    </tbody>
 </table>
-
+    </div>
 {% endblock %}
