@@ -30,8 +30,13 @@
                             <li><a href="{{ path('page', {'page': 'professionnels'}) }}"><div><i class="icon-stack"></i>Professionnels</div></a></li>
                         </ul>
                     </li>
-                    <li class="mega-menu"><a href="#"><div>Conception de jardin</div></a>
-                        <div class="mega-menu-content style-2 clearfix" style="top: unset;">
+                    <li><a href="#"><div>Conception de jardin</div></a>
+                    <ul>
+                            <li><a href="{{ path('ambiances') }}"><div>Les ambiances</div></a></li>
+                            <li><a href="{{ path('lieux') }}"><div>Les lieux</div></a></li>
+                            <li><a href="{{ path('philosophies') }}"><div>La philosophie</div></a></li>
+                    </ul>
+                     <!--   <div class="mega-menu-content style-2 clearfix" style="top: unset;">
                             <ul class="mega-menu-column col-md-4">
                                 <li class="mega-menu-title"><a href="{{ path('ambiances') }}"><div>Les ambiances</div></a>
                                     <ul>
@@ -68,7 +73,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                     </li>
                     <li><a href="{{ path('contact') }}"><div>Contact</div></a></li>
                     <li><a href="#"><div>Blog</div></a></li>
