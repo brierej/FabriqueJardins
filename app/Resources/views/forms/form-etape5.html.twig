@@ -14,10 +14,10 @@
             <span>Vous souhaitez faire les travaux vous-même</span>
         </label>
         <label>
-            <input type="checkbox" id="option_dossier_tech" name="option_dossier_tech" />
+            <input type="checkbox" id="option_dossier_tech" name="option_dossier_tech" onclick="calcTarif()"/>
             <span><u>En option:</u> Je réalise un <strong>dossier technique</strong> vous permettant de faire vous-même les travaux</span>
         </label>
-        <span>TARIF (todo)</span>
+        <span id="option_dossier_tech_price" class="price"></span>
     </div>
 </div>
 <div class="col_two_third">
@@ -27,13 +27,14 @@
             <span>Vous souhaitez confier les travaux à un entrepreneur du paysage</span>
         </label>
         <label>
-            <input type="checkbox" id="option_choix_pro" name="option_choix_pro" />
+            <input type="checkbox" id="option_choix_pro" name="option_choix_pro" onclick="calcTarif()"/>
             <span><u>En option:</u> Je vous accompagne dans le <strong>choix de l'entreprise</strong> (consultation, devis, commandes)</span>
         </label>
-        <span>TARIF (todo)</span>
+        <span id="option_choix_pro_price" class="price"></span>
     </div>
 </div>
 <div class="col_two_third">
-    <a href="#" class="button button-3d fright tab-linker left" rel="2">ETAPE PRECEDENTE</a>
-    <a href="#" class="button button-3d fright tab-linker right" rel="2">ETAPE SUIVANTE</a>
+    <a href="#" class="button button-3d fright tab-linker right" rel="2" onclick="activateTab(5)">ETAPE SUIVANTE</a>
+    <a href="#" class="button button-3d fright tab-linker left" rel="2" onclick="activateTab(3)">ETAPE PRECEDENTE</a>
+
 </div>

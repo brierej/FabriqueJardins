@@ -1,33 +1,33 @@
 <div class="col_full">
     <label for="formjardin_place">
-        Choisissez la structure de votre jardin (jusqu'à deux chois possibles)
+        Choisissez la structure de votre jardin (jusqu'à deux choix possibles)
     </label>
     <div class="control-group form-group">
         <div class="editable-input">
             <div class="editable-checklist">
                 <div class="col_one_third">
                     <label>
-                        <input type="checkbox" id="structure_class" name="formjardin_place"/>
+                        <input type="checkbox" id="structure_class" name="structure_class"/>
                         <span> Classique</span>
                     </label>
                     <div class="clear"></div>
                     <label>
-                        <input type="checkbox" id="structure_contem" name="formjardin_place"/>
+                        <input type="checkbox" id="structure_contem" name="structure_contem"/>
                         <span> Contemporaine</span>
                     </label>
                     <div class="clear"></div>
                     <label>
-                        <input type="checkbox" id="structure_ecolo" name="formjardin_place"/>
+                        <input type="checkbox" id="structure_ecolo" name="structure_ecolo"/>
                         <span> Ecologique - Biologique</span>
                     </label>
                     <div class="clear"></div>
                     <label>
-                        <input type="checkbox" id="structure_perma" name="formjardin_place"/>
+                        <input type="checkbox" id="structure_perma" name="structure_perma"/>
                         <span> Permacole</span>
                     </label>
                     <div class="clear"></div>
                     <label>
-                        <input type="checkbox" id="structure_autre" name="formjardin_place"/>
+                        <input type="checkbox" id="structure_autre" name="structure_autre"/>
                         <span> Autres</span>
                     </label>
                 </div>
@@ -37,8 +37,8 @@
 </div>
 <div class="col_two_third">
     <label for="structure_comments">Vous pouvez précisez, ici&nbsp;:</label>
-    <textarea rows="4" id="structure_comments" class="form-control" placeholder="Commentaires"></textarea>
+    <textarea rows="4" id="structure_comments" name="structure_comments" class="form-control" placeholder="Commentaires"></textarea>
+    <a href="#" class="button button-3d fright tab-linker right" rel="2" onclick="activateTab(3)">ETAPE SUIVANTE</a>
+    <a href="#" class="button button-3d fright tab-linker left" rel="2" onclick="activateTab(1)">ETAPE PRECEDENTE</a>
 
-    <a href="#" class="button button-3d fright tab-linker left" rel="2">ETAPE PRECEDENTE</a>
-    <a href="#" class="button button-3d fright tab-linker right" rel="2">ETAPE SUIVANTE</a>
 </div>

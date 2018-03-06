@@ -3,77 +3,86 @@
 {% block content %}
     <div class="container clearfix">
         <h2 class="center">Formulaire pour les particuliers</h2>
-        <div id="tabs" class="tabs clearfix" data-speed="700" data-active="1">
+        <div class="col_three_fourth">
+            <div id="tabs" class="tabs clearfix" data-speed="700" data-active="1">
 
-            <!--<form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post"> -->
-            <ul class="tab-nav clearfix">
-                <li>
-                    <a href="#tab-1" class="">1</a>
-                    {#<h5>Vos espace à aménager</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-2" class="">2</a>
-                    {#<h5>Les ambiances</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-3" class="">3</a>
-                    {#<h5>La philosophie</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-4" class="">4</a>
-                    {#<h5>Utilisation du jardin</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-5" class="">5</a>
-                    {#<h5>Les travaux</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-6" class="">6</a>
-                    {#<h5>L'entretien</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-7" class="">7</a>
-                    {#<h5>Coordonnées</h5>#}
-                </li>
-                <li>
-                    <a href="#tab-8" class="">8</a>
-                    {#<h5>Récapitulatif</h5>#}
-                </li>
-            </ul>
+                <form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
+                <ul class="tab-nav clearfix">
+                    <li>
+                        <a href="#tab-1">Surface</a>
+                        {#<h5>Vos espace à aménager</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-2" class="">Ambiance</a>
+                        {#<h5>Les ambiances</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-3" class="">Philosophie</a>
+                        {#<h5>La philosophie</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-4" class="">Utilisation</a>
+                        {#<h5>Utilisation du jardin</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-5" class="">Travaux</a>
+                        {#<h5>Les travaux</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-6" class="">Entretien</a>
+                        {#<h5>L'entretien</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-7" class="">Coordonnées</a>
+                        {#<h5>Coordonnées</h5>#}
+                    </li>
+                    <li>
+                        <a href="#tab-8" class="">Paiement</a>
+                        {#<h5>Récapitulatif</h5>#}
+                    </li>
+                </ul>
 
-            <div class="tab-container">
+                <div class="tab-container">
 
-                <div id="tab-1" class="tab-content clearfix">
-                    {% include 'forms/form-etape1.html.twig' %}
+                    <div id="tab-1" class="tab-content clearfix">
+                        {% include 'forms/form-etape1.html.twig' %}
+                    </div>
+                    <div id="tab-2" class="tab-content clearfix">
+                        {% include 'forms/form-etape2.html.twig' %}
+                    </div>
+                    <div id="tab-3" class="tab-content clearfix">
+                        {% include 'forms/form-etape3.html.twig' %}
+                    </div>
+                    <div id="tab-4" class="tab-content clearfix">
+                        {% include 'forms/form-etape4.html.twig' %}
+                    </div>
+                    <div id="tab-5" class="tab-content clearfix">
+                        {% include 'forms/form-etape5.html.twig' %}
+                    </div>
+                    <div id="tab-6" class="tab-content clearfix">
+                        {% include 'forms/form-etape6.html.twig' %}
+                    </div>
+                    <div id="tab-7" class="tab-content clearfix">
+                        {% include 'forms/form-etape7.html.twig' %}
+                    </div>
+                    <div id="tab-8" class="tab-content clearfix">
+                        {% include 'forms/form-etape8.html.twig' %}
+                    </div>
+
                 </div>
-                <div id="tab-2" class="tab-content clearfix">
-                    {% include 'forms/form-etape2.html.twig' %}
-                </div>
-                <div id="tab-3" class="tab-content clearfix">
-                    {% include 'forms/form-etape3.html.twig' %}
-                </div>
-                <div id="tab-4" class="tab-content clearfix">
-                    {% include 'forms/form-etape4.html.twig' %}
-                </div>
-                <div id="tab-5" class="tab-content clearfix">
-                    {% include 'forms/form-etape5.html.twig' %}
-                </div>
-                <div id="tab-6" class="tab-content clearfix">
-                    {% include 'forms/form-etape6.html.twig' %}
-                </div>
-                <div id="tab-7" class="tab-content clearfix">
-                    {% include 'forms/form-etape7.html.twig' %}
-                </div>
-                <div id="tab-8" class="tab-content clearfix">
-                    {% include 'forms/form-etape8.html.twig' %}
-                </div>
+                </form>
+
 
             </div>
-            <!--</form>-->
+        </div>
+        <div class="col_one_fourth col_last">
+            TOTAL :
+            <div id="tarif" class="price">
 
-
+            </div>
         </div>
         <div class="clear bottommargin"></div>
+
     </div>
 
 {% endblock %}

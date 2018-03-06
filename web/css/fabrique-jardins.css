@@ -115,3 +115,11 @@
     margin-left:-5px;
     color: #000000;
 }
+.price{
+    color: cornflowerblue;
+    font-weight:bold;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

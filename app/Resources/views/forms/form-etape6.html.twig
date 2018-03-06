@@ -56,12 +56,12 @@
 </div>
 <div class="col_two_third">
     <label>
-        <input type="checkbox" id="option_guide_entretien" name="option_guide_entretien" />
+        <input type="checkbox" id="option_guide_entretien" name="option_guide_entretien" onclick="calcTarif()"/>
         <span><u>En option:</u> Je réalise le <strong>guide d'entretien</strong> de votre jardin</span>
     </label>
-    <span>TARIF (todo)</span>
+    <span id="option_guide_entretien_price" class="price"></span>
 </div>
 <div class="col_two_third">
-    <a href="#" class="button button-3d fright tab-linker left" rel="2">ETAPE PRECEDENTE</a>
-    <a href="#" class="button button-3d fright tab-linker right" rel="2">ETAPE SUIVANTE</a>
+    <a href="#" class="button button-3d fright tab-linker right" rel="2" onclick="activateTab(6)">ETAPE SUIVANTE</a>
+    <a href="#" class="button button-3d fright tab-linker left" rel="2" onclick="activateTab(4)">ETAPE PRECEDENTE</a>
 </div>
