@@ -1,72 +1,76 @@
-<div class="col_half">
+<div class="col_full">
     <label for="formjardin_place">Choisissez le lieu et la surface à aménager</label>
     <div class="control-group form-group">
         <div class="editable-input">
             <div class="editable-checklist">
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="massif_0-25" value="massif_0-25" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/massif/LA FABRIQUE DE JARDINS - LIEUX - MASSIF (7).jpg') }}"/>
                     <span> Massif 0 à 25m²</span>
                     <span class="price">95 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="massif_26-50" value="massif_26-50" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/massif/LA FABRIQUE DE JARDINS - LIEUX - MASSIF (1).jpg') }}"/>
                     <span> Massif 26 à 50m²</span>
                     <span class="price">190 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="balcon_terrasse_0-25" value="balcon_terrasse_0-25" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/balcon/LA FABRIQUE DE JARDINS - LIEUX - BALCON (1).jpg') }}" />
                     <span> Balcon Terrasse 0 à 25m²</span>
                     <span class="price">95 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="balcon_terrasse_26-50" value="balcon_terrasse_26-50" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/balcon/LA FABRIQUE DE JARDINS - LIEUX - BALCON (3).jpg') }}" />
                     <span> Balcon Terrasse 26 à 50m²</span>
                     <span class="price">190 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="potager_0-25" value="potager_0-25" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/potager/LA FABRIQUE DE JARDIN - LIEUX - POTAGER (2).jpg') }}" />
                     <span> Potager 0 à 25m²</span>
                     <span class="price">95 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="potager_26-50" value="potager_26-50" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/potager/LA FABRIQUE DE JARDIN - LIEUX - POTAGER (13).jpg') }}" />
                     <span> Potager 26 à 50m²</span>
                     <span class="price">190 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="jardin_ville" value="jardin_ville" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/ville/LA FABRIQUE DE JARDIN - LIEUX - VILLE (2).jpg') }}" />
                     <span> Jardin de ville 51 à 250m²</span>
                     <span class="price">380 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="jardin_bourg" value="jardin_bourg" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/bourg/LA FABRIQUE DE JARDINS - LIEUX - BOURG (3).jpg') }}" />
                     <span> Jardin de bourg 251 à 500m²</span>
                     <span class="price">760 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="jardin_campagne" value="jardin_campagne" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset('media/lieux/campagne/LA FABRIQUE - LIEUX - CAMPAGNE (3).jpg') }}" />
                     <span> Jardin de campagne 501 à 800m²</span>
                     <span class="price">1140 €</span>
                 </label>
-                <div class="clear"></div>
-                <label>
+                <label class="surface_box">
                     <input type="radio" id="surface_sup" value="surface_sup" name="choix_surface" onclick="calcTarif()"/>
-                    <span> Très grands jardins Supérieurs à 800m² Nous consulter</span>
+                    <img src="{{ asset('media/lieux/grands-jardins/LA FABRIQUE DE JARDINS - LIEUX - GRANDS JARDINS (1).jpg') }}" />
+                    <span> Très grands jardins Supérieurs à 800m²</span>
+                    <span class="price">DEVIS</span>
+                </label>
+                <label class="surface_box_x2">
+                    <input type="checkbox" id="option_3D" name="option_3D" onclick="calcTarif()"/>
+                    <img src="" />
+                    <span><u>En option:</u> Une <strong>mise en forme 3D</strong> de votre projet</span>
                 </label>
             </div>
         </div>
-        <label>
-            <input type="checkbox" id="option_3D" name="option_3D" onclick="calcTarif()"/>
-            <span><u>En option:</u> Une <strong>mise en forme 3D</strong> de votre projet</span>
-        </label>
+
         <span id="option_3D_price" class="price"></span>
     </div>
 </div>
