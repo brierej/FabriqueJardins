@@ -123,3 +123,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+#recapOptions li{
+    margin-left: 20px;
+}

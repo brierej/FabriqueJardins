@@ -30,6 +30,47 @@ function calcTarif(add){
 
     $('#tarif').text(tarif + '€');
     updateOptionPrice(choixSurface);
+    updateRecap(options, choixSurface);
+}
+
+function updateRecap(options, choixSurface) {
+    surfaceLabels = {
+        "massif_0-25": "Massif de 0 à 25 m²",
+        "massif_26-50": "Massif de 26 à 50m²",
+        "balcon_terrasse_0-25": "Balcon/Terrasse de 0 à 25m²",
+        "balcon_terrasse_26-50": "Balcon/Terrasse de 26 à 50m²",
+        "potager_0-25": "Potager de 0 à 25m²",
+        "potager_26-50": "Potager de 26 à 50m²",
+        "jardin_ville": "Jardin de ville",
+        "jardin_bourg": "Jardin de bourg",
+        "jardin_campagne": "Jardin de campagne",
+    };
+    optionsLabels = {
+        "option_3D": "Mise en forme 3D",
+        "option_dossier_tech": "Dossier technique",
+        "option_guide_entretien": "Guide d'entretien",
+        "option_choix_pro": "Choix de l'entreprise"
+    };
+
+    var list = document.createElement('ul');
+    var optionsElement = $('#recapOptions');
+    for(var i = 0; i < options.length; i++) {
+        // Create the list item:
+        var item = document.createElement('li');
+
+        // Set its contents:
+        item.appendChild(document.createTextNode(optionsLabels[options[i]]));
+
+        // Add it to the list:
+        list.appendChild(item);
+    }
+    console.log(list.innerHTML);
+    // Finally, return the constructed list:
+    if (options.length > 0) {
+        optionsElement.html('Options : ' + list.innerHTML);
+    }
+
+    $('#recapSurface').text(surfaceLabels[choixSurface]);
 }
 
 function getTarifsArray() {
