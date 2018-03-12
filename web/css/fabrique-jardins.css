@@ -154,3 +154,13 @@
 .surface_box_x2 input[type=radio]{
     display: none;
 }
+
+.feature-button{
+    margin: 20px 0px;
+    width:100%;
+    text-align: center;
+}
+
+.feature-box p{
+    text-align: justify;
+}
