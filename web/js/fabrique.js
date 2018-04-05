@@ -6,10 +6,9 @@ function activateTab(num){
 
 function validateForm(){
     var serializedArray = $('#billing-form').serializeArray();
-    console.log(serializedArray);
 }
 
-function calcTarif(add){
+function calcTarif(element){
     var serializedArray = $('#billing-form').serializeArray();
     var options = [];
     var tarif = 0;
@@ -23,8 +22,8 @@ function calcTarif(add){
         }
     }
 
-    console.log(choixSurface);
-    console.log(options);
+    // console.log(choixSurface);
+    // console.log(options);
 
     tarif = tarifOptions(options, choixSurface);
 
@@ -45,31 +44,33 @@ function updateRecap(options, choixSurface) {
         "jardin_bourg": "Jardin de bourg",
         "jardin_campagne": "Jardin de campagne",
     };
+    $tarifsOptions = getTarifsArray();
     optionsLabels = {
-        "option_3D": "Mise en forme 3D",
-        "option_dossier_tech": "Dossier technique",
-        "option_guide_entretien": "Guide d'entretien",
-        "option_choix_pro": "Choix de l'entreprise"
+        "option_3D": "Mise en forme 3D (+" + $tarifsOptions[choixSurface]['option_3D'] + ' €)',
+        "option_dossier_tech": "Dossier technique +" + $tarifsOptions[choixSurface]['option_3D'] + ' €)',
+        "option_guide_entretien": "Guide d'entretien +" + $tarifsOptions[choixSurface]['option_3D'] + ' €)',
+        "option_choix_pro": "Choix de l'entreprise +" + $tarifsOptions[choixSurface]['option_3D'] + ' €)'
     };
 
     var list = document.createElement('ul');
     var optionsElement = $('#recapOptions');
-    for(var i = 0; i < options.length; i++) {
-        // Create the list item:
+
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
+
+    for (var i = 0; i < options.length; i++) {
         var item = document.createElement('li');
-
-        // Set its contents:
         item.appendChild(document.createTextNode(optionsLabels[options[i]]));
-
-        // Add it to the list:
         list.appendChild(item);
     }
-    console.log(list.innerHTML);
-    // Finally, return the constructed list:
+
+    // console.log(list.innerHTML);
     if (options.length > 0) {
         optionsElement.html('Options : ' + list.innerHTML);
+    } else {
+        optionsElement.html('');
     }
-
     $('#recapSurface').text(surfaceLabels[choixSurface]);
 }
 
@@ -158,4 +159,9 @@ function tarifOptions(options, surface){
     }
 
     return res;
+}
+
+function selectSurface(element) {
+    $('.surface_box').removeClass('surface_checked');
+    $(element).addClass('surface_checked');
 }

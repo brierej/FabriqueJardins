@@ -115,25 +115,25 @@
     margin-left:-5px;
     color: #000000;
 }
-.price{
-    color: cornflowerblue;
-    font-weight:bold;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
 #recapOptions li{
     margin-left: 20px;
 }
 
 .surface_box{
-    height:200px;
     float: left;
     width: 25%;
-    padding: 0 12px 12px 0;
+    padding: 0 0px 12px 0;
+    border: 2px solid transparent;
 }
+.surface_box:hover{
+    border: 2px solid #465A7B;
+}
+.surface_box:checked{
+    border: 2px solid forestgreen;
+}
+
+
 .surface_box img {
     height:150px;
     width:auto;
@@ -163,4 +163,31 @@
 
 .feature-box p{
     text-align: justify;
+}
+
+.product-price{
+    color: cornflowerblue;
+    font-weight:bold;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width:100%;
+    text-align: center;
+}
+.product-add{
+    width: 100%;
+    padding-top: 5px;
+}
+.product-button{
+    border: thin solid slategrey;
+    display: inline-block;
+    font-size: smaller;
+    text-transform: none;
+    padding: 4px;
+}
+
+.surface_checked{
+    background-color: lightgrey;
+    border: 2px solid slategrey;
 }
