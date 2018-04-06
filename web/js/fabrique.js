@@ -143,11 +143,14 @@ function getTarifsArray() {
 }
 
 function updateOptionPrice(surface) {
+    console.log('updateOptionPrice');
     tarif = getTarifsArray();
     $('#option_3D_price').text(tarif[surface]['option_3D'] + '€');
     $('#option_dossier_tech_price').text(tarif[surface]['option_dossier_tech'] + '€');
     $('#option_guide_entretien_price').text(tarif[surface]['option_guide_entretien'] + '€');
     $('#option_choix_pro_price').text(tarif[surface]['option_choix_pro'] + '€');
+    $('#option_choix_deplacement_dpt').text('30 €');
+    $('#option_choix_deplacement_gorges').text('0 €');
 }
 
 function tarifOptions(options, surface){

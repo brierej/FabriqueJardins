@@ -137,6 +137,9 @@
 .surface_box img {
     height:150px;
     width:auto;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 2px 2px 2px #aaa;
+    margin-bottom:10px;
 }
 .surface_box input[type=radio]{
     display: none;
@@ -190,4 +193,15 @@
 .surface_checked{
     background-color: lightgrey;
     border: 2px solid slategrey;
+}
+
+.bloc_option_3D{
+    background-image: url('../media/option3D.png');
+    height:100px;
+    padding-top: 35px;
+    padding-left: 10px;
+    color:white;
+    font-weight:bold;
+    box-shadow: 8px 8px 12px #aaa;
+    border-radius: 5px 5px 5px 5px;
 }
