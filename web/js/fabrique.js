@@ -28,6 +28,7 @@ function calcTarif(element){
     tarif = tarifOptions(options, choixSurface);
 
     $('#tarif').text(tarif + '€');
+    $('#sMontant').val(tarif);
     updateOptionPrice(choixSurface);
     updateRecap(options, choixSurface);
 }

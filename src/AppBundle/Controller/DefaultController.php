@@ -73,4 +73,28 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+
+    /**
+     * @Route("/success", name="success")
+     */
+    public function successAction(Request $request)
+    {
+        return $this->render('pages/success.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'request' => $request->request
+        ]);
+    }
+
+    /**
+     * @Route("/error", name="error")
+     */
+    public function errorAction(Request $request)
+    {
+        return $this->render('pages/error.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'request' => $request->request
+        ]);
+    }
+
+
 }

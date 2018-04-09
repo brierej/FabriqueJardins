@@ -5,3 +5,6 @@ app:
 kms_froala_editor:
     resource: "@KMSFroalaEditorBundle/Resources/config/routing.yml"
     prefix:   /froalaeditor
+
+presta_sitemap:
+    resource: "@PrestaSitemapBundle/Resources/config/routing.yml"

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<form action="{{ payment_infos.sUrlPaiement }}" method="post" id="PaymentRequest">
+    <p>
+        <input type="hidden" name="version"             id="version"        value="{{ payment_infos.sVersion }}" />
+        <input type="hidden" name="TPE"                 id="TPE"            value="{{ payment_infos.sNumero }}" />
+        <input type="hidden" name="date"                id="date"           value="{{ payment_array.date }}" />
+        <input type="hidden" name="montant"             id="montant"        value="{{ payment_array.montant }}{{ payment_array.devise }}" />
+        <input type="hidden" name="reference"           id="reference"      value="{{ payment_array.reference }}" />
+        <input type="hidden" name="MAC"                 id="MAC"            value="{{ payment_smac }}" />
+        <input type="hidden" name="url_retour"          id="url_retour"     value="{{ payment_infos.sUrlKO }}" />
+        <input type="hidden" name="url_retour_ok"       id="url_retour_ok"  value="{{ payment_infos.sUrlOK }}" />
+        <input type="hidden" name="url_retour_err"      id="url_retour_err" value="{{ payment_infos.sUrlKO }}" />
+        <input type="hidden" name="lgue"                id="lgue"           value="{{ payment_infos.sLangue }}" />
+        <input type="hidden" name="societe"             id="societe"        value="{{ payment_infos.sCodeSociete }}" />
+        <input type="hidden" name="texte-libre"         id="texte-libre"    value="{{ payment_array.texteLibre }}" />
+        <input type="hidden" name="mail"                id="mail"           value="{{ payment_array.email }}" />
+
+        <input type="submit" name="bouton"              id="bouton"         value="Connexion / Connection" />
+    </p>
+</form>
+
+    {{ dump(payment_infos) }}
+    {{ dump(payment_array) }}
+    {{ dump(payment_smac) }}
+
+{% endblock %}
