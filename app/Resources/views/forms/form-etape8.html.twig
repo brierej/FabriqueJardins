@@ -1,2 +1,52 @@
 
-<input type="submit" class="button button-3d fright tab-linker right">VALIDER MA COMMANDE</input>
+{#<div class="col_half">#}
+    {#<h3>RECAPITULATIF DE LA COMMANDE</h3>#}
+    {#<h4><span id="recapSurface"></span></h4>#}
+    {#<div><ul id="recapOptions"></ul></div>#}
+    {#<div>TOTAL : <span id="tarif" class="price">0 €</span></div>#}
+{##}
+    {#<input type="hidden" name="tarif" id="sMontant" value="" />#}
+{#</div>#}
+
+<div class="col_half col_last">
+    <div class="col_full col_last">
+        <p>Les paiements s'effectuent de manière sécurisée via la plateforme de paiement <a href="https://www.monetico-paiement.fr/">Monetico</a>.
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="col_full col_last">
+        <div class="col_one_third">
+            <img src="{{ asset('media/monetico/cic.jpg') }}" />
+        </div>
+        <div class="col_one_third">
+            <img src="{{ asset('media/monetico/credit-mutuel.jpg') }}" />
+        </div>
+        <div class="col_one_third col_last">
+            <img src="{{ asset('media/monetico/monetico-paiement.jpg') }}" />
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="col_full">
+        <div class="col_one_fourth">
+            <img src="{{ asset('media/monetico/SMP_carte_amex.gif') }}" />
+        </div>
+        <div class="col_one_fourth">
+            <img src="{{ asset('media/monetico/SMP_carte_cb.gif') }}" />
+        </div>
+        <div class="col_one_fourth">
+            <img src="{{ asset('media/monetico/SMP_carte_eurocard.gif') }}" />
+        </div>
+        <div class="col_one_fourth col_last">
+            <img src="{{ asset('media/monetico/SMP_carte_visa.gif') }}" />
+        </div>
+    </div>
+
+</div>
+<div class="clearfix"></div>
+
+
+<input type="submit" class="button button-3d fright tab-linker right" value="Valider ma commande"/>

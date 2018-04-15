@@ -13,6 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Monetico;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 
 define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
@@ -108,8 +109,8 @@ class FormController extends Controller
             'montant' => $sMontant
         );
 
-        var_dump($request->request);
-        var_dump($sArray);
+//        var_dump($request->request);
+//        var_dump($sArray);
 
 // =============================================================================================================================================================
 // SECTION CODE : Cette section ne doit pas être modifiée
