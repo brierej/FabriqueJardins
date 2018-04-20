@@ -9,6 +9,8 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\Pricing;
+use AppBundle\Entity\Questionnaire;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,8 +43,10 @@ class FormController extends Controller
      */
     public function paymentAction(Request $request)
     {
+        $currentDate = new \DateTime();
+
         // Reference: unique, alphaNum (A-Z a-z 0-9), 12 characters max
-        $sReference = "FJ" . date("YmdHis");
+        $sReference = "FJ" . $currentDate->format("YmdHis");
         // Amount : format  "xxxxx.yy" (no spaces)
         // $sMontant = 1.01;
         $sMontant = $request->request->get('tarif');
@@ -51,7 +55,7 @@ class FormController extends Controller
         // free texte : a bigger reference, session context for the return on the merchant website
         $sTexteLibre = "Texte Libre";
         // transaction date : format d/m/y:h:m:s
-        $sDate = date("d/m/Y:H:i:s");
+        $sDate = $currentDate->format("d/m/Y:H:i:s");
         // Language of the company code
         $sLangue = "FR";
         // customer email
@@ -150,12 +154,75 @@ class FormController extends Controller
 // MAC computation
         $sMAC = $oHmac->computeHmac($phase1go_fields);
 
+        $em = $this->getDoctrine()->getManager();
+        $questionnaire = new Questionnaire();
+        $questionnaire->setJson(json_encode($request->request->all()));
+        $questionnaire->setReference($sArray['reference']);
+        $questionnaire->setCreatedAt($currentDate);
+        $em->persist($questionnaire);
+        $em->flush();
+
+        $typeJardin = $request->request->get('choix_surface');
+        $pricing = $this->getDoctrine()
+            ->getRepository(Pricing::class)
+            ->findOneBy([
+                'code' => $typeJardin
+                ]);
+
+        if (!$pricing) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        $basePrice = $request->request->get('price');
+        $options = array();
+        if ($request->request->get('option_3D') == 'on') {
+            $options[] = array(
+                'code' => 'option_3D',
+                'label' => 'Modélisation 3D',
+                'price' => $pricing->getPrice3D()
+            );
+            $basePrice += $pricing->getPrice3D();
+        }
+        if ($request->request->get('option_dossier_tech') == 'on') {
+            $options[] = array(
+                'code' => 'option_dossier_tech',
+                'label' => 'Dossier technique',
+                'price' => $pricing->getPriceDossierTech()
+            );
+            $basePrice += $pricing->getPriceDossierTech();
+        }
+        if ($request->request->get('option_choix_pro') == 'on') {
+            $options[] = array(
+                'code' => 'option_choix_pro',
+                'label' => 'Choix d\'entreprise',
+                'price' => $pricing->getPriceChoixEntreprise()
+            );
+            $basePrice += $pricing->getPriceChoixEntreprise();
+        }
+        if ($request->request->get('option_guide_entretien') == 'on') {
+            $options[] = array(
+                'code' => 'option_guide_entretien',
+                'label' => 'Guide d\'entretien',
+                'price' => $pricing->getPriceGuideEntretien()
+            );
+            $basePrice += $pricing->getPriceGuideEntretien();
+        }
+
         return $this->render('forms/paiement.html.twig', array(
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'payment_url' => $oEpt->sUrlPaiement,
             'payment_infos' => $oEpt,
             'payment_smac' => $sMAC,
-            'payment_array' => $sArray
+            'payment_array' => $sArray,
+            'form_infos' => $request->request->all(),
+            'form_json' => json_encode($request->request),
+            'total_price' => $basePrice,
+            'options' => $options,
+            'surface_label' => $pricing->getLabel(),
+            'surface_unitlabel' => $pricing->getUnitLabel(),
+            'surface_baseprice' => $pricing->getPrice()
         ));
     }
 
@@ -164,10 +231,22 @@ class FormController extends Controller
      */
     public function formAction(Request $request, $form_type)
     {
+        $pricing = $this->getDoctrine()
+            ->getRepository(Pricing::class)
+            ->findAll();
 
+        if (!$pricing) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+//        var_dump($pricing);
+//
         // replace this example code with whatever you need
         return $this->render('forms/'.$form_type.'.html.twig', array(
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'pricing' => $pricing
         ));
     }
 }

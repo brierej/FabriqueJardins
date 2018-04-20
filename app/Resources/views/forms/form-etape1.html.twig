@@ -3,87 +3,18 @@
     <div class="control-group form-group">
         <div class="editable-input">
             <div class="editable-checklist">
+                {% for surface in pricing %}
+                    {#{{ dump(surface) }}#}
                 <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="massif_0-25" value="massif_0-25" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/massif/LA FABRIQUE DE JARDINS - LIEUX - MASSIF (7).jpg') }}"/>
-                    <div class="product-label center">Massifs</div>
-                    <div class="product-subtitle center">0 à 25m²</div>
-                    <div class="product-price center">95 €</div>
+                    <input type="radio" id="{{ surface.code }}" value="{{ surface.code }}" name="choix_surface" onclick="calcTarif()"/>
+                    <img src="{{ asset(surface.image) }}"/>
+                    <div class="product-label center">{{ surface.label }}</div>
+                    <div class="product-subtitle center">{{ surface.getUnitLabel() }}</div>
+                    <div class="product-price center">{{ surface.price }} €</div>
                     <div class="product-add center"><div class="product-button">Valider</div></div>
                     <div class="clearfix center"></div>
                 </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="massif_26-50" value="massif_26-50" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/massif/LA FABRIQUE DE JARDINS - LIEUX - MASSIF (1).jpg') }}"/>
-                    <div class="product-label center">Massifs</div>
-                    <div class="product-subtitle center">26 à 50m²</div>
-                    <div class="product-price center">190 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="balcon_terrasse_0-25" value="balcon_terrasse_0-25" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/balcon/LA FABRIQUE DE JARDINS - LIEUX - BALCON (1).jpg') }}" />
-                    <div class="product-label center">Balcon Terrasse</div>
-                    <div class="product-subtitle center">0 à 25m²</div>
-                    <div class="product-price center">95 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="balcon_terrasse_26-50" value="balcon_terrasse_26-50" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/balcon/LA FABRIQUE DE JARDINS - LIEUX - BALCON (3).jpg') }}" />
-                    <div class="product-label center">Balcon Terrasse</div>
-                    <div class="product-subtitle center">26 à 50m²</div>
-                    <div class="product-price center">190 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="potager_0-25" value="potager_0-25" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/potager/LA FABRIQUE DE JARDIN - LIEUX - POTAGER (2).jpg') }}" />
-                    <div class="product-label center">Potager</div>
-                    <div class="product-subtitle center">0 à 25m²</div>
-                    <div class="product-price center">95 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="potager_26-50" value="potager_26-50" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/potager/LA FABRIQUE DE JARDIN - LIEUX - POTAGER (13).jpg') }}" />
-                    <div class="product-label center">Potager</div>
-                    <div class="product-subtitle center">26 à 50m²</div>
-                    <div class="product-price center">190 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="jardin_ville" value="jardin_ville" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/ville/LA FABRIQUE DE JARDIN - LIEUX - VILLE (2).jpg') }}" />
-                    <div class="product-label center">Jardin de ville</div>
-                    <div class="product-subtitle center">51 à 250m²</div>
-                    <div class="product-price center">380 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="jardin_bourg" value="jardin_bourg" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/bourg/LA FABRIQUE DE JARDINS - LIEUX - BOURG (3).jpg') }}" />
-                    <div class="product-label center">Jardin de bourg</div>
-                    <div class="product-subtitle center">251 à 500m²</div>
-                    <div class="product-price center">760 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
-                <label class="surface_box" onclick="selectSurface(this)">
-                    <input type="radio" id="jardin_campagne" value="jardin_campagne" name="choix_surface" onclick="calcTarif()"/>
-                    <img src="{{ asset('media/lieux/campagne/LA FABRIQUE - LIEUX - CAMPAGNE (3).jpg') }}" />
-                    <div class="product-label center">Jardin de campagne</div>
-                    <div class="product-subtitle center">501 à 800m²</div>
-                    <div class="product-price center">1140 €</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
-                    <div class="clearfix"></div>
-                </label>
+                {% endfor %}
                 <label class="surface_box" onclick="selectSurface(this)">
                     <input type="radio" id="surface_sup" value="surface_sup" name="choix_surface" onclick="calcTarif()"/>
                     <img src="{{ asset('media/lieux/grands-jardins/LA FABRIQUE DE JARDINS - LIEUX - GRANDS JARDINS (1).jpg') }}" />

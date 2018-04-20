@@ -2,6 +2,18 @@
 
 {% block content %}
 
+{# affichage du recap de la commande avec le détail des options
+  Revenir sur un formulaire deja rempli ? #}
+
+    {{ dump(total_price) }}
+    {{ dump(surface_label) }}
+    {{ dump(surface_unitlabel) }}
+    {{ dump(surface_baseprice) }}
+
+    {% for option in options %}
+        {{ dump(option.label ~ option.price) }}
+    {% endfor %}
+
 <form action="{{ payment_infos.sUrlPaiement }}" method="post" id="PaymentRequest">
     <p>
         <input type="hidden" name="version"             id="version"        value="{{ payment_infos.sVersion }}" />
@@ -22,8 +34,10 @@
     </p>
 </form>
 
-    {#{{ dump(payment_infos) }}#}
-    {#{{ dump(payment_array) }}#}
-    {#{{ dump(payment_smac) }}#}
+    {{ dump(payment_infos) }}
+    {{ dump(payment_array) }}
+    {{ dump(payment_smac) }}
+    {{ dump(form_infos) }}
+
 
 {% endblock %}

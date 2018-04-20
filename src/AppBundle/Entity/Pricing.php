@@ -75,6 +75,11 @@ class Pricing
     private $price_guide_entretien;
 
     /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $image;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -240,6 +245,22 @@ class Pricing
     public function setPriceGuideEntretien($price_guide_entretien)
     {
         $this->price_guide_entretien = $price_guide_entretien;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
 }

@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
+
+
 {% block content %}
+
     <div class="container clearfix">
         <h2 class="center">Formulaire pour les particuliers</h2>
         <form id="billing-form" name="billing-form" class="nobottommargin" action="{{ path('payment') }}" method="post">
@@ -35,10 +38,6 @@
                             <a href="#tab-7" class="">Coordonnées</a>
                             {#<h5>Coordonnées</h5>#}
                         </li>
-                        <li>
-                            <a href="#tab-8" class="">Paiement</a>
-                            {#<h5>Récapitulatif</h5>#}
-                        </li>
                     </ul>
 
                     <div class="tab-container">
@@ -63,9 +62,6 @@
                         </div>
                         <div id="tab-7" class="tab-content clearfix">
                             {% include 'forms/form-etape7.html.twig' %}
-                        </div>
-                        <div id="tab-8" class="tab-content clearfix">
-                            {% include 'forms/form-etape8.html.twig' %}
                         </div>
 
                     </div>
