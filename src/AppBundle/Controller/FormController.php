@@ -175,7 +175,7 @@ class FormController extends Controller
             );
         }
 
-        $basePrice = $request->request->get('price');
+        $basePrice = $pricing->getPrice();
         $options = array();
         if ($request->request->get('option_3D') == 'on') {
             $options[] = array(
@@ -220,9 +220,7 @@ class FormController extends Controller
             'form_json' => json_encode($request->request),
             'total_price' => $basePrice,
             'options' => $options,
-            'surface_label' => $pricing->getLabel(),
-            'surface_unitlabel' => $pricing->getUnitLabel(),
-            'surface_baseprice' => $pricing->getPrice()
+            'pricing' => $pricing,
         ));
     }
 
