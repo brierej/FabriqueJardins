@@ -22,15 +22,15 @@
 
                     <!-- Contact Form
                     ============================================= -->
-                    <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+                    <form class="nobottommargin" id="template-contactform" name="template-contactform" action="{{ path('contactSave') }}" method="post">
 
                         <div class="col_half">
                             <label for="template-contactform-name">Nom</label>
-                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control" />
                         </div>
                         <div class="col_half col_last">
                             <label for="template-contactform-name">Prénom</label>
-                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control" />
                         </div>
 
 

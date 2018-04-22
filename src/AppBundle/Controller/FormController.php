@@ -247,4 +247,5 @@ class FormController extends Controller
             'pricing' => $pricing
         ));
     }
+
 }
