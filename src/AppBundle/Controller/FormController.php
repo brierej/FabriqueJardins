@@ -23,8 +23,8 @@ define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
 define ("MONETICOPAIEMENT_VERSION", "3.0");
 define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
 define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
-define ("MONETICOPAIEMENT_URLOK", "http://fabriquedejardins.local/app_dev.php/success");
-define ("MONETICOPAIEMENT_URLKO", "http://fabriquedejardins.local/app_dev.php/error");
+define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr/success");
+define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr/error");
 
 define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
 define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
