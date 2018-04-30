@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div id="portfolio" class="portfolio grid-container portfolio-1 clearfix">
+                    {% for realisation in realisations %}
+                    <article class="portfolio-item pf-graphics pf-illustrations alt clearfix">
+                        <div class="portfolio-image">
+                            <div class="fslider" data-arrows="false">
+                                <div class="flexslider">
+                                    <div class="slider-wrap">
+                                        {% for key,file in files if key == realisation.code %}
+                                            {% for filename in file %}
+                                                <div class="slide"><a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}"><img src="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" alt="Shake It"></a></div>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay" data-lightbox="gallery">
+                                {% for key,file in files if key == realisation.code %}
+                                    {% for key2,filename in file %}
+                                        {% if key2 == 0 %}
+                                        <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+                                        {% else %}
+                                        <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" class="hidden" data-lightbox="gallery-item"></a>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                                <a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-desc">
+                            <h3><a href="portfolio-single-gallery.html">{{ realisation.title }}</a></h3>
+                            <span><a href="#">{{ realisation.subtitle }}</a></span>
+                            <p>{{ realisation.description }}</p>
+                            <a href="{{ path('realisation', {'realisation' : realisation.code}) }}" class="button button-3d noleftmargin">Voir le détail</a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div><!-- #portfolio end -->
+        </div>
+    </section>
+
+{% endblock %}

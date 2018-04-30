@@ -9,6 +9,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Product;
+use AppBundle\Entity\Realisation;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,6 +17,71 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CatalogController extends Controller
 {
+    /**
+     * @Route("/realisations", name="realisations")
+     */
+    public function realisationsAction(Request $request)
+    {
+        $realisations = $this->getDoctrine()
+            ->getRepository(Realisation::class)
+            ->findBy(array('type' => 'realisations'));
+
+        if (!$realisations) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        var_dump($realisations);
+
+        $files = array();
+        foreach($realisations as $realisation) {
+
+            $path = getcwd().'/media/'.$realisation->getType().'/'.$realisation->getCode();
+            $tmp_files = scandir($path);
+            foreach($tmp_files as $tmp_file) {
+                if (is_file($path.'/'.$tmp_file))
+                    $files[$realisation->getCode()][] = $tmp_file;
+            }
+        }
+
+        return $this->render('catalog/realisations.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'realisations' => $realisations,
+            'files' => $files
+        ]);
+    }
+
+    /**
+     * @Route("/realisations/{realisation}", name="realisation")
+     */
+    public function realisationAction(Request $request, $realisation)
+    {
+        $realisationProject = $this->getDoctrine()
+            ->getRepository(Realisation::class)
+            ->findOneBy(array('code' => $realisation));
+
+        if (!$realisationProject) {
+            throw $this->createNotFoundException(
+                'No products found'
+            );
+        }
+
+        $files = array();
+        $path = getcwd().'/media/realisations/'.$realisation;
+        $tmp_files = scandir($path);
+        foreach($tmp_files as $tmp_file) {
+            if (is_file($path.'/'.$tmp_file))
+                $files[] = $tmp_file;
+        }
+
+        return $this->render('catalog/realisation.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'datas' => $realisationProject,
+            'files' => $files
+        ]);
+    }
+
     /**
      * @Route("/conception-jardin/lieux", name="lieux")
      */

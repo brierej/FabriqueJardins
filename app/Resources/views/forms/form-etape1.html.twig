@@ -16,13 +16,15 @@
                 </label>
                 {% endfor %}
                 <label class="surface_box" onclick="selectSurface(this)">
+                    <a href="{{ path('contact') }}">
                     <input type="radio" id="surface_sup" value="surface_sup" name="choix_surface" onclick="calcTarif()"/>
                     <img src="{{ asset('media/lieux/grands-jardins/LA FABRIQUE DE JARDINS - LIEUX - GRANDS JARDINS (1).jpg') }}" />
                     <div class="product-label center">Très grands jardins</div>
                     <div class="product-subtitle center">supérieur à 800m²</div>
                     <div class="product-price center">DEVIS</div>
-                    <div class="product-add center"><div class="product-button">Valider</div></div>
+                    <div class="product-add center"><div class="product-button">Nous contacter</div></div>
                     <div class="clearfix"></div>
+                    </a>
                 </label>
             </div>
         </div>
@@ -35,7 +37,7 @@
     <label class="col_full bloc_option_3D">
         <input type="checkbox" id="option_3D" name="option_3D" onclick="calcTarif()"/>
         <img src="" />
-        <span><u>En option:</u> Une <strong>mise en forme 3D</strong> de votre projet - </span>
+        <span style="font-size:130%;"><u>En option:</u> Une <strong>mise en forme 3D</strong> de votre projet - </span>
         <span id="option_3D_price" class="price"> (prix en fonction de la surface)</span>
     </label>
 </div>
