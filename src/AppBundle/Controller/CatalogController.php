@@ -32,8 +32,6 @@ class CatalogController extends Controller
             );
         }
 
-        var_dump($realisations);
-
         $files = array();
         foreach($realisations as $realisation) {
 
