@@ -16,7 +16,7 @@
                                             {% for filename in file %}
                                                 <div class="slide">
                                                     <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" data-lightbox="image">
-                                                        <img src="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" alt="Shake It" data-lightbox="image">
+                                                        <img src="{{ asset('media/realisations/' ~ realisation.code ~ '/slider-' ~ filename) }}" alt="Shake It" data-lightbox="image">
                                                     </a>
                                                 </div>
                                             {% endfor %}

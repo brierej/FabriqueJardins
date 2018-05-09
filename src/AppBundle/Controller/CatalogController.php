@@ -38,7 +38,7 @@ class CatalogController extends Controller
             $path = getcwd().'/media/'.$realisation->getType().'/'.$realisation->getCode();
             $tmp_files = scandir($path);
             foreach($tmp_files as $tmp_file) {
-                if (is_file($path.'/'.$tmp_file))
+                if (is_file($path.'/'.$tmp_file) && !preg_match('#slider-#', $tmp_file) )
                     $files[$realisation->getCode()][] = $tmp_file;
             }
         }
@@ -78,7 +78,7 @@ class CatalogController extends Controller
         $path = getcwd().'/media/realisations/'.$realisation;
         $tmp_files = scandir($path);
         foreach($tmp_files as $tmp_file) {
-            if (is_file($path.'/'.$tmp_file))
+            if (is_file($path.'/'.$tmp_file)  && !preg_match('#slider-#', $tmp_file))
                 $files[] = $tmp_file;
         }
 
