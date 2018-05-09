@@ -43,10 +43,19 @@ class CatalogController extends Controller
             }
         }
 
+        $filesVrac = array();
+        $path = getcwd().'/media/'.$realisation->getType();
+        $tmp_files = scandir($path);
+        foreach($tmp_files as $tmp_file) {
+            if (is_file($path.'/'.$tmp_file))
+                $filesVrac[] = $tmp_file;
+        }
+
         return $this->render('catalog/realisations.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'realisations' => $realisations,
-            'files' => $files
+            'files' => $files,
+            'filesVrac' => $filesVrac
         ]);
     }
 

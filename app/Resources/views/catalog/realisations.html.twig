@@ -14,23 +14,15 @@
                                     <div class="slider-wrap">
                                         {% for key,file in files if key == realisation.code %}
                                             {% for filename in file %}
-                                                <div class="slide"><a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}"><img src="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" alt="Shake It"></a></div>
+                                                <div class="slide">
+                                                    <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" data-lightbox="image">
+                                                        <img src="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" alt="Shake It" data-lightbox="image">
+                                                    </a>
+                                                </div>
                                             {% endfor %}
                                         {% endfor %}
                                     </div>
                                 </div>
-                            </div>
-                            <div class="portfolio-overlay" data-lightbox="gallery">
-                                {% for key,file in files if key == realisation.code %}
-                                    {% for key2,filename in file %}
-                                        {% if key2 == 0 %}
-                                        <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                        {% else %}
-                                        <a href="{{ asset('media/realisations/' ~ realisation.code ~ '/' ~ filename) }}" class="hidden" data-lightbox="gallery-item"></a>
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endfor %}
-                                <a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-desc">
@@ -45,5 +37,17 @@
             </div><!-- #portfolio end -->
         </div>
     </section>
+    <div class="col_full nobottommargin">
+        {#<div class="fancy-title title-border">#}
+        {#<h4>Gallery</h4>#}
+        {#</div>#}
+
+        <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
+            {% for fileVrac in filesVrac %}
+                <a href="{{ asset('media/realisations/' ~ fileVrac) }}" data-lightbox="gallery-item">
+                    <img class="image_fade" src="{{ asset('media/realisations/' ~ fileVrac) }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
