@@ -96,7 +96,7 @@ class CatalogController extends Controller
     {
         $products = $this->getDoctrine()
             ->getRepository(Product::class)
-            ->findBy(array('type' => 'lieux'));
+            ->findBy(array('type' => 'lieu'));
 
         if (!$products) {
             throw $this->createNotFoundException(
@@ -255,7 +255,7 @@ class CatalogController extends Controller
                 $files[] = $tmp_file;
         }
 
-        return $this->render('catalog/catalogue-ambiances.html.twig', [
+        return $this->render('catalog/catalogue-philosophy.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'datas' => $products,
             'files' => $files
@@ -279,14 +279,14 @@ class CatalogController extends Controller
 
         // Récupère les images du dossier correspondant à l'ambiance
         $files = array();
-        $path = getcwd().'/media/lieux/'.$lieu;
+        $path = getcwd().'/media/lieu/'.$lieu;
         $tmp_files = scandir($path);
         foreach($tmp_files as $tmp_file) {
             if (is_file($path.'/'.$tmp_file))
                 $files[] = $tmp_file;
         }
 
-        return $this->render('catalog/catalogue-ambiances.html.twig', [
+        return $this->render('catalog/catalogue-places.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'datas' => $products,
             'files' => $files
