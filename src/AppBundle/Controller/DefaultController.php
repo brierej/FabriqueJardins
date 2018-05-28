@@ -11,6 +11,23 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
+define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
+define ("MONETICOPAIEMENT_VERSION", "3.0");
+define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
+define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
+define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr");
+define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr");
+
+define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
+define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
+define ("MONETICOPAIEMENT_PHASE2BACK_RECEIPT","version=2\ncdr=%s");
+define ("MONETICOPAIEMENT_PHASE2BACK_MACOK","0");
+define ("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK","1\n");
+define ("MONETICOPAIEMENT_PHASE2BACK_FIELDS", "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*");
+define ("MONETICOPAIEMENT_PHASE1GO_FIELDS", "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s");
+define ("MONETICOPAIEMENT_URLPAYMENT", "paiement.cgi");
+
 class DefaultController extends Controller
 {
     /**
