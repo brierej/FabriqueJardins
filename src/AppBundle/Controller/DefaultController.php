@@ -14,47 +14,47 @@ use Symfony\Component\HttpFoundation\Response;
 if (!defined("MONETICOPAIEMENT_KEY")) {
 define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
 }
-if (!defined("MONETICOPAIEMENT_KEY")) {
+if (!defined("MONETICOPAIEMENT_EPTNUMBER")) {
 define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
 }
-    if (!defined("MONETICOPAIEMENT_KEY")) {
+    if (!defined("MONETICOPAIEMENT_VERSION")) {
 define ("MONETICOPAIEMENT_VERSION", "3.0");
     }
-        if (!defined("MONETICOPAIEMENT_KEY")) {
+        if (!defined("MONETICOPAIEMENT_URLSERVER")) {
 define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
         }
-            if (!defined("MONETICOPAIEMENT_KEY")) {
+            if (!defined("MONETICOPAIEMENT_COMPANYCODE")) {
 define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
             }
-                if (!defined("MONETICOPAIEMENT_KEY")) {
+                if (!defined("MONETICOPAIEMENT_URLOK")) {
 define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr");
                 }
-                    if (!defined("MONETICOPAIEMENT_KEY")) {
+                    if (!defined("MONETICOPAIEMENT_URLKO")) {
 define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr");
                     }
-                        if (!defined("MONETICOPAIEMENT_KEY")) {
+                        if (!defined("MONETICOPAIEMENT_CTLHMAC")) {
 
 define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
                         }
-                            if (!defined("MONETICOPAIEMENT_KEY")) {
+                            if (!defined("MONETICOPAIEMENT_CTLHMACSTR")) {
 define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
                             }
-                                if (!defined("MONETICOPAIEMENT_KEY")) {
+                                if (!defined("MONETICOPAIEMENT_PHASE2BACK_RECEIPT")) {
 define ("MONETICOPAIEMENT_PHASE2BACK_RECEIPT","version=2\ncdr=%s");
                                 }
-                                    if (!defined("MONETICOPAIEMENT_KEY")) {
+                                    if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACOK")) {
 define ("MONETICOPAIEMENT_PHASE2BACK_MACOK","0");
                                     }
-                                        if (!defined("MONETICOPAIEMENT_KEY")) {
+                                        if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK")) {
 define ("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK","1\n");
                                         }
-                                            if (!defined("MONETICOPAIEMENT_KEY")) {
+                                            if (!defined("MONETICOPAIEMENT_PHASE2BACK_FIELDS")) {
 define ("MONETICOPAIEMENT_PHASE2BACK_FIELDS", "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*");
                                             }
-                                                if (!defined("MONETICOPAIEMENT_KEY")) {
+                                                if (!defined("MONETICOPAIEMENT_PHASE1GO_FIELDS")) {
 define ("MONETICOPAIEMENT_PHASE1GO_FIELDS", "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s");
                                                 }
-                                                    if (!defined("MONETICOPAIEMENT_KEY")) {
+                                                    if (!defined("MONETICOPAIEMENT_URLPAYMENT")) {
 define ("MONETICOPAIEMENT_URLPAYMENT", "paiement.cgi");
                                                     }
 
@@ -226,7 +226,7 @@ class DefaultController extends Controller
         $oHmac = new MoneticoPaiement_Hmac($oEpt);
 
         echo $oHmac->computeHmac($sData);
-        echo '<hr />';
+        echo '<br />';
         echo $params['MAC'];
 
         if (strtoupper($oHmac->computeHmac($sData)) == strtoupper($params['MAC'])) {
