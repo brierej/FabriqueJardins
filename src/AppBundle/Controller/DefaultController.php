@@ -177,9 +177,9 @@ class DefaultController extends Controller
         $oEpt = new MoneticoPaiement_Ept('FR');
         $oHmac = new MoneticoPaiement_Hmac($oEpt);
 
-        echo $oHmac->computeHmac($sData);
-        echo '<hr />';
-        echo $params['MAC'];
+//        echo $oHmac->computeHmac($sData);
+//        echo '<hr />';
+//        echo $params['MAC'];
 
         if (strtoupper($oHmac->computeHmac($sData)) == strtoupper($params['MAC'])) {
             return new Response(
