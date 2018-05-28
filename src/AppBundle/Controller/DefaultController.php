@@ -4,6 +4,8 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Contact;
 use AppBundle\Entity\SalesOrder;
+use AppBundle\Monetico\MoneticoPaiement_Ept;
+use AppBundle\Monetico\MoneticoPaiement_Hmac;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -106,7 +108,33 @@ class DefaultController extends Controller
      */
     public function successAction(Request $request)
     {
-        $params = $request->query->all();
+        $params['MAC'] = $request->query->get('MAC');
+        $params['date'] = $request->query->get('date');
+        $params['TPE'] = $request->query->get('TPE');
+        $params['montant'] = $request->query->get('montant');
+        $params['reference'] = $request->query->get('reference');
+        $params['texte-libre'] = $request->query->get('texte-libre');
+        $params['code-retour'] = $request->query->get('code-retour');
+        $params['cvx'] = $request->query->get('cvx');
+        $params['vld'] = $request->query->get('vld');
+        $params['brand'] = $request->query->get('brand');
+        $params['status3ds'] = $request->query->get('status3ds');
+        $params['numauto'] = $request->query->get('numauto');
+        $params['motifrefus'] = $request->query->get('motifrefus');
+        $params['originecb'] = $request->query->get('originecb');
+        $params['bincb'] = $request->query->get('bincb');
+        $params['hpancb'] = $request->query->get('hpancb');
+        $params['ipclient'] = $request->query->get('ipclient');
+        $params['originetr'] = $request->query->get('originetr');
+        $params['veres'] = $request->query->get('veres');
+        $params['pares'] = $request->query->get('pares');
+        $params['montantech'] = $request->query->get('montantech');
+        $params['filtragecause'] = $request->query->get('filtragecause');
+        $params['filtragevaleur'] = $request->query->get('filtragevaleur');
+        $params['filtrage_etat'] = $request->query->get('filtrage_etat');
+        $params['cbenregistree'] = $request->query->get('cbenregistree');
+        $params['cbmasquee'] = $request->query->get('cbmasquee');
+        $params['modepaiement'] = $request->query->get('modepaiement');
 
         $em = $this->getDoctrine()->getManager();
         $salesOrder = new SalesOrder();
@@ -140,17 +168,32 @@ class DefaultController extends Controller
         $em->persist($salesOrder);
         $em->flush();
 
-//        return $this->render('pages/success.html.twig', [
-//            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-//        ]);
-        return new Response(
-            "version=2\ncdr=0\n",
-            Response::HTTP_OK,
-            array('content-type' => 'text/html')
-        );
-//
-//        echo "version=2\n
-//cdr=0\n";
+        $sData = $params['TPE']."*".$params['date']."*".$params['montant']."*".$params['reference']."*".$params['texte-libre']."*3.0*".$params['code-retour']."*".$params['cvx']."*".
+    $params['vld']."*".$params['brand']."*".$params['status3ds']."*".$params['numauto']."*".$params['motifrefus']."*".$params['originecb']."*".$params['bincb']."*".
+    $params['hpancb']."*".$params['ipclient']."*".$params['originetr']."*".$params['veres']."*".$params['pares']."*";
+
+
+
+        $oEpt = new MoneticoPaiement_Ept('FR');
+        $oHmac = new MoneticoPaiement_Hmac($oEpt);
+
+        echo $oHmac->computeHmac($sData);
+        echo '<hr />';
+        echo $params['MAC'];
+
+        if (strtoupper($oHmac->computeHmac($sData)) == strtoupper($params['MAC'])) {
+            return new Response(
+                "version=2\ncdr=0\n",
+                Response::HTTP_OK,
+                array('content-type' => 'text/html')
+            );
+        } else {
+            return new Response(
+                "version=2\ncdr=1\n",
+                Response::HTTP_OK,
+                array('content-type' => 'text/html')
+            );
+        }
     }
 
     /**
