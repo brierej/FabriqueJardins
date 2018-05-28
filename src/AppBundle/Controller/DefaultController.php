@@ -7,6 +7,7 @@ use AppBundle\Entity\SalesOrder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -139,9 +140,17 @@ class DefaultController extends Controller
         $em->persist($salesOrder);
         $em->flush();
 
-        return $this->render('pages/success.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+//        return $this->render('pages/success.html.twig', [
+//            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+//        ]);
+        return new Response(
+            "version=2\ncdr=0\n",
+            Response::HTTP_OK,
+            array('content-type' => 'text/html')
+        );
+//
+//        echo "version=2\n
+//cdr=0\n";
     }
 
     /**
