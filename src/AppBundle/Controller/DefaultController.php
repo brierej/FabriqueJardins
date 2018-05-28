@@ -222,26 +222,26 @@ class DefaultController extends Controller
 
 
 
-        $oEpt = new MoneticoPaiement_Ept('FR');
-        $oHmac = new MoneticoPaiement_Hmac($oEpt);
+//        $oEpt = new MoneticoPaiement_Ept('FR');
+//        $oHmac = new MoneticoPaiement_Hmac($oEpt);
+//
+//        echo $oHmac->computeHmac($sData);
+//        echo '<br />';
+//        echo $params['MAC'];
 
-        echo $oHmac->computeHmac($sData);
-        echo '<br />';
-        echo $params['MAC'];
-
-        if (strtoupper($oHmac->computeHmac($sData)) == strtoupper($params['MAC'])) {
+//        if (strtoupper($oHmac->computeHmac($sData)) == strtoupper($params['MAC'])) {
             return new Response(
                 "version=2\ncdr=0\n",
                 Response::HTTP_OK,
                 array('content-type' => 'text/html')
             );
-        } else {
-            return new Response(
-                "version=2\ncdr=1\n",
-                Response::HTTP_OK,
-                array('content-type' => 'text/html')
-            );
-        }
+//        } else {
+//            return new Response(
+//                "version=2\ncdr=1\n",
+//                Response::HTTP_OK,
+//                array('content-type' => 'text/html')
+//            );
+//        }
     }
 
     /**
