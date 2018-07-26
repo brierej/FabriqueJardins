@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Pricing;
 use AppBundle\Entity\Product;
 use AppBundle\Entity\Realisation;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -104,6 +105,22 @@ class CatalogController extends Controller
             );
         }
 
+        $pricings = array();
+        foreach($products as $product)
+        {
+            $pricing = $this->getDoctrine()
+                ->getRepository(Pricing::class)
+                ->findBy(array('product' => $product->getCode()));
+
+            if (!$pricing) {
+                $pricing = new Pricing();
+            }
+
+//            var_dump($product->getCode());
+//            var_dump($pricing);
+            $pricings[$product->getCode()][] = $pricing;
+        }
+
         // Récupère les images du dossier correspondant à l'ambiance
         $files = array();
         foreach($products as $product) {
@@ -121,6 +138,7 @@ class CatalogController extends Controller
         return $this->render('catalog/portfolio.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'products' => $products,
+            'pricings' => $pricings,
             'files' => $files,
             'context' => 'lieux'
         ]);

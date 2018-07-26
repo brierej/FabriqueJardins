@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="section dark container-fullwidth" style="margin: 0px; height: 500px; background-position: center bottom; background-size:cover; background-image: url('{{ asset('media/dessin3.jpg') }}');">
+    <div class="section dark container-fullwidth" style="margin: 0px; height: 500px; background-position: center bottom; background-size:cover; background-image: url('{{ asset('media/dessin2.png') }}');">
         <div class="container center clearfix vertical-middle" style="padding-top: 20px; padding-bottom:20px; background-color: rgba(0, 0, 0, 0.5);">
 
             <div class="slider-caption slider-caption-center" style="max-width:1000px;">
@@ -22,13 +22,13 @@
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
-            <a  href="{{ asset('media/dessin2.jpg') }}" data-lightbox="image">
+            <a  href="{{ asset('media/dessin2.png') }}" data-lightbox="image">
                 <img src="{{ asset('media/dessin2-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
-            <a  href="{{ asset('media/dessin3.jpg') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin3-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+            <a  href="{{ asset('media/dessin4.jpg') }}" data-lightbox="image">
+                <img src="{{ asset('media/dessin4-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
@@ -83,7 +83,7 @@
         <div class="col_one_third nobottommargin col_last">
             <div class="feature-box media-box">
                 <div class="fbox-media">
-                    <img class="crop360" src="{{ asset('media/philosophie/ecologique/LA FABRIQUE DE JARDINS - PHILOSOPHIE - ECOLOGIQUE (4).jpg') }}" alt="Why choose Us?">
+                    <img class="crop360" src="{{ asset('media/philosophie/ecologique/LA FABRIQUE DE JARDINS - PHILOSOPHIE - ECOLOGIQUE (12).jpg') }}" alt="Why choose Us?">
                 </div>
                 <div class="fbox-desc">
                     <h3><a style="text-decoration: underline !important" href="{{ path('philosophies') }}">Les philosophies</a><span class="subtitle">Un jardin écologique</span></h3>
@@ -112,7 +112,7 @@
                         <a href="#"><i class="i-alt">1</i></a>
                     </div>-->
                     <h3>1. Choisissez votre style de jardin</h3>
-                    <p>Parcourez le guide de conception à la recherche de votre jardin idéal. Découvrez des ambiances et des exemples de réalisation pour vous aiguiller sur le jardin de vos rêves.</p>
+                    <p>Parcourez le <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}">guide de conception</a> à la recherche de votre jardin idéal. Découvrez <a href="{{ path('ambiances') }}">des ambiances</a> et des <a href="{{ path('realisations') }}">exemples de réalisation</a> pour vous aiguiller sur le jardin de vos rêves.</p>
                 </div>
 
                 <div style="padding: 0" class="feature-box fbox-plain">

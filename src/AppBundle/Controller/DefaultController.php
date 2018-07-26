@@ -11,52 +11,52 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-if (!defined("MONETICOPAIEMENT_KEY")) {
-define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
-}
-if (!defined("MONETICOPAIEMENT_EPTNUMBER")) {
-define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
-}
-    if (!defined("MONETICOPAIEMENT_VERSION")) {
-define ("MONETICOPAIEMENT_VERSION", "3.0");
-    }
-        if (!defined("MONETICOPAIEMENT_URLSERVER")) {
-define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
-        }
-            if (!defined("MONETICOPAIEMENT_COMPANYCODE")) {
-define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
-            }
-                if (!defined("MONETICOPAIEMENT_URLOK")) {
-define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr");
-                }
-                    if (!defined("MONETICOPAIEMENT_URLKO")) {
-define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr");
-                    }
-                        if (!defined("MONETICOPAIEMENT_CTLHMAC")) {
-
-define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
-                        }
-                            if (!defined("MONETICOPAIEMENT_CTLHMACSTR")) {
-define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
-                            }
-                                if (!defined("MONETICOPAIEMENT_PHASE2BACK_RECEIPT")) {
-define ("MONETICOPAIEMENT_PHASE2BACK_RECEIPT","version=2\ncdr=%s");
-                                }
-                                    if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACOK")) {
-define ("MONETICOPAIEMENT_PHASE2BACK_MACOK","0");
-                                    }
-                                        if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK")) {
-define ("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK","1\n");
-                                        }
-                                            if (!defined("MONETICOPAIEMENT_PHASE2BACK_FIELDS")) {
-define ("MONETICOPAIEMENT_PHASE2BACK_FIELDS", "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*");
-                                            }
-                                                if (!defined("MONETICOPAIEMENT_PHASE1GO_FIELDS")) {
-define ("MONETICOPAIEMENT_PHASE1GO_FIELDS", "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s");
-                                                }
-                                                    if (!defined("MONETICOPAIEMENT_URLPAYMENT")) {
-define ("MONETICOPAIEMENT_URLPAYMENT", "paiement.cgi");
-                                                    }
+//if (!defined("MONETICOPAIEMENT_KEY")) {
+//define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
+//}
+//if (!defined("MONETICOPAIEMENT_EPTNUMBER")) {
+//define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
+//}
+//    if (!defined("MONETICOPAIEMENT_VERSION")) {
+//define ("MONETICOPAIEMENT_VERSION", "3.0");
+//    }
+//        if (!defined("MONETICOPAIEMENT_URLSERVER")) {
+//define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
+//        }
+//            if (!defined("MONETICOPAIEMENT_COMPANYCODE")) {
+//define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
+//            }
+//                if (!defined("MONETICOPAIEMENT_URLOK")) {
+//define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr");
+//                }
+//                    if (!defined("MONETICOPAIEMENT_URLKO")) {
+//define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr");
+//                    }
+//                        if (!defined("MONETICOPAIEMENT_CTLHMAC")) {
+//
+//define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
+//                        }
+//                            if (!defined("MONETICOPAIEMENT_CTLHMACSTR")) {
+//define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
+//                            }
+//                                if (!defined("MONETICOPAIEMENT_PHASE2BACK_RECEIPT")) {
+//define ("MONETICOPAIEMENT_PHASE2BACK_RECEIPT","version=2\ncdr=%s");
+//                                }
+//                                    if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACOK")) {
+//define ("MONETICOPAIEMENT_PHASE2BACK_MACOK","0");
+//                                    }
+//                                        if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK")) {
+//define ("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK","1\n");
+//                                        }
+//                                            if (!defined("MONETICOPAIEMENT_PHASE2BACK_FIELDS")) {
+//define ("MONETICOPAIEMENT_PHASE2BACK_FIELDS", "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*");
+//                                            }
+//                                                if (!defined("MONETICOPAIEMENT_PHASE1GO_FIELDS")) {
+//define ("MONETICOPAIEMENT_PHASE1GO_FIELDS", "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s");
+//                                                }
+//                                                    if (!defined("MONETICOPAIEMENT_URLPAYMENT")) {
+//define ("MONETICOPAIEMENT_URLPAYMENT", "paiement.cgi");
+//                                                    }
 
 
 class DefaultController extends Controller
@@ -105,16 +105,7 @@ class DefaultController extends Controller
         ]);
     }
 
-    /**
-     * @Route("/questionnaire-professionnel", name="questionnaire-particuliers")
-     */
-    public function formProAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('forms/form-particuliers.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
-    }
+
 
     /**
      * @Route("/contact", name="contact")
@@ -140,15 +131,16 @@ class DefaultController extends Controller
         $contact->setLastname($request->request->get('template-contactform-lastname'));
         $contact->setEmail($request->request->get('template-contactform-email'));
         $contact->setTelephone($request->request->get('template-contactform-telephone'));
-        $contact->setSujet($request->request->get('template-contactform-sujet'));
+        $contact->setSujet($request->request->get('template-contactform-subject'));
         $contact->setMessage($request->request->get('template-contactform-message'));
         $em->persist($contact);
         $em->flush();
 
         // replace this example code with whatever you need
-//        return $this->render('forms/contact.html.twig', [
-//            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-//        ]);
+        return $this->render('forms/contact.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
+        ]);
     }
 
     /**

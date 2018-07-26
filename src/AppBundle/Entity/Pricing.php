@@ -32,6 +32,11 @@ class Pricing
     /**
      * @ORM\Column(type="string")
      */
+    private $product;
+
+    /**
+     * @ORM\Column(type="string")
+     */
     private $label;
 
     /**
@@ -101,6 +106,22 @@ class Pricing
     public function setCode($code)
     {
         $this->code = $code;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    /**
+     * @param mixed $product
+     */
+    public function setProduct($product)
+    {
+        $this->product = $product;
     }
 
     /**

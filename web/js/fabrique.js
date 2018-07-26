@@ -169,3 +169,8 @@ function selectSurface(element) {
     $('.surface_box').removeClass('surface_checked');
     $(element).addClass('surface_checked');
 }
+
+function checkTab6() {
+        alert('#billing-form-email');
+        activateTab(5);
+}
