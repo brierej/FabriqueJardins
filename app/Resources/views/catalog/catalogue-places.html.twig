@@ -12,6 +12,126 @@
 
 {% block content %}
 
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="col_two_fifth">
+                    <img src="{{ asset('media/' ~ datas.type ~ '/' ~ datas.code ~ '/' ~ random(files)) }}"/>
+                </div>
+                <div class="col_three_fifth col_last">
+                    <h2>{{ datas.title }}</h2>
+                    <p>{{ datas.description|raw }}</p>
+
+                    {% if pricing|length == 1 %}
+                        <div class="col_one_fourth"></div>
+                        <div class="col_half">
+                            <h3 class="center" style="background-color: #dadada; margin-left: 10px; margin-right: 10px">{{ pricing[0].getPrice()}}&nbsp;€</h3>
+                            {% for option in options %}
+                                <div class="panel-group nobottommargin" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}">
+                                                <span>{{ option.title }}&nbsp;&nbsp;</span><i class="icon-question-sign"></i>
+                                                <span style="float: right; text-align: right">
+                                                    {% if option.code == 'price_3d' %}
+                                                        + {{ pricing[0].getPrice3D() }}&nbsp;€
+                                                    {% elseif option.code == 'price_dossier_tech' %}
+                                                        + {{ pricing[0].getPriceDossierTech() }}&nbsp;€
+                                                    {% elseif option.code == 'price_choix_entreprise' %}
+                                                        + {{ pricing[0].getPriceChoixEntreprise() }}&nbsp;€
+                                                    {% elseif option.code == 'price_guide_entretien' %}
+                                                        + {{ pricing[0].getPriceGuideEntretien() }}&nbsp;€
+                                                    {% endif %}
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                {{ option.desc }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col_one_fourth"></div>
+                    {% elseif pricing|length == 2 %}
+                        <div class="col_half">
+                            <h3 class="center" style="background-color: #dadada; margin-left: 10px; margin-right: 10px">{{ pricing[0].getPrice()}}&nbsp;€</h3>
+                            <span class="center col_full nobottommargin">{{ pricing[0].getUnitLabel() }}</span>
+                            {% for option in options %}
+                                <div class="panel-group nobottommargin" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}">
+                                                <span>{{ option.title }}&nbsp;&nbsp;</span><i class="icon-question-sign"></i>
+                                                <span style="float: right; text-align: right">
+                                                    {% if option.code == 'price_3d' %}
+                                                        {{ pricing[0].getPrice3D() }}&nbsp;€
+                                                    {% elseif option.code == 'price_dossier_tech' %}
+                                                        {{ pricing[0].getPriceDossierTech() }}&nbsp;€
+                                                    {% elseif option.code == 'price_choix_entreprise' %}
+                                                        {{ pricing[0].getPriceChoixEntreprise() }}&nbsp;€
+                                                    {% elseif option.code == 'price_guide_entretien' %}
+                                                        {{ pricing[0].getPriceGuideEntretien() }}&nbsp;€
+                                                    {% endif %}
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                {{ option.desc }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col_half col_last">
+                            <h3 class="center" style="background-color: #dadada; margin-left: 10px; margin-right: 10px">{{ pricing[1].getPrice()}}&nbsp;€</h3>
+                            <span class="center col_full nobottommargin">{{ pricing[1].getUnitLabel() }}</span>
+                            {% for option in options %}
+                                <div class="panel-group nobottommargin" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}">
+                                                <span>{{ option.title }}&nbsp;&nbsp;</span><i class="icon-question-sign"></i>
+                                                <span style="float: right; text-align: right">
+                                                    {% if option.code == 'price_3d' %}
+                                                        {{ pricing[1].getPrice3D() }}&nbsp;€
+                                                    {% elseif option.code == 'price_dossier_tech' %}
+                                                        {{ pricing[1].getPriceDossierTech() }}&nbsp;€
+                                                    {% elseif option.code == 'price_choix_entreprise' %}
+                                                        {{ pricing[1].getPriceChoixEntreprise() }}&nbsp;€
+                                                    {% elseif option.code == 'price_guide_entretien' %}
+                                                        {{ pricing[1].getPriceGuideEntretien() }}&nbsp;€
+                                                    {% endif %}
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                {{ option.desc }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    {% endif %}
+                        <div class="col_full" style="background-color: red">
+                            <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}" class="button button-3d fbox-center fright">ACCEDER AU QUESTIONNAIRE</a>
+                        </div>
+                </div>
+                <!--<div class="col_one_fifth col_last">
+                {% for prices in pricing %}
+                    {{ dump(prices) }}
+                {% endfor %}
+                </div>-->
+            </div>
+        </div>
+    </section>
     <div class="col_full nobottommargin">
         {#<div class="fancy-title title-border">#}
         {#<h4>Gallery</h4>#}

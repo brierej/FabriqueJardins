@@ -9,6 +9,7 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\Contact;
 use AppBundle\Entity\Product;
 use AppBundle\Entity\Questionnaire;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -40,7 +41,7 @@ class AdminController extends Controller
     }
 
     /**
-     * @Route("/admin/questionnaires", name="admin_questionnaires")
+     * @Route("/admin/questionnaires", name="admin_questionnaire")
      */
     public function viewQuestionnaireAction()
     {
@@ -55,10 +56,31 @@ class AdminController extends Controller
         }
 
         // replace this example code with whatever you need
-        return $this->render('admin/index.html.twig', [
+        return $this->render('admin/questionnaire.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            'questionnaires' => $questionnaires
+            'data' => $questionnaires
         ]);
     }
 
+    /**
+     * @Route("/admin/contacts", name="admin_contact")
+     */
+    public function viewContactAction()
+    {
+        $contacts = $this->getDoctrine()
+            ->getRepository(Contact::class)
+            ->findAll();
+
+        if (!$contacts) {
+            throw $this->createNotFoundException(
+                'No questionnaire found'
+            );
+        }
+
+        // replace this example code with whatever you need
+        return $this->render('admin/list-contacts.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'data' => $contacts
+        ]);
+    }
 }

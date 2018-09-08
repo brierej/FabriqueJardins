@@ -7,7 +7,6 @@
             <span>{{ datas.subtitle }}</span>
         </div>
     </section>
-
 {% endblock %}
 
 {% block content %}
@@ -39,59 +38,59 @@
         </div>
 <!--    </div> -->
 
-    <div class="container clearfix">
-        {% if datas.showFeaturesList() %}
-        <div class="col_one_fourth nobottommargin ambiance-features">
-            <div class="fancy-title title-border">
-                <h4 class="ambiance-params"><i class="material-icons">perm_data_setting</i>Caractéristiques</h4>
+        <div class="container clearfix">
+            {% if datas.showFeaturesList() %}
+            <div class="col_one_fourth nobottommargin ambiance-features">
+                <div class="fancy-title title-border">
+                    <h4 class="ambiance-params"><i class="material-icons">perm_data_setting</i>Caractéristiques</h4>
+                </div>
+                <ul class="iconlist nobottommargin ambiance-list">
+                    {% for feature in datas.showFeaturesList() %}
+                        <li><i class="icon-caret-right"></i>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class="iconlist nobottommargin ambiance-list">
-                {% for feature in datas.showFeaturesList() %}
-                    <li><i class="icon-caret-right"></i>{{ feature }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+                {% endif %}
+
+            {% if datas.showMaterialsList() %}
+            <div class="col_one_fourth nobottommargin ambiance-materials">
+                <div class="fancy-title title-border">
+                    <h4 class="ambiance-params"><i class="material-icons">view_list</i>Les matériaux</h4>
+                </div>
+                <ul class="iconlist nobottommargin ambiance-list">
+                    {% for material in datas.showMaterialsList() %}
+                        <li><i class="icon-caret-right"></i>{{ material }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
             {% endif %}
 
-        {% if datas.showMaterialsList() %}
-        <div class="col_one_fourth nobottommargin ambiance-materials">
-            <div class="fancy-title title-border">
-                <h4 class="ambiance-params"><i class="material-icons">view_list</i>Les matériaux</h4>
+            {% if datas.showDecorationsList() %}
+            <div class="col_one_fourth nobottommargin ambiance-decorations">
+                <div class="fancy-title title-border">
+                    <h4 class="ambiance-params"><i class="material-icons">account_balance</i>Les éléments</h4>
+                </div>
+                <ul class="iconlist nobottommargin ambiance-list">
+                    {% for decoration in datas.showDecorationsList() %}
+                        <li><i class="icon-caret-right"></i>{{ decoration }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class="iconlist nobottommargin ambiance-list">
-                {% for material in datas.showMaterialsList() %}
-                    <li><i class="icon-caret-right"></i>{{ material }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+            {% endif %}
 
-        {% if datas.showDecorationsList() %}
-        <div class="col_one_fourth nobottommargin ambiance-decorations">
-            <div class="fancy-title title-border">
-                <h4 class="ambiance-params"><i class="material-icons">account_balance</i>Les éléments</h4>
+            {% if datas.showPlantsList() %}
+            <div class="col_one_fourth nobottommargin ambiance-vegetals col_last">
+                <div class="fancy-title title-border">
+                    <h4 class="ambiance-params"><i class="material-icons">local_florist</i>Les végétaux</h4>
+                </div>
+                <ul class="iconlist nobottommargin ambiance-list">
+                    {% for plant in datas.showPlantsList() %}
+                        <li><i class="icon-caret-right"></i>{{ plant }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class="iconlist nobottommargin ambiance-list">
-                {% for decoration in datas.showDecorationsList() %}
-                    <li><i class="icon-caret-right"></i>{{ decoration }}</li>
-                {% endfor %}
-            </ul>
+            {% endif %}
         </div>
-        {% endif %}
-
-        {% if datas.showPlantsList() %}
-        <div class="col_one_fourth nobottommargin ambiance-vegetals col_last">
-            <div class="fancy-title title-border">
-                <h4 class="ambiance-params"><i class="material-icons">local_florist</i>Les végétaux</h4>
-            </div>
-            <ul class="iconlist nobottommargin ambiance-list">
-                {% for plant in datas.showPlantsList() %}
-                    <li><i class="icon-caret-right"></i>{{ plant }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-    </div>
 
         </div>
     </section>

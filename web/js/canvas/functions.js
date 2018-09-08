@@ -3223,6 +3223,11 @@ var SEMICOLON = SEMICOLON || {};
 							$(form).find('.form-process').fadeIn();
 						}
 
+						console.log(elementResult);
+                        console.log(elementRedirect);
+
+                        alert('wait');
+
 						$(form).ajaxSubmit({
 							target: elementResult,
 							dataType: 'json',
@@ -3233,6 +3238,7 @@ var SEMICOLON = SEMICOLON || {};
 									$(form).find('.form-process').fadeOut();
 								}
 								if( data.alert != 'error' && elementRedirect ){
+									alert('redirect');
 									window.location.replace( elementRedirect );
 									return true;
 								}

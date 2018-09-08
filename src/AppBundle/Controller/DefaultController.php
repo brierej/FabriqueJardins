@@ -123,8 +123,6 @@ class DefaultController extends Controller
      */
     public function contactSaveAction(Request $request)
     {
-        var_dump($request->request->all());
-
         $em = $this->getDoctrine()->getManager();
         $contact = new Contact();
         $contact->setFirstname($request->request->get('template-contactform-firstname'));
@@ -135,6 +133,45 @@ class DefaultController extends Controller
         $contact->setMessage($request->request->get('template-contactform-message'));
         $em->persist($contact);
         $em->flush();
+
+        // Retrieve flashbag from the controller
+        $flashbag = $this->get('session')->getFlashBag();
+
+// Add flash message
+        $message = 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.';
+        $type = 'success';
+        $flashbag->add($type, $message);
+
+        // replace this example code with whatever you need
+        return $this->render('forms/contact.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
+        ]);
+    }
+
+    /**
+     * @Route("/quickContactSave", name="quickContactSave")
+     */
+    public function quickContactSaveAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $contact = new Contact();
+        $contact->setFirstname($request->request->get('quick-contact-form-name'));
+        //$contact->setLastname($request->request->get('template-contactform-lastname'));
+        $contact->setEmail($request->request->get('quick-contact-form-email'));
+        //$contact->setTelephone($request->request->get('template-contactform-telephone'));
+        //$contact->setSujet($request->request->get('template-contactform-subject'));
+        $contact->setMessage($request->request->get('quick-contact-form-message'));
+        $em->persist($contact);
+        $em->flush();
+
+        // Retrieve flashbag from the controller
+        $flashbag = $this->get('session')->getFlashBag();
+
+// Add flash message
+        $message = 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.';
+        $type = 'success';
+        $flashbag->add($type, $message);
 
         // replace this example code with whatever you need
         return $this->render('forms/contact.html.twig', [

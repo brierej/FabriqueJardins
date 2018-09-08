@@ -53,10 +53,10 @@
                                     {% if product_code == product.code %}
                                         {% for key_price, price in prices[0] %}
                                             {% if (prices[0]|length == 1) %}
-                                            <div style="padding-top:10px; padding-bottom: 10px; text-align:center; width: 100%; color: #333; background-color: #e8e8e8; display:block; float:left;">
-                                                <!--<span style="width:100%; display:block; float:left;">{{ price.getUnitLabel() }}</span>-->
-                                                <span style="width:100%; display:block; float:left; font-size: 1.3em; font-weight: bold">{{ price.price ~ '€' }}</span>
-                                            </div>
+                                                <div style="padding-top:10px; padding-bottom: 10px; text-align:center; width: 100%; color: #333; background-color: #e8e8e8; display:block; float:left;">
+                                                    <!--<span style="width:100%; display:block; float:left;">{{ price.getUnitLabel() }}</span>-->
+                                                    <span style="width:100%; display:block; float:left; font-size: 1.3em; font-weight: bold">{{ price.price ~ '€' }}</span>
+                                                </div>
                                             {% elseif (prices[0]|length == 2) %}
                                                 {% if key_price == 0 %}
                                                     <div style="border-right: thin solid rgba(0,0,0,0.1); padding-top:10px; padding-bottom: 10px; text-align: center; width: 50%; color: #333; background-color: #e8e8e8; display:block; float:left;">
@@ -69,10 +69,13 @@
                                                         <span style="width:100%; display:block; float:left; font-size: 1.3em; font-weight: bold" >{{ price.price ~ '€' }}</span>
                                                     </div>
                                                 {% endif %}
-
                                             {% endif %}
                                         {% endfor %}
-
+                                        {% if prices[0] is not iterable %}
+                                        <div style="padding-top:10px; padding-bottom: 10px; text-align:center; width: 100%; color: #333; background-color: #e8e8e8; display:block; float:left;">
+                                            <span style="width:100%; display:block; float:left; font-size: 1.3em; font-weight: bold">DEVIS</span>
+                                        </div>
+                                            {% endif %}
                                     {% endif %}
                                 {% endfor %}
                             {% elseif context == 'philosophies' %}

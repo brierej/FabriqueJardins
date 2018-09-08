@@ -295,6 +295,31 @@ class CatalogController extends Controller
             );
         }
 
+        $pricing = $this->getDoctrine()
+            ->getRepository(Pricing::class)
+            ->findBy(array('product' => $products->getCode()));
+
+        $options['price_3d'] = array(
+            'code' => 'price_3d',
+            'title' => 'Option 3D',
+            'desc' => 'Modélisation du projet de jardin en 3D'
+        );
+        $options['price_dossier_tech'] = array(
+            'code' => 'price_dossier_tech',
+            'title' => 'Option Dossier technique',
+            'desc' => 'Mise en place d\'un dossier technique pour le projet'
+        );
+        $options['price_choix_entreprise'] = array(
+            'code' => 'price_choix_entreprise',
+            'title' => 'Option choix de l\'entreprise',
+            'desc' => 'Choix de l\'entreprise pour conduire le projet de jardin à terme'
+        );
+        $options['price_guide_entretien'] = array(
+            'code' => 'price_guide_entretien',
+            'title' => 'Option Guide d\'entretien',
+            'desc' => 'Mise en place d\'un guide d\'entretien du jardin'
+        );
+
         // Récupère les images du dossier correspondant à l'ambiance
         $files = array();
         $path = getcwd().'/media/lieu/'.$lieu;
@@ -307,7 +332,9 @@ class CatalogController extends Controller
         return $this->render('catalog/catalogue-places.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'datas' => $products,
-            'files' => $files
+            'files' => $files,
+            'pricing' => $pricing,
+            'options' => $options
         ]);
     }
 

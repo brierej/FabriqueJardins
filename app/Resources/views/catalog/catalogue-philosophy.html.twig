@@ -12,6 +12,19 @@
 
 {% block content %}
 
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="col_one_fourth"></div>
+                <div class="col_half align-content-center">
+                    {{ datas.description|raw }}
+                </div>
+                <div class="col_one_fourth col_last"></div>
+
+            </div>
+        </div>
+    </section>
+
     <div class="col_full nobottommargin">
         {#<div class="fancy-title title-border">#}
         {#<h4>Gallery</h4>#}

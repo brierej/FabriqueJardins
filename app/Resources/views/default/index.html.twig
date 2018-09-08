@@ -18,32 +18,32 @@
 
         <article class="portfolio-item">
             <a href="{{ asset('media/dessin1.jpg') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin1-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin1-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 3px;">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
             <a  href="{{ asset('media/dessin2.png') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin2-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin2-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 0px;">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
             <a  href="{{ asset('media/dessin4.jpg') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin4-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin4-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 0px;">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
             <a  href="{{ asset('media/LA FABRIQUE DE JARDIN - FLYER PARTICULIERS (8).png') }}" data-lightbox="image">
-                <img src="{{ asset('media/LA FABRIQUE DE JARDIN - FLYER PARTICULIERS (8).png') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin8.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 0px;">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
             <a  href="{{ asset('media/dessin5.jpg') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin5-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin5-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 0px;">
             </a>
         </article>
         <article class="portfolio-item pf-media pf-icons">
             <a  href="{{ asset('media/dessin6.jpg') }}" data-lightbox="image">
-                <img src="{{ asset('media/dessin6-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination">
+                <img src="{{ asset('media/dessin6-thumb.jpg') }}" data-lightbox="image" alt="Open Imagination" style="padding: 3px 3px 0px 0px; ">
             </a>
         </article>
 
@@ -97,12 +97,12 @@
     <div class="section container-fullwidth">
         <div class="container clearfix">
             <div class="heading-block center">
-                <h2>La fabrique de jardins</h2>
+                <h2>Comment ca marche</h2>
                 <span style="font-size: 200%">Une méthode simple et rapide pour définir vos besoins et vos envies</span>
         </div>
 
             <div class="col_half">
-                <img style="width:100%;" data-animate="fadeIn" src="{{ asset('media/logo4.gif') }}" alt="Macbook">
+                <img style="width:100%;" data-animate="fadeIn" src="{{ asset('media/logo4-small.gif') }}" alt="Macbook">
             </div>
 
             <div class="col_half col_last nobottommargin" style="font-size: 130%; margin-top: 50px;">
@@ -131,6 +131,24 @@
                     <p>Échangez avec moi et validez votre projet. Vous recevrez ensuite une étude personnalisée.</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container clearfix bottommargin">
+        <div id="q-contact" class="widget quick-contact-widget clearfix">
+
+            <h4 class="highlight-me">Quick Contact</h4>
+            <div class="quick-contact-form-result"></div>
+            <form id="quick-contact-form" name="quick-contact-form" action="{{ path('contactSave') }}" method="post" class="quick-contact-form nobottommargin">
+                <div class="form-process"></div>
+
+                <input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
+                <input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
+                <textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+                <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+                <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+            </form>
+
         </div>
     </div>
 {% endblock %}

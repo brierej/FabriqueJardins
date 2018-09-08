@@ -2,7 +2,14 @@
 
 {% block content %}
 
-    <section id="map-overlay" style="background-color:#ADB7C7">
+    {% for message in app.flashes('success') %}
+        <div class="style-msg successmsg">
+            <div class="sb-msg"><i class="icon-thumbs-up"></i>{{ message }}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+    {% endfor %}
+
+    <section id="map-overlay" style="background-color:#F9F9F9">
 
         <div class="container clearfix">
 
@@ -21,14 +28,16 @@
 
 
                 </div>
-
-                <div class="contact-widget">
+<div class="postcontent">
+                <div class="contact-widget customjs">
 
                     <div class="contact-form-result"></div>
 
                     <!-- Contact Form
                     ============================================= -->
                     <form class="nobottommargin" id="template-contactform" name="template-contactform" action="{{ path('contactSave') }}" method="post">
+
+                        <div class="form-process"></div>
 
                         <div class="col_half">
                             <label for="template-contactform-name">Nom</label>
@@ -75,7 +84,7 @@
 
                     </form>
                 </div>
-
+</div>
                 <div class="clear"></div>
                 <div class="line"></div>
                 <!-- Contact Info
