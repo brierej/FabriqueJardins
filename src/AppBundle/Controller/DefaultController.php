@@ -78,12 +78,18 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $contact = new Contact();
-        $contact->setFirstname($request->request->get('template-contactform-firstname'));
-        $contact->setLastname($request->request->get('template-contactform-lastname'));
-        $contact->setEmail($request->request->get('template-contactform-email'));
-        $contact->setTelephone($request->request->get('template-contactform-telephone'));
-        $contact->setSujet($request->request->get('template-contactform-subject'));
-        $contact->setMessage($request->request->get('template-contactform-message'));
+        $firstname = $request->request->get('template-contactform-firstname') ? $request->request->get('template-contactform-firstname') : '';
+        $contact->setFirstname($firstname);
+        $lastname = $request->request->get('template-contactform-lastname') ? $request->request->get('template-contactform-lastname') : '';
+        $contact->setLastname($lastname);
+        $email = $request->request->get('template-contactform-email') ? $request->request->get('template-contactform-email') : '';
+        $contact->setEmail($email);
+        $telephone = $request->request->get('template-contactform-telephone') ? $request->request->get('template-contactform-telephone') : '';
+        $contact->setTelephone($telephone);
+        $subject = $request->request->get('template-contactform-subject') ? $request->request->get('template-contactform-subject') : '';
+        $contact->setSujet($subject);
+        $message = $request->request->get('template-contactform-message') ? $request->request->get('template-contactform-message') : '';
+        $contact->setMessage($message);
         $contact->setCreatedAt(new \DateTime("now"));
         $em->persist($contact);
         $em->flush();
@@ -102,7 +108,7 @@ class DefaultController extends Controller
                     ],
                     'To' => [
                         [
-                            'Email' => "briere.jofrey@gmail.com",
+                            'Email' => "laurence@lafabriquedejardins.fr",
                         ]
                     ],
                     'Subject' => "Nouveau contact",
