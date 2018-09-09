@@ -62,8 +62,10 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-# Swiftmailer Configuration
+# Swiftmailer Configuration Base
 swiftmailer:
+    encryption: '%mailer_encryption%'
+    port : '%mailer_port%'
     transport: '%mailer_transport%'
     host: '%mailer_host%'
     username: '%mailer_user%'

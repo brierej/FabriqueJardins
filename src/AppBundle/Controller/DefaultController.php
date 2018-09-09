@@ -10,54 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
-//if (!defined("MONETICOPAIEMENT_KEY")) {
-//define ("MONETICOPAIEMENT_KEY", "87A3C12B8D840EA2A3C63B48351F5D74C6F72695");
-//}
-//if (!defined("MONETICOPAIEMENT_EPTNUMBER")) {
-//define ("MONETICOPAIEMENT_EPTNUMBER", "2821788");
-//}
-//    if (!defined("MONETICOPAIEMENT_VERSION")) {
-//define ("MONETICOPAIEMENT_VERSION", "3.0");
-//    }
-//        if (!defined("MONETICOPAIEMENT_URLSERVER")) {
-//define ("MONETICOPAIEMENT_URLSERVER", "https://p.monetico-services.com/test/");
-//        }
-//            if (!defined("MONETICOPAIEMENT_COMPANYCODE")) {
-//define ("MONETICOPAIEMENT_COMPANYCODE", "lafabrique");
-//            }
-//                if (!defined("MONETICOPAIEMENT_URLOK")) {
-//define ("MONETICOPAIEMENT_URLOK", "http://lafabriquedejardins.fr");
-//                }
-//                    if (!defined("MONETICOPAIEMENT_URLKO")) {
-//define ("MONETICOPAIEMENT_URLKO", "http://lafabriquedejardins.fr");
-//                    }
-//                        if (!defined("MONETICOPAIEMENT_CTLHMAC")) {
-//
-//define ("MONETICOPAIEMENT_CTLHMAC","V4.0.sha1.php--[CtlHmac%s%s]-%s");
-//                        }
-//                            if (!defined("MONETICOPAIEMENT_CTLHMACSTR")) {
-//define ("MONETICOPAIEMENT_CTLHMACSTR", "CtlHmac%s%s");
-//                            }
-//                                if (!defined("MONETICOPAIEMENT_PHASE2BACK_RECEIPT")) {
-//define ("MONETICOPAIEMENT_PHASE2BACK_RECEIPT","version=2\ncdr=%s");
-//                                }
-//                                    if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACOK")) {
-//define ("MONETICOPAIEMENT_PHASE2BACK_MACOK","0");
-//                                    }
-//                                        if (!defined("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK")) {
-//define ("MONETICOPAIEMENT_PHASE2BACK_MACNOTOK","1\n");
-//                                        }
-//                                            if (!defined("MONETICOPAIEMENT_PHASE2BACK_FIELDS")) {
-//define ("MONETICOPAIEMENT_PHASE2BACK_FIELDS", "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*");
-//                                            }
-//                                                if (!defined("MONETICOPAIEMENT_PHASE1GO_FIELDS")) {
-//define ("MONETICOPAIEMENT_PHASE1GO_FIELDS", "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s");
-//                                                }
-//                                                    if (!defined("MONETICOPAIEMENT_URLPAYMENT")) {
-//define ("MONETICOPAIEMENT_URLPAYMENT", "paiement.cgi");
-//                                                    }
-
+use \Mailjet\Resources;
 
 class DefaultController extends Controller
 {
@@ -121,7 +74,7 @@ class DefaultController extends Controller
     /**
      * @Route("/contactSave", name="contactSave")
      */
-    public function contactSaveAction(Request $request)
+    public function contactSaveAction(Request $request, \Swift_Mailer $mailer)
     {
         $em = $this->getDoctrine()->getManager();
         $contact = new Contact();
@@ -131,16 +84,64 @@ class DefaultController extends Controller
         $contact->setTelephone($request->request->get('template-contactform-telephone'));
         $contact->setSujet($request->request->get('template-contactform-subject'));
         $contact->setMessage($request->request->get('template-contactform-message'));
+        $contact->setCreatedAt(new \DateTime("now"));
         $em->persist($contact);
         $em->flush();
 
         // Retrieve flashbag from the controller
         $flashbag = $this->get('session')->getFlashBag();
 
+        $mj = new \Mailjet\Client('253dc463a4324328af2d7bc19ba0611f', '18b9afdb49bba6f5df5477ef17c30fa0',
+            true,['version' => 'v3.1']);
+        $body = [
+            'Messages' => [
+                [
+                    'From' => [
+                        'Email' => "contact@lafabriquedejardins.fr",
+                        'Name' => "La Fabrique de Jardins"
+                    ],
+                    'To' => [
+                        [
+                            'Email' => "briere.jofrey@gmail.com",
+                        ]
+                    ],
+                    'Subject' => "Nouveau contact",
+                    //'TextPart' => "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
+                    'HTMLPart' => $this->renderView(
+                    // app/Resources/views/Emails/registration.html.twig
+                        'emails/contact.html.twig',
+                        array('contact' => $contact)
+                    )
+                ]
+            ]
+        ];
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
+        $response->success() && var_dump($response->getData());
+
+        var_dump($response->getData());
+
+        die;
+        /*
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Hello Email')
+            ->setFrom('contact@lafabriquedejardins.fr')
+            ->setTo('briere.jofrey@gmail.com')
+            ->setBody(
+                $this->renderView(
+                // app/Resources/views/Emails/registration.html.twig
+                    'emails/contact.html.twig',
+                    array('contact' => $contact)
+                ),
+                'text/html'
+            )
+        ;
+        $this->get('mailer')->send($message);
+        */
+
 // Add flash message
-        $message = 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.';
+        $notif = 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.';
         $type = 'success';
-        $flashbag->add($type, $message);
+        $flashbag->add($type, $notif);
 
         // replace this example code with whatever you need
         return $this->render('forms/contact.html.twig', [

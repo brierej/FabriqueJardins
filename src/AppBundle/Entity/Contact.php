@@ -54,6 +54,11 @@ class Contact
     private $message;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created_at;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -157,5 +162,19 @@ class Contact
         $this->message = $message;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
 
+    /**
+     * @param mixed $created_at
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->created_at = $created_at;
+    }
 }

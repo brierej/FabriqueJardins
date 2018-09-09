@@ -1,0 +1,14 @@
+{# app/Resources/views/emails/contact.html.twig #}
+
+<h3>Nouveau message</h3>
+
+
+Nouveau message de {{ contact.getFirstname() }} {{ contact.getLastname() }}<br />
+Email : {{ contact.getEmail() }}<br />
+<br />
+Message:
+<h4>{{ contact.getSujet() }}</h4>
+<p>{{ contact.getMessage() }}</p>
+
+
+
