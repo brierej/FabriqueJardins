@@ -2,6 +2,13 @@
 
 {% block content %}
 
+    {% for message in app.flashes('success') %}
+        <div class="style-msg successmsg">
+            <div class="sb-msg"><i class="icon-thumbs-up"></i>{{ message }}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+    {% endfor %}
+
     <div class="section dark container-fullwidth" style="margin: 0px; height: 500px; background-position: center bottom; background-size:cover; background-image: url('{{ asset('media/dessin2.png') }}');">
         <div class="container center clearfix vertical-middle" style="padding-top: 20px; padding-bottom:20px; background-color: rgba(0, 0, 0, 0.5);">
 

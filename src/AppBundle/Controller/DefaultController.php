@@ -146,7 +146,7 @@ class DefaultController extends Controller
         $type = 'success';
         $flashbag->add($type, $notif);
 
-        if ($request->request->get('template-contactform-message') == 'contact-page') {
+        if ($request->request->get('source') == 'contact-page') {
             return $this->render('forms/contact.html.twig', [
                 'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
                 'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
