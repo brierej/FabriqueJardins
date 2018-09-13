@@ -151,13 +151,11 @@ class DefaultController extends Controller
                 'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
                 'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
             ]);
-        } else if ($request->request->get('template-contactform-message') == 'contact-home') {
+        } else {
             return $this->render('default/index.html.twig', [
                 'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
                 'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
             ]);
-        } else {
-            return false;
         }
     }
 
