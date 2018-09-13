@@ -124,9 +124,6 @@ class DefaultController extends Controller
         $response = $mj->post(Resources::$Email, ['body' => $body]);
         $response->success() && var_dump($response->getData());
 
-        var_dump($response->getData());
-
-        die;
         /*
         $message = \Swift_Message::newInstance()
             ->setSubject('Hello Email')

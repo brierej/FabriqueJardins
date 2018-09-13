@@ -46,17 +46,6 @@
             </div><!-- #portfolio end -->
         </div>
     </section>
-    <div class="col_full nobottommargin">
-        {#<div class="fancy-title title-border">#}
-        {#<h4>Gallery</h4>#}
-        {#</div>#}
 
-        <div class="masonry-thumbs col-4 clearfix" data-lightbox="gallery" style="width: 100.3%;">
-            {% for fileVrac in filesVrac %}
-                <a href="{{ asset('media/realisations/' ~ fileVrac) }}" data-lightbox="gallery-item">
-                    <img class="image_fade" src="{{ asset('media/realisations/' ~ fileVrac) }}" alt="Gallery Thumb 1" data-animate="zoomIn"></a>
-            {% endfor %}
-        </div>
-    </div>
 
 {% endblock %}
