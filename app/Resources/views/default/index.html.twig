@@ -142,6 +142,7 @@
             <form id="quick-contact-form" name="quick-contact-form" action="{{ path('contactSave') }}" method="post" class="quick-contact-form nobottommargin">
                 <div class="form-process"></div>
 
+                <input type="hidden" name="source" value="contact-home"/>
                 <input type="text" class="required sm-form-control input-block-level" id="template-contactform-lastname" name="template-contactform-lastname" value="" placeholder="Nom" />
                 <input type="text" class="required sm-form-control email input-block-level" id="template-contactform-email" name="template-contactform-email" value="" placeholder="Email" />
                 <textarea class="required sm-form-control input-block-level short-textarea" id="template-contactform-message" name="template-contactform-message" rows="4" cols="30" placeholder="Message"></textarea>

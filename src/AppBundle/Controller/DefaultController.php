@@ -98,7 +98,7 @@ class DefaultController extends Controller
         $flashbag = $this->get('session')->getFlashBag();
 
         $mj = new \Mailjet\Client('253dc463a4324328af2d7bc19ba0611f', '18b9afdb49bba6f5df5477ef17c30fa0',
-            true,['version' => 'v3.1']);
+            true, ['version' => 'v3.1']);
         $body = [
             'Messages' => [
                 [
@@ -141,16 +141,24 @@ class DefaultController extends Controller
         $this->get('mailer')->send($message);
         */
 
-// Add flash message
+        // Add flash message
         $notif = 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.';
         $type = 'success';
         $flashbag->add($type, $notif);
 
-        // replace this example code with whatever you need
-        return $this->render('forms/contact.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
-        ]);
+        if ($request->request->get('template-contactform-message') == 'contact-page') {
+            return $this->render('forms/contact.html.twig', [
+                'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
+                'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
+            ]);
+        } else if ($request->request->get('template-contactform-message') == 'contact-home') {
+            return $this->render('default/index.html.twig', [
+                'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
+                'notif' => 'Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.'
+            ]);
+        } else {
+            return false;
+        }
     }
 
     /**
