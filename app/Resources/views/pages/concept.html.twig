@@ -50,10 +50,10 @@
                     <img class="crop360" src="{{ asset('media/lieu/balcon/LA FABRIQUE DE JARDINS - LIEUX - BALCON (2).jpg') }}" alt="Why choose Us?">
                 </div>
                 <div class="fbox-desc">
-                    <span class="subtitle" style="text-align: center; width: 100%">Questionnaire en ligne</span>
-                    <p style="text-align: justify;">Puis, devenez acteur de votre projet en remplissant le questionnaire en ligne au moment qui vous convient</p>
+                    <span class="subtitle" style="text-align: center; width: 100%">Echangez avec nous et mettons en place votre projet</span>
+                    <p style="text-align: justify;">Puis, devenez acteur de votre projet en échangeant avec nous pour définir ensemble votre projet d'aménagement de jardin.</p>
                 </div>
-                <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}" class="button button-3d middle feature-button">Accéder au questionnaire</a>
+                <a href="{{ path('contact') }}" class="button button-3d middle feature-button">Contactez-nous</a>
             </div>
         </div>
 
@@ -101,8 +101,10 @@
                     <div class="fbox-icon">
                         <a href="#"><i class="i-alt">2.</i></a>
                     </div>
-                    <h3>REMPLISSEZ LE QUESTIONNAIRE</h3>
-                    <p>Le <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}">questionnaire</a> vous aidera à définir votre projet plus précisément.</p>
+                    {#<h3>REMPLISSEZ LE QUESTIONNAIRE</h3>#}
+                    {#<p>Le <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}">questionnaire</a> vous aidera à définir votre projet plus précisément.</p>#}
+                    <h3>CONTACTEZ NOUS</h3>
+                    <p><a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}">Contactez-nous</a> et nous vous aiderons à définir votre projet plus précisemment.</p>
                 </div>
 
             </div>
