@@ -1344,7 +1344,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 #primary-menu.style-2 {
 	float: none;
 	max-width: none;
-	border-top: 1px solid #F5F5F5;
+	/*border-top: 1px solid #F5F5F5;*/
 }
 
 #primary-menu.style-2 > div > ul { float: left; }
