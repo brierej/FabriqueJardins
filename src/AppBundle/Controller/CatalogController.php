@@ -97,7 +97,9 @@ class CatalogController extends Controller
     {
         $products = $this->getDoctrine()
             ->getRepository(Product::class)
-            ->findBy(array('type' => 'lieu'));
+            ->findBy(
+                array('type' => 'lieu'),
+                array('merch' => 'ASC'));
 
         if (!$products) {
             throw $this->createNotFoundException(
@@ -287,7 +289,8 @@ class CatalogController extends Controller
     {
         $products = $this->getDoctrine()
             ->getRepository(Product::class)
-            ->findOneBy(array('code' => $lieu));
+            ->findOneBy(array('code' => $lieu))
+            ;
 
         if (!$products) {
             throw $this->createNotFoundException(

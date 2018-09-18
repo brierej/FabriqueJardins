@@ -32,6 +32,12 @@ class Product
 
     /**
      * @var
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $merch;
+
+    /**
+     * @var
      * @ORM\Column(type="string", length=40)
      */
     private $type;
@@ -89,6 +95,22 @@ class Product
      * @ORM\Column(type="text", nullable=true)
      */
     private $plants;
+
+    /**
+     * @return mixed
+     */
+    public function getMerch()
+    {
+        return $this->merch;
+    }
+
+    /**
+     * @param mixed $merch
+     */
+    public function setMerch($merch)
+    {
+        $this->merch = $merch;
+    }
 
     /**
      * @return mixed
