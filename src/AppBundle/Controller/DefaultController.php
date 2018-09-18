@@ -103,7 +103,7 @@ class DefaultController extends Controller
             'Messages' => [
                 [
                     'From' => [
-                        'Email' => "contact@lafabriquedejardins.fr",
+                        'Email' => "laurence@lafabriquedejardins.fr",
                         'Name' => "La Fabrique de Jardins"
                     ],
                     'To' => [

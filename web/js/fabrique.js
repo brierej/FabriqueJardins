@@ -250,7 +250,7 @@ $('#template-contactform-submit').click(function( event ) {
 function verifForm(formCheckpoint) {
     switch (formCheckpoint) {
         case 'questionnaire1' :
-            alert(formCheckpoint);
+            // alert(formCheckpoint);
             var radio = null;
             if (!radio) {
                 alert('Veuillez choisir le type de prestation souhaitée');

@@ -94,7 +94,7 @@
                                 <div class="panel-group nobottommargin" id="accordion">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2{{ loop.index }}">
                                                 <span>{{ option.title }}&nbsp;&nbsp;</span><i class="icon-question-sign"></i>
                                                 <span style="float: right; text-align: right">
                                                     {% if option.code == 'price_3d' %}
@@ -109,7 +109,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
+                                        <div id="collapse2{{ loop.index }}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 {{ option.desc }}
                                             </div>
@@ -121,7 +121,7 @@
                         </div>
                     {% endif %}
                         <div class="col_full" style="background-color: red">
-                            <a href="{{ path('form', {'form_type': 'questionnaire-particuliers'}) }}" class="button button-3d fbox-center fright">ACCEDER AU QUESTIONNAIRE</a>
+                            <a href="{{ path('contact') }}" class="button button-3d fbox-center fright">Demande de devis</a>
                         </div>
                 </div>
                 <!--<div class="col_one_fifth col_last">

@@ -302,22 +302,22 @@ class CatalogController extends Controller
         $options['price_3d'] = array(
             'code' => 'price_3d',
             'title' => 'Option 3D',
-            'desc' => 'Modélisation du projet de jardin en 3D'
+            'desc' => 'Modélisation en 3D des aménagements et une vidéo du jardin'
         );
         $options['price_dossier_tech'] = array(
             'code' => 'price_dossier_tech',
             'title' => 'Option Dossier technique',
-            'desc' => 'Mise en place d\'un dossier technique pour le projet'
+            'desc' => 'Mise en place d\'un dossier technique pour le projet : une estimation financière et des fiches techniques de réalisation des travaux'
         );
         $options['price_choix_entreprise'] = array(
             'code' => 'price_choix_entreprise',
             'title' => 'Option choix de l\'entreprise',
-            'desc' => 'Choix de l\'entreprise pour conduire le projet de jardin à terme'
+            'desc' => 'Choix de l\'entreprise pour conduire le projet de jardin à terme : consultation, devis, commandes'
         );
         $options['price_guide_entretien'] = array(
             'code' => 'price_guide_entretien',
             'title' => 'Option Guide d\'entretien',
-            'desc' => 'Mise en place d\'un guide d\'entretien du jardin'
+            'desc' => 'Mise en place d\'une notice d\'entretien détaillée de votre jardin'
         );
 
         // Récupère les images du dossier correspondant à l'ambiance
